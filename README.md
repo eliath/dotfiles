@@ -6,6 +6,10 @@
 
 ^ should set some prefs like user/computername
 
+alfred
+
+
+
 ## Terminal
 
 - run setup/dotfiles.sh
