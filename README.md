@@ -5,6 +5,7 @@
 - run setup/macOS.sh
 
 ^ should set some prefs like user/computername
+brew, autojump, other brew packages...
 
 ## Terminal
 
@@ -29,6 +30,8 @@
 ### tmux
 
 - plugins....
+
+### ssh ?
 
 -------
 
