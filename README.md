@@ -8,6 +8,7 @@
 brew, autojump, other brew packages...
 
 alfred
+python?
 
 
 
