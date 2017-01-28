@@ -2,7 +2,7 @@
 
 # macOS
 
-- run setup/macOS.sh
+- run `setup/macOS.sh`
 
 ^ should set some prefs like user/computername
 brew, autojump, other brew packages...
@@ -11,10 +11,9 @@ alfred
 python?
 
 
-
 ## Terminal
 
-- run setup/dotfiles.sh
+- run `setup/terminal.sh`
 
 ^ should setup bash profile, bash prompt, aliases, functions,
 .vim, .vimrc, .tmuxrc, whatever else.
@@ -23,6 +22,9 @@ python?
 - [download](https://www.iterm2.com/version3.html)
 - General > Load Preferences From Folder > dotfiles/iTerm
 - Color scheme?
+- powerline
+  - install menlo for powerline https://github.com/abertsch/Menlo-for-Powerline
+
 
 ### git
 
@@ -30,11 +32,13 @@ python?
 
 ### vim
 
-- plugins...
+- .vim and .vimrc should be linked with the setup script
+- run vim and do :PlugInstall
 
 ### tmux
 
-- plugins....
+- .tmux and .tmuxrc should be linked with the setup script
+- idk install plugins or whatever
 
 ### ssh ?
 
