@@ -24,6 +24,7 @@ python?
 - Color scheme?
 - powerline
   - install menlo for powerline https://github.com/abertsch/Menlo-for-Powerline
+  - powerline should be linked in setup script
 
 
 ### git
