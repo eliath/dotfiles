@@ -1,21 +1,32 @@
 {
   "segments": {
+    "above": [
+      {
+        "left": [
+          {
+            "function": "powerline.segments.common.net.hostname",
+            "priority": 10
+          },
+          {
+            "function": "powerline.segments.common.env.user",
+            "priority": 30
+          },
+          {
+            "function": "powerline.segments.shell.cwd",
+            "priority": 10
+          },
+          {
+            "function": "powerline.segments.common.vcs.branch",
+            "priority": 40
+          }
+        ]
+      }
+    ],
     "left": [
       {
-        "function": "powerline.segments.common.net.hostname",
-        "priority": 10
-      },
-      {
-        "function": "powerline.segments.common.env.user",
-        "priority": 30
-      },
-      {
-        "function": "powerline.segments.shell.cwd",
-        "priority": 10
-      },
-      {
-        "function": "powerline.segments.common.vcs.branch",
-        "priority": 40
+        "type": "string",
+        "contents": "→",
+        "highlight_groups": ["background"]
       }
     ]
   }
