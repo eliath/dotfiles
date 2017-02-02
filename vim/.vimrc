@@ -2,7 +2,7 @@
 syntax enable
 set background=dark
 " Vertical split bars
-hi VertSplit ctermfg=08 ctermbg=248
+hi VertSplit ctermfg=00 ctermbg=248
 
 " Tab width = 2
 filetype plugin indent on
