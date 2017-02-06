@@ -10,7 +10,6 @@ brew, autojump, other brew packages...
 alfred
 python?
 
-
 ## Terminal
 
 - run `setup/terminal.sh`

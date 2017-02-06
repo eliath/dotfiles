@@ -1,5 +1,8 @@
 DIR=$(dirname $BASH_SOURCE)
 
+# Efficient bash history
+HISTCONTROL=ignoreboth
+
 # Set Editor to be vim
 export EDITOR=vim
 
@@ -9,6 +12,10 @@ export EDITOR=vim
 # Start powerline
 powerline-daemon -q
 . `python -m site --user-site`/powerline/bindings/bash/powerline.sh
+
+# Highlight syntax in less cmd
+export LESSOPEN="| `brew --prefix`/bin/src-hilite-lesspipe.sh %s"
+export LESS=' -R '
 
 # Source other configs
 source "$DIR/.aliases"
