@@ -1,5 +1,6 @@
 #!/bin/bash
 DOTFILES="$HOME/dotfiles"
+BREW_DIR=$(brew --prefix)
 
 # Setup Bash
 echo ". $DOTFILES/shell/.profile" >> "$HOME/.bash_profile"

@@ -17,6 +17,10 @@ python?
 ^ should setup bash profile, bash prompt, aliases, functions,
 .vim, .vimrc, .tmuxrc, whatever else.
 
+Also need to install source-hilite to highlight files in less
+check out these docs: https://github.com/jrunning/source-highlight-solarized
+
+
 ### iTerm
 - [download](https://www.iterm2.com/version3.html)
 - General > Load Preferences From Folder > dotfiles/iTerm
