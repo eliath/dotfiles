@@ -14,7 +14,8 @@ powerline-daemon -q
 . `python -m site --user-site`/powerline/bindings/bash/powerline.sh
 
 # Highlight syntax in less cmd
-export LESSOPEN="| `brew --prefix`/bin/src-hilite-lesspipe.sh %s"
+export LESSOPEN="| source-highlight -f esc-solarized \
+  --style-file=esc-solarized.style -i %s -o STDOUT"
 export LESS=' -R '
 
 # Source other configs
