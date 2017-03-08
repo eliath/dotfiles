@@ -9,3 +9,5 @@ echo "[include]
   path = $DOTFILES/git/config" | \
   cat - ~/.gitconfig > /tmp/gitconfig && \
   mv /tmp/gitconfig ~/.gitconfig
+
+git config --global credential.helper osxkeychain
