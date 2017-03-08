@@ -1,4 +1,5 @@
 #!/bin/bash
+pushd "$(dirname "$0")" >> /dev/null
 . common.sh
 
 if [ ! -f ~/.gitconfig ]; then
@@ -9,5 +10,4 @@ echo "[include]
   path = $DOTFILES/git/config" | \
   cat - ~/.gitconfig > /tmp/gitconfig && \
   mv /tmp/gitconfig ~/.gitconfig
-
-git config --global credential.helper osxkeychain
+popd >> /dev/null
