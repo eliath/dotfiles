@@ -99,6 +99,9 @@ Plug 'tpope/vim-obsession'
 " Vim rename
 Plug 'danro/rename.vim'
 
+" Vim CamelCase movement
+Plug 'chaoren/vim-wordmotion'
+
 call plug#end()
 " - - - - - - - - - - - - - - - - - -
 
