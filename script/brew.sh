@@ -8,6 +8,7 @@ brew update
 brew upgrade
 
 # dev tools
+brew install tmux
 brew install autojump
 brew install htop
 

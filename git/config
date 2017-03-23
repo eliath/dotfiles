@@ -15,7 +15,5 @@
    default = simple
 [color "status"]
    changed = yellow
-[credential]
-	helper = osxkeychain
 [include]
     path = ./aliases
