@@ -11,6 +11,7 @@
    tool = opendiff
 [core]
    editor = vim
+   excludesFile = ~/dotfiles/git/ignore
 [push]
    default = simple
 [color "status"]
