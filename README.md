@@ -2,28 +2,35 @@
 
 # Setup
 
+## New Computer
+
+1. Configure basic prefs, e.g. dock apps, background,  menubar, timezone,  etc.
+2. Download 1Password
+3. Install Xcode Dev Tools
+4. App Store
+   a. Newton
+   b. Fantastical
+5. Install brew, cask, and other apps w/ ./script/brew.sh
+6. Iris: iristech.co
+
 run ./script/setup.sh all to setup everything
 run the script with no arguments to see a list of available targets.
 
+# App Setup
 
-## iTerm
-- [download](https://www.iterm2.com/version3.html)
-- General > Load Preferences From Folder > dotfiles/iTerm
-- Color scheme?
-- powerline
-  - install menlo for powerline https://github.com/abertsch/Menlo-for-Powerline
-  - powerline should be linked in setup script
-
-
-## vim
-
-- .vim and .vimrc should be linked with the setup script
-- run vim and do :PlugInstall
-
-## tmux
-
-- .tmux and .tmuxrc should be linked with the setup script
-- install plugins or whatever?
+- alfred
+- iterm
+  - General > Load Preferences From Folder > dotfiles/iTerm
+  - Color scheme?
+  - powerline
+    - install menlo for powerline https://github.com/abertsch/Menlo-for-Powerline
+    - powerline should be linked in setup script
+- vim
+  - .vim and .vimrc should be linked with the setup script
+  - run vim and do :PlugInstall
+- tmux
+  - .tmux and .tmuxrc should be linked with the setup script
+  - install plugins or whatever?
 
 -------
 
