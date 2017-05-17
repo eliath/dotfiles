@@ -1,4 +1,5 @@
 . common.sh
 
-touch $HOME/.tmux.conf
-echo "source-file $DOTFILES/tmux/config" >> $HOME/.tmux.conf
+rm -f $HOME/.tmux.conf
+ln -s $DOTFILES/tmux/.tmux.conf $HOME/.tmux.conf
+tmux source-file ~/.tmux.conf
