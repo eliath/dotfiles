@@ -1,23 +1,12 @@
-# dotfiles baby
+# dotfiles baby!
 
-# macOS
+# Setup
 
-- run `setup/macOS.sh`
+run ./script/setup.sh all to setup everything
+run the script with no arguments to see a list of available targets.
 
-^ should set some prefs like user/computername
-brew, autojump, other brew packages...
 
-alfred
-python?
-
-## Terminal
-
-- run `setup/terminal.sh`
-
-^ should setup bash profile, bash prompt, aliases, functions,
-.vim, .vimrc, .tmuxrc, whatever else.
-
-### iTerm
+## iTerm
 - [download](https://www.iterm2.com/version3.html)
 - General > Load Preferences From Folder > dotfiles/iTerm
 - Color scheme?
@@ -26,21 +15,15 @@ python?
   - powerline should be linked in setup script
 
 
-### git
-
-- run setup/git.sh
-
-### vim
+## vim
 
 - .vim and .vimrc should be linked with the setup script
 - run vim and do :PlugInstall
 
-### tmux
+## tmux
 
 - .tmux and .tmuxrc should be linked with the setup script
-- idk install plugins or whatever
-
-### ssh ?
+- install plugins or whatever?
 
 -------
 

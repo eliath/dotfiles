@@ -3,7 +3,6 @@ syntax enable
 set background=dark
 " Vertical split bars
 hi VertSplit ctermfg=00 ctermbg=248
-set winwidth=80
 
 " Tab width = 2
 filetype plugin indent on
@@ -11,6 +10,7 @@ set tabstop=2
 set shiftwidth=2
 set expandtab
 autocmd FileType lua setlocal shiftwidth=3 tabstop=3
+autocmd FileType python setlocal shiftwidth=2 tabstop=2
 
 " Use the mouse
 set mouse=niv
@@ -40,6 +40,9 @@ nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
+
+" Ctrl-I to insert single char
+:nmap <C-i> i_<esc>r
 
 "Search Highlight
 set incsearch
@@ -98,6 +101,9 @@ Plug 'tpope/vim-obsession'
 
 " Vim rename
 Plug 'danro/rename.vim'
+
+" Vim CamelCase movement
+Plug 'chaoren/vim-wordmotion'
 
 call plug#end()
 " - - - - - - - - - - - - - - - - - -

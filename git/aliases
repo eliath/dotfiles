@@ -1,0 +1,17 @@
+[alias]
+   branch-name = "!git rev-parse --abbrev-ref HEAD" # useful in other aliases
+   st = status --short --branch
+   ci = commit
+   co = checkout
+   br = branch
+   publish = "!git push -u origin $(git branch-name)" # Push the current branch + set it to track upstream branch
+   unpublish = "!git push origin :$(git branch-name)"
+   kill-branch = "!f() { git push origin :$@; git br -D $@;  }; f"
+   unstage = reset HEAD --
+   ls = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate
+   m-merge = "!f() { curr=$(git branch-name); git co master && git pull origin && git checkout $curr && git merge master;  }; f"
+   m-rebase= "!f() { curr=$(git branch-name); git co master && git pull --rebase && git checkout $curr && git rebase master;  }; f"
+   since = !git log $(git merge-base --fork-point master)..HEAD
+   conflicts = diff --name-only --diff-filter=U
+   delete-merged-branches = "!git co master && git branch --merged | grep -v '\\*' | xargs -n 1 git branch -d"
+   rm-orig = "!git ls-files --others --exclude-standard | grep '\\.orig$' | xargs rm"

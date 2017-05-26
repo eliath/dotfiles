@@ -1,0 +1,20 @@
+[user]
+   name = Elias Martinez Cohen
+[diff]
+   renames = true
+   tool = opendiff
+[http]
+   postBuffer = 524288000
+[color]
+   ui = true
+[merge]
+   tool = opendiff
+[core]
+   editor = vim
+   excludesFile = ~/dotfiles/git/ignore
+[push]
+   default = simple
+[color "status"]
+   changed = yellow
+[include]
+    path = ./aliases
