@@ -18,6 +18,9 @@ export LESSOPEN="| source-highlight -f esc-solarized \
   --style-file=esc-solarized.style -i %s -o STDOUT"
 export LESS=' -R '
 
+# Add pip packages to path
+export PATH="/Users/eliath/Library/Python/2.7/bin:$PATH"
+
 # Source other configs
 source "$DIR/.aliases"
 source "$DIR/.functions"
