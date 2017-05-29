@@ -1,0 +1,7 @@
+. common.sh
+
+brew install node
+
+# Install some useful global tools
+npm install -g webpack
+brew install yarn
