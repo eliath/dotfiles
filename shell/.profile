@@ -21,6 +21,9 @@ export LESS=' -R '
 # Add pip packages to path
 export PATH="/Users/eliath/Library/Python/2.7/bin:$PATH"
 
+# Add torch
+. "$HOME/torch/install/bin/torch-activate"
+
 # Source other configs
 source "$DIR/.aliases"
 source "$DIR/.functions"
