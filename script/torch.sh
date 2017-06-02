@@ -6,3 +6,12 @@ pushd ~/torch
 bash install-deps
 ./install.sh
 popd
+
+# luarocks deps
+luarocks install async
+luarocks install luasocket
+luarocks install image
+luarocks install graphicsmagick
+luarocks install luacheck
+
+ln -s $DOTFILES/lua/.luacheckrc $HOME/

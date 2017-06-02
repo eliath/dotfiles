@@ -19,10 +19,14 @@ export LESSOPEN="| source-highlight -f esc-solarized \
 export LESS=' -R '
 
 # Add pip packages to path
-export PATH="/Users/eliath/Library/Python/2.7/bin:$PATH"
+export PATH="$HOME/Library/Python/2.7/bin:$PATH"
 
 # Add torch
 . "$HOME/torch/install/bin/torch-activate"
+export PATH="$HOME/torch/install/bin:$PATH"
+
+# A place for local binaries
+export PATH="$HOME/local/bin:$PATH"
 
 # Source other configs
 source "$DIR/.aliases"

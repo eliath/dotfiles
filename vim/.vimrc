@@ -50,6 +50,11 @@ set incsearch
 " Backspace fix
 set backspace=indent,eol,start
 
+" - - - - - - - - - - - - - - - - - -
+" Aliases                           -
+" - - - - - - - - - - - - - - - - - -
+:command W w
+:command PrettyJSON ':%!python -m json.tool'
 
 " - - - - - - - - - - - - - - - - - -
 " PLUGINS  / vim-plug               -

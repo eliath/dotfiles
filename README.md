@@ -13,7 +13,7 @@
 5. Install brew, cask, and other apps w/ ./script/brew.sh
 6. Iris: iristech.co
 
-run ./script/setup.sh all to setup everything
+run `./script/setup.sh` all to setup everything
 run the script with no arguments to see a list of available targets.
 
 # App Setup
@@ -28,9 +28,12 @@ run the script with no arguments to see a list of available targets.
 - vim
   - .vim and .vimrc should be linked with the setup script
   - run vim and do :PlugInstall
+  - YouCompleteMe:
+    - follow the instructions at https://valloric.github.io/YouCompleteMe/#full-installation-guide
 - tmux
   - .tmux and .tmuxrc should be linked with the setup script
   - install plugins or whatever?
+- install lua from http://luadist.org/ if you need it.
 
 -------
 
