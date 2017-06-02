@@ -54,7 +54,6 @@ set backspace=indent,eol,start
 " Aliases                           -
 " - - - - - - - - - - - - - - - - - -
 :command W w
-:command PrettyJSON ':%!python -m json.tool'
 
 " - - - - - - - - - - - - - - - - - -
 " PLUGINS  / vim-plug               -
@@ -89,11 +88,8 @@ Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
 
 "Autocomplete
-Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
+Plug 'Valloric/YouCompleteMe', { 'do': './install.py --tern-completer' }
 set completeopt-=preview
-
-" TernJS
-Plug 'ternjs/tern_for_vim', { 'do': 'npm install' }
 
 " Auto bracket pairs
 Plug 'jiangmiao/auto-pairs'
