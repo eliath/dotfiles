@@ -12,6 +12,7 @@ brew install vim --with-override-system-vi
 brew install tmux
 brew install autojump
 brew install htop
+brew install source-highlight
 
 # cask
 brew tap caskroom/cask
