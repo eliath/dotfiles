@@ -1,5 +1,5 @@
-alias ll='ls -l'
-alias la='ls -la'
+alias ll='ls -lG'
+alias la='ls -laG'
 alias vi='vim'
 alias hgrep='history | grep'
 alias ps="ps aux"
