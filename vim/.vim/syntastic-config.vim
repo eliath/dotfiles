@@ -19,5 +19,8 @@ highlight SyntasticWarning ctermfg=07 ctermbg=11
 " Lua
 let g:syntastic_lua_checkers = ['luac', 'luacheck']
 
+"JavaScript
+let g:syntastic_javascript_checkers = ['eslint']
+
 " Python
 let g:syntastic_python_checker_args='--rcfile="~/workspace/source/pants-support/pylint/pylint.rc"'
