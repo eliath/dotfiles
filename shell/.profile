@@ -21,6 +21,9 @@ export LESS=' -R '
 # Add pip packages to path
 export PATH="$HOME/Library/Python/2.7/bin:$PATH"
 
+# Add yarn packages to path
+export PATH="$(yarn global bin):$PATH"
+
 # Add torch
 . "$HOME/torch/install/bin/torch-activate"
 export PATH="$HOME/torch/install/bin:$PATH"

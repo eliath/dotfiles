@@ -6,8 +6,8 @@ let g:syntastic_aggregate_errors = 1
 let g:syntastic_check_on_wq = 1
 
 " Appearance
-let g:syntastic_error_symbol = '✖︎'
-let g:syntastic_style_error_symbol = '✖︎'
+let g:syntastic_error_symbol = '⨯'
+let g:syntastic_style_error_symbol = '⨯'
 let g:syntastic_warning_symbol = '▸'
 let g:syntastic_style_warning_symbol ='▸'
 highlight SignColumn ctermfg=07 ctermbg=00
