@@ -13,8 +13,11 @@
 5. Install brew, cask, and other apps w/ ./script/brew.sh
 6. Iris: iristech.co
 
-run `./script/setup.sh` all to setup everything
+run `./script/setup.sh all` to setup everything
 run the script with no arguments to see a list of available targets.
+you also might need to install xcode tools before doing any of this shit:
+
+    xcode-select --install
 
 # App Setup
 
@@ -42,4 +45,3 @@ References:
 - https://dotfiles.github.io/
 - https://github.com/ptsteadman/dotfiles
 - https://github.com/nicksp/dotfiles
-
