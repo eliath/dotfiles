@@ -79,7 +79,7 @@ Plug 'mxw/vim-jsx'
 let g:jsx_ext_required = 0
 
 " CSS3 Syntax
-Plug 'hail2u/vim-css3-syntax'
+Plug 'alexlafroscia/postcss-syntax.vim'
 
 " Comments
 Plug 'tpope/vim-commentary'
