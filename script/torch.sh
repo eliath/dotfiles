@@ -11,6 +11,7 @@ popd
 luarocks install async
 luarocks install luasocket
 luarocks install image
+luarocks install csvigo
 luarocks install graphicsmagick
 luarocks install luacheck
 
