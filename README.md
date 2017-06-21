@@ -33,6 +33,7 @@ you also might need to install xcode tools before doing any of this shit:
   - run vim and do :PlugInstall
   - YouCompleteMe:
     - follow the instructions at https://valloric.github.io/YouCompleteMe/#full-installation-guide
+    - also don't forget to do `./install.py --tern-completer` or whatever.
 - tmux
   - .tmux and .tmuxrc should be linked with the setup script
   - install plugins or whatever?
