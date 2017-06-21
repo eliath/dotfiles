@@ -1,23 +1,33 @@
-# dotfiles baby!
+dotfiles baby!
+===============
 
-# Setup
+Setup
+-----
 
 ## New Computer
 
-1. Configure basic prefs, e.g. dock apps, background,  menubar, timezone,  etc.
-2. Download 1Password
-3. Install Xcode Dev Tools
-4. App Store
-   a. Newton
-   b. Fantastical
-5. Install brew, cask, and other apps w/ ./script/brew.sh
-6. Iris: iristech.co
+1. Clone this repo: `git clone github.com/eliath/dotfiles.git`
+    a. This will prompt to install dev tools, if it doesn't prompt,
+       install them anyway: `xcode-select --install`
+2. While that does its thing, configure basic prefs, e.g. dock apps,
+   background,  menubar, timezone,  etc.
+3. Download 1Password and log in before you're prompted for a million passwords.
+4. Some App Store stuff:
+    a. Newton
+    b. Fantastical
+    c. BreakTime
+6. More necessary apps:
+    a. Iris: iristech.co
+
+Everything else should be taken care of by the setup scripts.
+
+## Setup scripts
+
+Now you are ready to run the setups.
 
 run `./script/setup.sh all` to setup everything
-run the script with no arguments to see a list of available targets.
-you also might need to install xcode tools before doing any of this shit:
 
-    xcode-select --install
+run the script with no arguments to see a list of available targets.
 
 # App Setup
 
