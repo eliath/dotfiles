@@ -9,5 +9,5 @@ then
   echo "\n[DOTFILES] dotfiles' bash .profile already added system .bash_profile, will not add it again."
 else
   echo "\n[DOTFILES] adding .profile to system .bash_profile"
-  echo ". $DOTFILES/shell/.profile" >> "$HOME/.bash_profile"
+  echo ". $DOTFILES/bash/.profile" >> "$HOME/.bash_profile"
 fi
