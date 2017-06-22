@@ -5,9 +5,9 @@ function finish {
 }
 trap finish EXIT
 pushd "$(dirname "$0")" >> /dev/null
-. common.sh
+. variables.sh
 
-# what are the available setup scripts?
+# Get the available scripts
 ALL_SCRIPTS=()
 for FILENAME in $SCRIPT_DIR/*; do
   FILENAME=$(basename $FILENAME .sh)
@@ -40,23 +40,39 @@ arrayContains() {
   return $found
 }
 
+printError() {
+  echo -e "\n[DOTFILES:ERROR] $1\n"
+}
+
+printSection() {
+  echo ""
+  echo "*****************************"
+  echo "[DOTFILES] $1"
+  echo "*****************************"
+  echo ""
+}
+
 runSetupScript() {
-  echo "Running setup for $1 ..."
+  printSection "Running setup for $1 ..."
   source "$SCRIPT_DIR/$1.sh"
 }
 
 if [ $1 == "all" ]; then
+  . lazy_init.sh
   # loop thru all scripts and run them
   for scriptName in "${ALL_SCRIPTS[@]}"; do
     runSetupScript "$scriptName"
   done
+  echo -e "\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+  echo "[DOTFILES] Success." 
+  echo "[DOTFILES] Check the README for further instructions."
   exit 0
 fi
 
-# check args first
+# Error-handling: Check if arg given exists as script
 for scriptName in "$@"; do
   if ! arrayContains "$scriptName" "${ALL_SCRIPTS[@]}"; then
-    echo "Invalid argument: $scriptName"
+    printError "Invalid argument: $scriptName"
     printUsage
   fi
 done

@@ -1,4 +1,4 @@
-. common.sh
+. lazt_init.sh
 
 # Install torch & some extra libs
 git clone https://github.com/torch/distro.git ~/torch --recursive

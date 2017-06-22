@@ -1,7 +1,7 @@
-. common.sh
+. lazy_init.sh
 
 brew install node
 brew install yarn
 
 # Install some useful global tools
-yarn global add webpack eslint http-server
+npm i -g webpack eslint http-server

@@ -1,4 +1,4 @@
-. common.sh
+. lazy_init.sh
 
 # create gitconfig if not there already
 if [ ! -f ~/.gitconfig ]; then

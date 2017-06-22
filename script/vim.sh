@@ -1,4 +1,4 @@
-. common.sh
+. lazy_init.sh
 
 rm  -rf ~/.vim
 VIM_CONFIG_SRC="$DOTFILES/vim/.vim"
