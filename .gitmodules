@@ -1,0 +1,6 @@
+[submodule "lib/Menlo-for-Powerline"]
+	path = lib/Menlo-for-Powerline
+	url = https://github.com/abertsch/Menlo-for-Powerline
+[submodule "lib/source-highlight-solarized"]
+	path = lib/source-highlight-solarized
+	url = https://github.com/jrunning/source-highlight-solarized
