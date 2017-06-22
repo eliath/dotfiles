@@ -17,6 +17,19 @@
 			<key>utf8</key>
 			<true/>
 		</dict>
+		<key>9015518C-0667-440B-A8BD-4A2E711F7BD4</key>
+		<dict>
+			<key>enabled</key>
+			<true/>
+			<key>keyword</key>
+			<string>rescuetime</string>
+			<key>text</key>
+			<string>RescueTime Dashboard</string>
+			<key>url</key>
+			<string>https://www.rescuetime.com/dashboard</string>
+			<key>utf8</key>
+			<true/>
+		</dict>
 		<key>E3A52565-3B60-4A89-8F89-0E66C4655917</key>
 		<dict>
 			<key>enabled</key>

@@ -11,10 +11,12 @@
    tool = opendiff
 [core]
    editor = vim
-   excludesFile = ~/dotfiles/git/ignore
+   excludesfile = ~/dotfiles/git/ignore
 [push]
    default = simple
 [color "status"]
    changed = yellow
 [include]
     path = ./aliases
+[credential]
+    helper = osxkeychain

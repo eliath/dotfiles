@@ -15,3 +15,4 @@
    conflicts = diff --name-only --diff-filter=U
    delete-merged-branches = "!git co master && git branch --merged | grep -v '\\*' | xargs -n 1 git branch -d"
    rm-orig = "!git ls-files --others --exclude-standard | grep '\\.orig$' | xargs rm"
+   create = "!curl -u 'eliath' https://api.github.com/user/repos -d '{\"name\":\"${1-`basename "$PWD"`}\"}'"
