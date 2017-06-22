@@ -1,2 +1,0 @@
-DOTFILES="$HOME/dotfiles"
-SCRIPT_DIR="$DOTFILES/script"

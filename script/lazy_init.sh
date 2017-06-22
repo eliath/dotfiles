@@ -2,7 +2,8 @@ if [ "$DOTFILES_LAZY_INIT" = true ]; then
  return
 fi
 
-. "$HOME/dotfiles/script/variables.sh"
+DOTFILES="$HOME/dotfiles"
+SCRIPT_DIR="$DOTFILES/script"
 
 if hash brew 2>/dev/null; then
   :
