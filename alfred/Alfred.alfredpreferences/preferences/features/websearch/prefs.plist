@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>customSites</key>
+	<dict>
+		<key>4123939D-86DF-4507-82F8-08CEE9E15E50</key>
+		<dict>
+			<key>enabled</key>
+			<true/>
+			<key>keyword</key>
+			<string>wf</string>
+			<key>text</key>
+			<string>WordReference "{query}"</string>
+			<key>url</key>
+			<string>http://www.wordreference.com/es/en/translation.asp?spen={query}</string>
+			<key>utf8</key>
+			<true/>
+		</dict>
+		<key>E3A52565-3B60-4A89-8F89-0E66C4655917</key>
+		<dict>
+			<key>enabled</key>
+			<true/>
+			<key>keyword</key>
+			<string>thes</string>
+			<key>text</key>
+			<string>Synonyms for {query}</string>
+			<key>url</key>
+			<string>http://www.thesaurus.com/browse/{query}</string>
+			<key>utf8</key>
+			<true/>
+		</dict>
+	</dict>
+	<key>onlyShowEnabledInPrefs</key>
+	<true/>
+</dict>
+</plist>
