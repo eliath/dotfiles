@@ -7,7 +7,7 @@ fi
 
 pip install --user powerline-status
 pip install --user powerline-gitstatus
-mkdir "$HOME/.config"
+mkdir -p "$HOME/.config"
 ln -s "$DOTFILES/powerline" "$HOME/.config/powerline"
 
 cp $DOTFILES/lib/Menlo-for-Powerline/*.ttf ~/Library/Fonts/
