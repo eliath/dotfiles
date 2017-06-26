@@ -36,6 +36,10 @@ Additional Setup
   - most preferences should sync, but you may need to update theme
 - iterm
   - General > Load Preferences From Folder > dotfiles/iTerm
+- powerline
+  - The default iTunes segment is broken. Go to dotfiles/powerline/segments.py and
+    follow the instructions at the top of the file, replacting the default iTunes
+    segment with the contents of that file.
 
 -------
 
