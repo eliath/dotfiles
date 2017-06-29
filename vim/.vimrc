@@ -54,6 +54,9 @@ set backspace=indent,eol,start
 " Aliases                           -
 " - - - - - - - - - - - - - - - - - -
 :command W w
+:command Wq wq
+:command WQ wq
+:command E e
 
 " - - - - - - - - - - - - - - - - - -
 " PLUGINS  / vim-plug               -
