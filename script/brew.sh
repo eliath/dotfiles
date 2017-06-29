@@ -11,6 +11,7 @@ brew install autojump
 brew install htop
 brew install ghi
 brew install source-highlight
+brew install the_silver_searcher
 
 # cask apps
 brew tap caskroom/cask
@@ -22,6 +23,7 @@ brew cask install spectacle
 brew cask install karabiner-elements
 brew cask install sketch
 brew cask install rescuetime
+brew cask install torbrowser
 
 # Additional Setup
 SRC_HIGHLIGHT_DIR="$(brew --prefix source-highlight)/share/source-highlight"
