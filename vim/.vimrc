@@ -78,6 +78,9 @@ Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
 let g:jsx_ext_required = 0
 
+" Prefer local ocal eslint
+Plug 'mtscout6/syntastic-local-eslint.vim'
+
 " CSS3 Syntax
 Plug 'alexlafroscia/postcss-syntax.vim'
 
