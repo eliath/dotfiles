@@ -17,6 +17,19 @@
 			<key>utf8</key>
 			<true/>
 		</dict>
+		<key>559FB52C-FF55-4C36-909E-235BB149BA20</key>
+		<dict>
+			<key>enabled</key>
+			<true/>
+			<key>keyword</key>
+			<string>hours</string>
+			<key>text</key>
+			<string>Weekly Hours</string>
+			<key>url</key>
+			<string>https://docs.google.com/spreadsheets/d/1kuBk9g4SSKVDLWu3nyQMdU5FpPMxFNVIj1UaFORQSNk</string>
+			<key>utf8</key>
+			<true/>
+		</dict>
 		<key>9015518C-0667-440B-A8BD-4A2E711F7BD4</key>
 		<dict>
 			<key>enabled</key>
