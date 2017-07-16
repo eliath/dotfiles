@@ -40,6 +40,8 @@ Additional Setup
   - The default iTunes segment is broken. Go to dotfiles/powerline/segments.py and
     follow the instructions at the top of the file, replacting the default iTunes
     segment with the contents of that file.
+- chrome should pretty much set itself up.
+  - load the "humble tab" settings from ~/dotfiles/chrome/humble-tab-settings.json
 
 -------
 
