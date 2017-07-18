@@ -112,6 +112,9 @@ Plug 'danro/rename.vim'
 " Vim CamelCase movement
 Plug 'chaoren/vim-wordmotion'
 
+" Vim fuzzy file search
+Plug 'ctrlpvim/ctrlp.vim'
+
 call plug#end()
 " - - - - - - - - - - - - - - - - - -
 
