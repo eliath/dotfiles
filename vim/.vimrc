@@ -81,6 +81,9 @@ Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
 let g:jsx_ext_required = 0
 
+" JS Docs
+Plug 'heavenshell/vim-jsdoc'
+
 " Prefer local ocal eslint
 Plug 'mtscout6/syntastic-local-eslint.vim'
 
