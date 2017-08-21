@@ -26,11 +26,17 @@ Installation
 
 3. Some App Store stuff:
     a. 1password
+
     b. Newton
-    b. Fantastical
-    c. BreakTime
-    d. Amphetamine
+
+    c. Fantastical
+
+    d. BreakTime
+
+    e. Amphetamine
+
 6. More necessary apps:
+
     a. Iris: http://iristech.co
 
 Everything else should be taken care of by the setup script:
