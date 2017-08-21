@@ -5,10 +5,14 @@ Installation
 ------------
 
 1. Clone this repo: `git clone --recursive github.com/eliath/dotfiles.git ~/dotfiles`
+
     a. This will prompt to install dev tools, if it doesn't prompt,
        install them anyway: `xcode-select --install`
+
     b. if you didn't install submodules when you cloned do it now:
-       `git submodule update --init --recursive`
+
+     `git submodule update --init --recursive`
+
 2. While that does its thing, configure basic prefs, e.g. dock apps,
    background,  menubar, timezone,  etc.
 
@@ -24,7 +28,8 @@ Installation
 
     `dscacheutil -flushcache`
 
-    c. Change the spotlight keyboard shortcuts in System Prefs
+    c. Change the spotlight keyboard shortcuts in System Prefs, and de-activate all
+    mission control shortcuts
 
 3. Some App Store stuff:
 
@@ -37,10 +42,6 @@ Installation
     d. BreakTime
 
     e. Amphetamine
-
-6. More necessary apps:
-
-    a. Iris: http://iristech.co
 
 Everything else should be taken care of by the setup script:
 
