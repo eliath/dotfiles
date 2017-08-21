@@ -1,4 +1,4 @@
-. lazy_init.sh
+. $HOME/dotfiles/script/lazy_init.sh
 TORCH_DIR='$HOME/torch'
 # Prevent multiple installs
 if [ -d "$TORCH_DIR/install" ]; then

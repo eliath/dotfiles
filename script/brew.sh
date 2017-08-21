@@ -1,4 +1,4 @@
-. lazy_init.sh
+. $HOME/dotfiles/script/lazy_init.sh
 
 brew update
 brew upgrade

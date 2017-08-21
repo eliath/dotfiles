@@ -1,4 +1,4 @@
-. lazy_init.sh
+. $HOME/dotfiles/script/lazy_init.sh
 
 BASH_PROFILE="$HOME/.bash_profile"
 LINE_TO_ADD=". $DOTFILES/shell/.profile"

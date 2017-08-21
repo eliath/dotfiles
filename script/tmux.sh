@@ -1,4 +1,4 @@
-. lazy_init.sh
+. $HOME/dotfiles/script/lazy_init.sh
 
 mkdir -p "$HOME/.tmux/plugins"
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
