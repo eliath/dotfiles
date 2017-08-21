@@ -21,6 +21,7 @@ brew cask install alfred
 brew cask install iterm2
 brew cask install spectacle
 brew cask install karabiner-elements
+brew cask install iris
 brew cask install sketch
 brew cask install rescuetime
 brew cask install torbrowser

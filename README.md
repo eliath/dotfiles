@@ -24,6 +24,8 @@ Installation
 
     `dscacheutil -flushcache`
 
+    c. Change the spotlight keyboard shortcuts in System Prefs
+
 3. Some App Store stuff:
 
     a. 1password
