@@ -7,10 +7,17 @@ trap graceful_exit EXIT
 DOTFILES="$HOME/dotfiles"
 SCRIPT_DIR="$DOTFILES/script"
 pushd "$DOTFILES" >> /dev/null
-TARGETS=($(
-  find $DOTFILES/script -type f -maxdepth 1 -name "*.sh" \
-    -not -name "variables.sh" -not -name "lazy_init.sh" \
-    | xargs basename | sed s'/\.sh//'))
+TARGETS=(
+  "macOS"
+  "bash"
+  "brew"
+  "git"
+  "node"
+  "torch"
+  "tmux"
+  "vim"
+  "powerline"
+)
 
 USAGE="Dotfiles installation script
 Usage: ./install.sh [targets]
