@@ -16,9 +16,9 @@ brew install the_silver_searcher
 # cask apps
 brew tap caskroom/cask
 brew cask install google-chrome
-brew cask install 1password
-brew cask install alfred
 brew cask install iterm2
+brew cask install sublime-text
+brew cask install alfred
 brew cask install spectacle
 brew cask install karabiner-elements
 brew cask install iris
