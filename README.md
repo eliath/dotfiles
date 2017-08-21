@@ -11,12 +11,19 @@ Installation
        `git submodule update --init --recursive`
 2. While that does its thing, configure basic prefs, e.g. dock apps,
    background,  menubar, timezone,  etc.
+
     a. Background image, remove all dock apps, change select color, mouse tracking speed...
+
     b. Set the computer name with:
+
     `sudo scutil --set HostName <hostname>.eliath.biz`
+
     `sudo scutil --set LocalHostName <hostname>`
+
     `sudo scutil --set ComputerName <hostname>`
+
     `dscacheutil -flushcache`
+
 3. Some App Store stuff:
     a. 1password
     b. Newton
