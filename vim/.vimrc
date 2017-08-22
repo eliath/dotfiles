@@ -3,7 +3,7 @@ syntax enable
 set background=dark
 colorscheme solarized
 " Vertical split bars
-hi VertSplit ctermfg=00 ctermbg=248
+hi VertSplit ctermfg=14 ctermbg=00
 
 " Tab width = 2
 filetype plugin indent on
