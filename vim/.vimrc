@@ -75,9 +75,11 @@ so ~/.vim/plugged/vim-colors-solarized/autoload/togglebg.vim
 Plug 'vim-syntastic/syntastic'
 source ~/.vim/syntastic-config.vim
 
-" Python Syntax
-Plug 'hdima/python-syntax'
-let g:python_highlight_all = 1
+" NERDTree
+Plug 'scrooloose/nerdtree'
+map <silent> <C-b> :NERDTreeToggle<CR>
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
 "JavaScript Syntaxes
 Plug 'pangloss/vim-javascript'
@@ -102,15 +104,11 @@ Plug 'tpope/vim-commentary'
 " Auto-surround
 Plug 'tpope/vim-surround'
 
+" Vim sessions
+Plug 'tpope/vim-obsession'
 
 " Auto bracket pairs
 Plug 'jiangmiao/auto-pairs'
-
-" Vim start screen
-Plug 'mhinz/vim-startify'
-
-" Vim sessions
-Plug 'tpope/vim-obsession'
 
 " Vim rename
 Plug 'danro/rename.vim'
@@ -121,6 +119,10 @@ Plug 'chaoren/vim-wordmotion'
 " Vim fuzzy file search
 Plug 'ctrlpvim/ctrlp.vim'
 let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
+
+" Python Syntax
+Plug 'hdima/python-syntax'
+let g:python_highlight_all = 1
 
 call plug#end()
 " - - - - - - - - - - - - - - - - - -
