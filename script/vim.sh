@@ -10,4 +10,3 @@ ln -s "$DOTFILES/vim/.tern-config" "$HOME/.tern-config"
 
 # Install plugins
 vim -c "PlugInstall | q | q"
-$DOTFILES/vim/.vim/plugged/YouCompleteMe/install.sh --tern-completer

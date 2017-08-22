@@ -1,6 +1,7 @@
 " Solarized color scheme
 syntax enable
 set background=dark
+colorscheme solarized
 " Vertical split bars
 hi VertSplit ctermfg=00 ctermbg=248
 
@@ -66,6 +67,10 @@ call plug#begin()
 " Seamless tmux/vim navigation
 Plug 'christoomey/vim-tmux-navigator'
 
+" Solarized
+Plug 'altercation/vim-colors-solarized'
+so ~/.vim/plugged/vim-colors-solarized/autoload/togglebg.vim
+
 " Syntastic (linting)
 Plug 'vim-syntastic/syntastic'
 source ~/.vim/syntastic-config.vim
@@ -74,17 +79,18 @@ source ~/.vim/syntastic-config.vim
 Plug 'hdima/python-syntax'
 let g:python_highlight_all = 1
 
-"JavaScript Syntax
+"JavaScript Syntaxes
 Plug 'pangloss/vim-javascript'
-
-" JSX Syntax
 Plug 'mxw/vim-jsx'
 let g:jsx_ext_required = 0
-
-" JS Docs
+Plug 'othree/javascript-libraries-syntax.vim'
+Plug 'othree/yajs.vim'
 Plug 'heavenshell/vim-jsdoc'
 
-" Prefer local ocal eslint
+"Autocomplete
+Plug 'ajh17/VimCompletesMe'
+
+" Prefer local eslint
 Plug 'mtscout6/syntastic-local-eslint.vim'
 
 " CSS3 Syntax
@@ -96,9 +102,6 @@ Plug 'tpope/vim-commentary'
 " Auto-surround
 Plug 'tpope/vim-surround'
 
-"Autocomplete
-Plug 'Valloric/YouCompleteMe', { 'do': './install.py --tern-completer' }
-set completeopt-=preview
 
 " Auto bracket pairs
 Plug 'jiangmiao/auto-pairs'
