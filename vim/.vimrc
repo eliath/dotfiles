@@ -84,10 +84,9 @@ autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 "JavaScript Syntaxes
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
-let g:jsx_ext_required = 0
-Plug 'othree/javascript-libraries-syntax.vim'
-Plug 'othree/yajs.vim'
 Plug 'heavenshell/vim-jsdoc'
+Plug 'othree/yajs.vim'
+let g:jsx_ext_required = 0
 
 "Autocomplete
 Plug 'ajh17/VimCompletesMe'
@@ -123,6 +122,9 @@ let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standar
 " Python Syntax
 Plug 'hdima/python-syntax'
 let g:python_highlight_all = 1
+
+Plug 'alvan/vim-closetag'
+let g:closetag_filenames = '*.html,*.xhtml,*.js,*.jsx'
 
 call plug#end()
 " - - - - - - - - - - - - - - - - - -
