@@ -25,6 +25,7 @@ brew cask install iris
 brew cask install sketch
 brew cask install rescuetime
 brew cask install torbrowser
+brew cask install itsycal
 
 # Additional Setup
 SRC_HIGHLIGHT_DIR="$(brew --prefix source-highlight)/share/source-highlight"
