@@ -29,7 +29,7 @@ Installation
     `dscacheutil -flushcache`
 
     c. Change the spotlight keyboard shortcuts in System Prefs, and de-activate all
-    mission control shortcuts
+    mission control shortcuts.
 
 3. Some App Store stuff:
 
@@ -37,21 +37,17 @@ Installation
 
     b. Newton
 
-    c. Fantastical
+    c. BreakTime
 
-    d. BreakTime
-
-    e. Amphetamine
+    d. Amphetamine
 
 Everything else should be taken care of by the setup script:
 
-    $ ~/dotfiles/install.sh
+    $ ~/dotfiles/install.sh all
 
+The `all` target will run all setup scripts. Run without argument to see a list of
+available targets
 
-
-run `./script/setup.sh all` to setup everything
-
-run the script with no arguments to see a list of available targets.
 
 Additional Setup
 ----------------
@@ -65,12 +61,5 @@ Additional Setup
     follow the instructions at the top of the file, replacting the default iTunes
     segment with the contents of that file.
 - chrome should pretty much set itself up.
-  - load the "humble tab" settings from ~/dotfiles/chrome/humble-tab-settings.json
+  - load the "humble tab" settings: `~/dotfiles/chrome/humble-tab-settings.json`
 
--------
-
-References:
-
-- https://dotfiles.github.io/
-- https://github.com/ptsteadman/dotfiles
-- https://github.com/nicksp/dotfiles
