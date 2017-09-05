@@ -18102,7 +18102,7 @@
 	<key>NSWindow Frame SUUpdateAlert</key>
 	<string>530 513 620 392 0 0 1680 1050 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>646 583 958 433 0 0 1680 1027 </string>
+	<string>511 1602 918 452 -310 1050 1920 1080 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
 	<string>0 0 1680 1050 0 0 1680 1027 </string>
 	<key>New Bookmarks</key>
@@ -18295,7 +18295,7 @@
 			<key>Blinking Cursor</key>
 			<true/>
 			<key>Blur</key>
-			<true/>
+			<false/>
 			<key>Blur Radius</key>
 			<real>15</real>
 			<key>Bold Color</key>
@@ -21913,6 +21913,8 @@
 	<true/>
 	<key>NoSyncInstallationId</key>
 	<string>96C9EB18-BF9B-4EE7-97D1-228D31928586</string>
+	<key>NoSyncPermissionToShowTip</key>
+	<false/>
 	<key>NoSyncTimeOfFirstLaunchOfVersionWithTip</key>
 	<real>525039043.37773103</real>
 	<key>OnlyWhenMoreTabs</key>
@@ -21989,7 +21991,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2017-08-21T20:13:42Z</date>
+	<date>2017-08-28T23:39:32Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>SavePasteHistory</key>

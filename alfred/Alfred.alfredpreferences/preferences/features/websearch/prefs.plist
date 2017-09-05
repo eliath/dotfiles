@@ -56,6 +56,19 @@
 			<key>utf8</key>
 			<true/>
 		</dict>
+		<key>ECB22DB7-9BA7-4535-B97B-03F63A399746</key>
+		<dict>
+			<key>enabled</key>
+			<true/>
+			<key>keyword</key>
+			<string>cal</string>
+			<key>text</key>
+			<string>Open Calendar</string>
+			<key>url</key>
+			<string>https://calendar.google.com/calendar/</string>
+			<key>utf8</key>
+			<true/>
+		</dict>
 	</dict>
 	<key>onlyShowEnabledInPrefs</key>
 	<true/>
