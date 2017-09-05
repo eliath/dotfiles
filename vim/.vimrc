@@ -51,6 +51,11 @@ set incsearch
 " Backspace fix
 set backspace=indent,eol,start
 
+" Change cursor shape between insert and normal mode in tmux
+let &t_SI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=1\x7\<Esc>\\"
+let &t_SR = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=2\x7\<Esc>\\"
+let &t_EI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=0\x7\<Esc>\\"
+
 " - - - - - - - - - - - - - - - - - -
 " Aliases                           -
 " - - - - - - - - - - - - - - - - - -
@@ -77,7 +82,7 @@ source ~/.vim/syntastic-config.vim
 
 " NERDTree
 Plug 'scrooloose/nerdtree'
-map <silent> <C-b> :NERDTreeFocus<CR>
+map <silent> <C-b> :NERDTreeToggle<CR>
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
