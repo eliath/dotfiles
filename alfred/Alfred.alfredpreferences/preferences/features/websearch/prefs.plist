@@ -43,6 +43,19 @@
 			<key>utf8</key>
 			<true/>
 		</dict>
+		<key>D01C18B3-6B93-470C-9FA4-6CBF227B73EC</key>
+		<dict>
+			<key>enabled</key>
+			<true/>
+			<key>keyword</key>
+			<string>q3</string>
+			<key>text</key>
+			<string>Q3 Dev Roadmap</string>
+			<key>url</key>
+			<string>https://github.com/orgs/discretenewyork/projects/2</string>
+			<key>utf8</key>
+			<true/>
+		</dict>
 		<key>E3A52565-3B60-4A89-8F89-0E66C4655917</key>
 		<dict>
 			<key>enabled</key>
