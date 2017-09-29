@@ -1,5 +1,15 @@
 DIR=$(dirname $BASH_SOURCE)
 
+#####################
+# CONFIG            #
+#####################
+HISTCONTROL=ignoreboth # Efficient bash history
+export EDITOR=vim
+export LESS=' -R ' # Highlight syntax in less
+export LESSOPEN="| source-highlight -f esc-solarized \
+  --style-file=esc-solarized.style -i %s -o STDOUT"
+
+
 ###########
 # PATHS   #
 ###########
@@ -29,15 +39,10 @@ export PATH="$HOME/local/bin:$PATH"
 powerline-daemon -q
 . `python -m site --user-site`/powerline/bindings/bash/powerline.sh
 
-
-#####################
-# CONFIG            #
-#####################
-HISTCONTROL=ignoreboth # Efficient bash history
-export EDITOR=vim
-export LESS=' -R ' # Highlight syntax in less
-export LESSOPEN="| source-highlight -f esc-solarized \
-  --style-file=esc-solarized.style -i %s -o STDOUT"
+# pyenv
+if command -v pyenv 1>/dev/null 2>&1; then
+  eval "$(pyenv init -)"
+fi
 
 #####################
 # ADD'L CONFIGS    #
