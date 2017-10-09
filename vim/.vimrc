@@ -23,8 +23,10 @@ autocmd BufWritePre * %s/\s\+$//e
 set backupcopy=yes
 set autoread
 
-" Disable autocomment
-autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+" Disable autocomment for `//`
+inoremap <expr> <enter> getline('.') =~ '^\s*//' ? '<enter><esc>S' : '<enter>'
+nnoremap <expr> O getline('.') =~ '^\s*//' ? 'O<esc>S' : 'O'
+nnoremap <expr> o getline('.') =~ '^\s*//' ? 'o<esc>S' : 'o'
 
 " Splits
 set splitright
