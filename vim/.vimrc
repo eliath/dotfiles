@@ -65,6 +65,7 @@ let &t_EI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=0\x7\<Esc>\\"
 :command Wq wq
 :command WQ wq
 :command E e
+:command PrettyJSON %!python -m json.tool
 
 " - - - - - - - - - - - - - - - - - -
 " PLUGINS  / vim-plug               -
