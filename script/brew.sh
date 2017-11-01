@@ -6,7 +6,6 @@ brew upgrade
 # dev tools
 brew install vim --with-override-system-vi
 brew install python
-brew install pyenv
 brew install tmux
 brew install autojump
 brew install htop

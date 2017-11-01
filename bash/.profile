@@ -39,11 +39,6 @@ export PATH="$HOME/local/bin:$PATH"
 powerline-daemon -q
 . `python -m site --user-site`/powerline/bindings/bash/powerline.sh
 
-# pyenv
-if command -v pyenv 1>/dev/null 2>&1; then
-  eval "$(pyenv init -)"
-fi
-
 #####################
 # ADD'L CONFIGS    #
 #####################
