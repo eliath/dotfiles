@@ -14,7 +14,7 @@ highlight SignColumn ctermfg=07 ctermbg=00
 highlight SyntasticErrorSign ctermfg=01 ctermbg=00
 highlight SyntasticWarningSign ctermfg=03 ctermbg=00
 highlight SyntasticError ctermfg=07 ctermbg=09
-highlight SyntasticWarning ctermfg=07 ctermbg=11
+highlight SyntasticWarning ctermfg=07 ctermbg=03
 
 " Lua
 let g:syntastic_lua_checkers = ['luac', 'luacheck']
