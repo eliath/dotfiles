@@ -5,11 +5,12 @@ brew upgrade
 
 # dev tools
 brew install vim --with-override-system-vi
+brew install hub
+brew install tig
 brew install python
 brew install tmux
 brew install autojump
 brew install htop
-brew install ghi
 brew install source-highlight
 brew install the_silver_searcher
 brew install fd
