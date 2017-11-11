@@ -4,3 +4,4 @@ alias vi='vim'
 alias hgrep='history | grep'
 alias ps="ps aux"
 alias psgrep="ps aux | grep -v grep | grep -i -e VSZ -e"
+alias git=hub
