@@ -2,22 +2,18 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>backgroundcolor</key>
+	<array>
+		<real>0.92801767587661743</real>
+		<real>0.9397503137588501</real>
+		<real>0.9395110011100769</real>
+	</array>
 	<key>iconid</key>
 	<string>C0149251-55E6-4E51-8D19-F44510C9C693</string>
 	<key>iconisuserspecified</key>
 	<true/>
 	<key>items</key>
 	<array>
-		<dict>
-			<key>actionuid</key>
-			<string>remote.alfred.showalfred</string>
-			<key>buttoniconid</key>
-			<string>E87F29EA-F082-49E2-B564-5CB7F3A744BE</string>
-			<key>buttonlabel</key>
-			<string>Show Alfred</string>
-			<key>itemuid</key>
-			<string>E86953FC-89A9-4658-A541-D15AA79900F7</string>
-		</dict>
 		<dict>
 			<key>actionconfig</key>
 			<dict>
@@ -69,7 +65,23 @@
 			<key>itemuid</key>
 			<string>58AEB267-3FFC-4679-8224-98DABB64485A</string>
 		</dict>
-		<dict/>
+		<dict>
+			<key>actionconfig</key>
+			<dict>
+				<key>command</key>
+				<integer>6</integer>
+				<key>confirm</key>
+				<false/>
+			</dict>
+			<key>actionuid</key>
+			<string>remote.alfred.systemcommand</string>
+			<key>buttoniconid</key>
+			<string>74C38DE4-D039-4FF1-975A-4F5F90B1204B</string>
+			<key>buttonlabel</key>
+			<string>Lock</string>
+			<key>itemuid</key>
+			<string>331F4A64-62A9-45FE-8CD0-D165F03FDD34</string>
+		</dict>
 		<dict>
 			<key>actionconfig</key>
 			<dict>
@@ -120,6 +132,25 @@
 			<string>Mute Mac</string>
 			<key>itemuid</key>
 			<string>013D1275-3AF6-4B81-BC85-CF5591850C3F</string>
+		</dict>
+		<dict>
+			<key>actionconfig</key>
+			<dict>
+				<key>keychar</key>
+				<string>Space</string>
+				<key>keycode</key>
+				<integer>49</integer>
+				<key>keymod</key>
+				<integer>0</integer>
+			</dict>
+			<key>actionuid</key>
+			<string>remote.alfred.dispatchkeycombo</string>
+			<key>buttoniconid</key>
+			<string>6604A03B-94B9-4DD0-8899-EDC7F9635195</string>
+			<key>buttonlabel</key>
+			<string>Space</string>
+			<key>itemuid</key>
+			<string>28F59753-9269-4CEB-A5D0-0A5E75F8A36B</string>
 		</dict>
 		<dict>
 			<key>actionconfig</key>
@@ -193,23 +224,6 @@
 			<key>actionconfig</key>
 			<dict>
 				<key>command</key>
-				<integer>6</integer>
-				<key>confirm</key>
-				<false/>
-			</dict>
-			<key>actionuid</key>
-			<string>remote.alfred.systemcommand</string>
-			<key>buttoniconid</key>
-			<string>74C38DE4-D039-4FF1-975A-4F5F90B1204B</string>
-			<key>buttonlabel</key>
-			<string>Lock</string>
-			<key>itemuid</key>
-			<string>331F4A64-62A9-45FE-8CD0-D165F03FDD34</string>
-		</dict>
-		<dict>
-			<key>actionconfig</key>
-			<dict>
-				<key>command</key>
 				<integer>4</integer>
 				<key>confirm</key>
 				<true/>
@@ -257,9 +271,25 @@
 			<key>itemuid</key>
 			<string>2C2EB81A-984A-4CE4-8677-F2A049DC3663</string>
 		</dict>
+		<dict>
+			<key>actionuid</key>
+			<string>remote.alfred.showalfred</string>
+			<key>buttoniconid</key>
+			<string>E87F29EA-F082-49E2-B564-5CB7F3A744BE</string>
+			<key>buttonlabel</key>
+			<string>Show Alfred</string>
+			<key>itemuid</key>
+			<string>E86953FC-89A9-4658-A541-D15AA79900F7</string>
+		</dict>
+	</array>
+	<key>labelcolor</key>
+	<array>
+		<real>0.098752081394195557</real>
+		<real>0.098749130964279175</real>
+		<real>0.098750799894332886</real>
 	</array>
 	<key>subtitle</key>
-	<string>Control your Mac</string>
+	<string></string>
 	<key>title</key>
 	<string>System Commands</string>
 </dict>
