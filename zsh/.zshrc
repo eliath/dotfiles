@@ -63,6 +63,6 @@ powerline-daemon -q
 
 # Start TMUX on login
 if which tmux >/dev/null 2>&1; then
-  test -z "$TMUX" && (tmux attach || tmux new-session)
+  test -z "$TMUX" && (tmux attach || tmux new-session && exit)
 fi
 :

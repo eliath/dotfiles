@@ -18106,7 +18106,7 @@
 	<key>NSWindow Frame SUUpdateAlert</key>
 	<string>530 493 620 392 0 0 1680 1050 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>302 473 918 512 0 0 1680 1027 </string>
+	<string>302 517 796 473 0 0 1680 1050 </string>
 	<key>NSWindow Frame UKCrashReporter</key>
 	<string>0 443 592 584 0 0 1680 1027 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
@@ -18116,6 +18116,8 @@
 		<dict>
 			<key>ASCII Anti Aliased</key>
 			<true/>
+			<key>ASCII Ligatures</key>
+			<false/>
 			<key>Allow Title Reporting</key>
 			<false/>
 			<key>Ambiguous Double Width</key>
