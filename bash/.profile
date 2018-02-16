@@ -44,3 +44,9 @@ powerline-daemon -q
 #####################
 source "$DIR/.aliases"
 source "$DIR/.functions"
+
+
+# Start Tmux on Login
+if which tmux >/dev/null 2>&1; then
+  test -z "$TMUX" && (tmux attach || tmux new-session)
+fi
