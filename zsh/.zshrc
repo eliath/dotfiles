@@ -1,7 +1,7 @@
 # Aliases
+alias ll="ls -lG"
+alias la="ls -laG"
 alias git=hub
-alias ll='ls -lG'
-alias la='ls -laG'
 alias hgrep='history | grep'
 alias ps='ps aux'
 alias psgrep='ps aux | grep -v grep | grep -i -e VSZ -e'
@@ -10,6 +10,14 @@ alias psgrep='ps aux | grep -v grep | grep -i -e VSZ -e'
 export EDITOR='vim'
 export VISUAL='vim'
 
+# History options
+setopt BANG_HIST
+setopt SHARE_HISTORY
+setopt INC_APPEND_HISTORY
+setopt HIST_IGNORE_SPACE
+setopt HIST_SAVE_NO_DUPS
+setopt HIST_IGNORE_DUPS
+setopt HIST_EXPIRE_DUPS_FIRST
 
 ###########
 # PATHS   #
@@ -56,6 +64,9 @@ zstyle ':prezto:load' pmodule \
 # Activate Prezto
 PREZTO_INIT="$ZDOTDIR/.zprezto/init.zsh"
 [ -f "$PREZTO_INIT" ] && source "$PREZTO_INIT"
+unset LSCOLORS
+export CLICOLOR=1
+export CLICOLOR_FORCE=1
 
 # powerline
 powerline-daemon -q
@@ -63,6 +74,6 @@ powerline-daemon -q
 
 # Start TMUX on login
 if which tmux >/dev/null 2>&1; then
-  test -z "$TMUX" && (tmux attach || tmux new-session && exit)
+  test -z "$TMUX" && (tmux attach || exec tmux new-session && exit)
 fi
 :
