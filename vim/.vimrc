@@ -11,7 +11,7 @@ set tabstop=2
 set shiftwidth=2
 set expandtab
 autocmd FileType lua setlocal shiftwidth=3 tabstop=3
-autocmd FileType python setlocal shiftwidth=2 tabstop=2
+autocmd FileType python setlocal shiftwidth=2 tabstop=2 softtabstop=0 expandtab smarttab
 
 " Use the mouse
 set mouse=niv
