@@ -26,7 +26,7 @@ setopt HIST_EXPIRE_DUPS_FIRST
 export PATH="$HOME/Library/Python/2.7/bin:$PATH"
 
 # yarn packages
-export PATH="$(yarn global bin):$PATH"
+# export PATH="$(yarn global bin):$PATH"
 
 # torch packages
 export PATH="$HOME/torch/install/bin:$PATH"
