@@ -20,15 +20,15 @@ brew install fd
 brew tap caskroom/cask
 brew cask install google-chrome
 brew cask install iterm2
-brew cask install sublime-text
 brew cask install alfred
 brew cask install spectacle
 brew cask install karabiner-elements
-brew cask install iris
 brew cask install sketch
-brew cask install rescuetime
-brew cask install torbrowser
+brew cask install sublime-text
+brew cask install iina
+brew cask install dash
 brew cask install itsycal
+brew cask install torbrowser
 
 # Additional Setup
 SRC_HIGHLIGHT_DIR="$(brew --prefix source-highlight)/share/source-highlight"
