@@ -4,6 +4,7 @@ brew update
 brew upgrade
 
 # dev tools
+brew install coreutils
 brew install vim --with-override-system-vi
 brew install hub
 brew install tig

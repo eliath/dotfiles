@@ -17,42 +17,16 @@
 			<key>utf8</key>
 			<true/>
 		</dict>
-		<key>559FB52C-FF55-4C36-909E-235BB149BA20</key>
+		<key>58BC9452-4BF5-40FA-A9A6-987CEC920455</key>
 		<dict>
 			<key>enabled</key>
 			<true/>
 			<key>keyword</key>
-			<string>hours</string>
+			<string>g</string>
 			<key>text</key>
-			<string>Weekly Hours</string>
+			<string>Google</string>
 			<key>url</key>
-			<string>https://docs.google.com/a/discretenewyork.com/spreadsheets/d/1urE2q3zLFnlnjQbLMg_83OX8QOqIiPjbos8o_8CqEqg/edit?usp=sharing</string>
-			<key>utf8</key>
-			<true/>
-		</dict>
-		<key>9015518C-0667-440B-A8BD-4A2E711F7BD4</key>
-		<dict>
-			<key>enabled</key>
-			<true/>
-			<key>keyword</key>
-			<string>rescuetime</string>
-			<key>text</key>
-			<string>RescueTime Dashboard</string>
-			<key>url</key>
-			<string>https://www.rescuetime.com/dashboard</string>
-			<key>utf8</key>
-			<true/>
-		</dict>
-		<key>D01C18B3-6B93-470C-9FA4-6CBF227B73EC</key>
-		<dict>
-			<key>enabled</key>
-			<true/>
-			<key>keyword</key>
-			<string>q3</string>
-			<key>text</key>
-			<string>Q3 Dev Roadmap</string>
-			<key>url</key>
-			<string>https://github.com/orgs/discretenewyork/projects/2</string>
+			<string>https://www.google.com/search?q={query}</string>
 			<key>utf8</key>
 			<true/>
 		</dict>
@@ -79,6 +53,19 @@
 			<string>Open Calendar</string>
 			<key>url</key>
 			<string>https://calendar.google.com/calendar/</string>
+			<key>utf8</key>
+			<true/>
+		</dict>
+		<key>F35BB858-9D30-469F-BB94-677516808BF5</key>
+		<dict>
+			<key>enabled</key>
+			<true/>
+			<key>keyword</key>
+			<string>duck</string>
+			<key>text</key>
+			<string>DuckDuckGo</string>
+			<key>url</key>
+			<string>https://duckduckgo.com/?q={query}</string>
 			<key>utf8</key>
 			<true/>
 		</dict>

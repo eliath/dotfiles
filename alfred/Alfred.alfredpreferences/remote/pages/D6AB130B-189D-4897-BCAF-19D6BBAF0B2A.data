@@ -4,14 +4,14 @@
 <dict>
 	<key>backgroundcolor</key>
 	<array>
-		<real>0.92801767587661743</real>
-		<real>0.9397503137588501</real>
-		<real>0.9395110011100769</real>
+		<real>1</real>
+		<real>0.97933721542358398</real>
+		<real>1</real>
 	</array>
 	<key>iconid</key>
-	<string>C0149251-55E6-4E51-8D19-F44510C9C693</string>
+	<string>080D2C02-5FFE-435B-BF79-EC0255085032</string>
 	<key>iconisuserspecified</key>
-	<true/>
+	<false/>
 	<key>items</key>
 	<array>
 		<dict>
@@ -34,53 +34,40 @@
 		<dict>
 			<key>actionconfig</key>
 			<dict>
-				<key>command</key>
-				<integer>11</integer>
-				<key>confirm</key>
-				<false/>
+				<key>keychar</key>
+				<string>w</string>
+				<key>keycode</key>
+				<integer>-1</integer>
+				<key>keymod</key>
+				<integer>1048576</integer>
 			</dict>
 			<key>actionuid</key>
-			<string>remote.alfred.systemcommand</string>
+			<string>remote.alfred.dispatchkeycombo</string>
 			<key>buttoniconid</key>
-			<string>E39D048D-4282-4368-85E4-7A4B5B2FAB4F</string>
+			<string>B8BBE225-86FD-4B14-976D-88E98E887140</string>
 			<key>buttonlabel</key>
-			<string>Sleep Displays</string>
+			<string>⌘W</string>
 			<key>itemuid</key>
-			<string>7E482DFF-F824-4220-A5B7-5A1606E656B9</string>
+			<string>FFFEFDDD-5E78-4A89-A6D4-C911AABF612B</string>
 		</dict>
 		<dict>
 			<key>actionconfig</key>
 			<dict>
-				<key>command</key>
-				<integer>1</integer>
-				<key>confirm</key>
-				<false/>
+				<key>keychar</key>
+				<string>⎋</string>
+				<key>keycode</key>
+				<integer>53</integer>
+				<key>keymod</key>
+				<integer>0</integer>
 			</dict>
 			<key>actionuid</key>
-			<string>remote.alfred.systemcommand</string>
+			<string>remote.alfred.dispatchkeycombo</string>
 			<key>buttoniconid</key>
-			<string>C521DE7F-BB08-4C53-A0A1-17FAB3A5EBF1</string>
+			<string>FABCCA40-6032-409F-ABC9-FD51BB1AC45C</string>
 			<key>buttonlabel</key>
-			<string>Screen Saver</string>
+			<string>⎋</string>
 			<key>itemuid</key>
-			<string>58AEB267-3FFC-4679-8224-98DABB64485A</string>
-		</dict>
-		<dict>
-			<key>actionconfig</key>
-			<dict>
-				<key>command</key>
-				<integer>6</integer>
-				<key>confirm</key>
-				<false/>
-			</dict>
-			<key>actionuid</key>
-			<string>remote.alfred.systemcommand</string>
-			<key>buttoniconid</key>
-			<string>74C38DE4-D039-4FF1-975A-4F5F90B1204B</string>
-			<key>buttonlabel</key>
-			<string>Lock</string>
-			<key>itemuid</key>
-			<string>331F4A64-62A9-45FE-8CD0-D165F03FDD34</string>
+			<string>AF0EA571-7B70-459A-A278-13A947C87AAA</string>
 		</dict>
 		<dict>
 			<key>actionconfig</key>
@@ -102,36 +89,21 @@
 		<dict>
 			<key>actionconfig</key>
 			<dict>
-				<key>command</key>
-				<integer>13</integer>
-				<key>confirm</key>
-				<false/>
+				<key>keychar</key>
+				<string>←</string>
+				<key>keycode</key>
+				<integer>123</integer>
+				<key>keymod</key>
+				<integer>10485760</integer>
 			</dict>
 			<key>actionuid</key>
-			<string>remote.alfred.systemcommand</string>
+			<string>remote.alfred.dispatchkeycombo</string>
 			<key>buttoniconid</key>
-			<string>DFB59510-9EC1-4EFD-B207-71EA5797A3D8</string>
+			<string>A64149C5-9F9D-4BE8-9620-22DBC6D804E7</string>
 			<key>buttonlabel</key>
-			<string>Mac Vol Down</string>
+			<string>←</string>
 			<key>itemuid</key>
-			<string>687242CD-79D9-4680-8F61-A1D3BECFFADF</string>
-		</dict>
-		<dict>
-			<key>actionconfig</key>
-			<dict>
-				<key>command</key>
-				<integer>14</integer>
-				<key>confirm</key>
-				<false/>
-			</dict>
-			<key>actionuid</key>
-			<string>remote.alfred.systemcommand</string>
-			<key>buttoniconid</key>
-			<string>F63A1F3D-E03F-4D1F-AFC8-769118B0FA36</string>
-			<key>buttonlabel</key>
-			<string>Mute Mac</string>
-			<key>itemuid</key>
-			<string>013D1275-3AF6-4B81-BC85-CF5591850C3F</string>
+			<string>16D1773E-27EC-4410-AE20-728A9E24BA08</string>
 		</dict>
 		<dict>
 			<key>actionconfig</key>
@@ -155,132 +127,81 @@
 		<dict>
 			<key>actionconfig</key>
 			<dict>
+				<key>keychar</key>
+				<string>→</string>
+				<key>keycode</key>
+				<integer>124</integer>
+				<key>keymod</key>
+				<integer>10485760</integer>
+			</dict>
+			<key>actionuid</key>
+			<string>remote.alfred.dispatchkeycombo</string>
+			<key>buttoniconid</key>
+			<string>1AEE1AAF-52BB-4752-B3D8-B4FB57BE1AB8</string>
+			<key>buttonlabel</key>
+			<string>→</string>
+			<key>itemuid</key>
+			<string>CAA69BCE-06CE-441C-960F-6E305951D3B7</string>
+		</dict>
+		<dict>
+			<key>actionconfig</key>
+			<dict>
 				<key>command</key>
-				<integer>2</integer>
+				<integer>13</integer>
 				<key>confirm</key>
 				<false/>
 			</dict>
 			<key>actionuid</key>
 			<string>remote.alfred.systemcommand</string>
 			<key>buttoniconid</key>
-			<string>7C111183-72FD-4AD3-999D-6C42AE49ED42</string>
+			<string>DFB59510-9EC1-4EFD-B207-71EA5797A3D8</string>
 			<key>buttonlabel</key>
-			<string>Show Trash</string>
+			<string>Mac Vol Down</string>
 			<key>itemuid</key>
-			<string>7AE73A39-A054-4797-BD2F-4E5996A697C4</string>
+			<string>687242CD-79D9-4680-8F61-A1D3BECFFADF</string>
 		</dict>
+		<dict/>
+		<dict/>
+		<dict/>
 		<dict>
 			<key>actionconfig</key>
 			<dict>
 				<key>command</key>
-				<integer>3</integer>
+				<integer>14</integer>
 				<key>confirm</key>
 				<false/>
 			</dict>
 			<key>actionuid</key>
 			<string>remote.alfred.systemcommand</string>
 			<key>buttoniconid</key>
-			<string>26CD56AC-D10D-41E9-BE80-B2B2CA49CD75</string>
+			<string>F63A1F3D-E03F-4D1F-AFC8-769118B0FA36</string>
 			<key>buttonlabel</key>
-			<string>Empty Trash</string>
+			<string>Mute Mac</string>
 			<key>itemuid</key>
-			<string>E348BF85-031C-43FD-83F9-7FFE42BF5E38</string>
+			<string>013D1275-3AF6-4B81-BC85-CF5591850C3F</string>
 		</dict>
 		<dict>
 			<key>actionconfig</key>
 			<dict>
-				<key>command</key>
-				<integer>9</integer>
-				<key>confirm</key>
-				<true/>
+				<key>keychar</key>
+				<string>f</string>
+				<key>keycode</key>
+				<integer>-1</integer>
+				<key>keymod</key>
+				<integer>0</integer>
 			</dict>
 			<key>actionuid</key>
-			<string>remote.alfred.systemcommand</string>
+			<string>remote.alfred.dispatchkeycombo</string>
 			<key>buttoniconid</key>
-			<string>E9756CDB-B266-47D9-AB73-E6E66C47763F</string>
+			<string>6E767FA0-B6B9-41F8-A08E-76A2DBAC8902</string>
 			<key>buttonlabel</key>
-			<string>Quit All Apps</string>
+			<string>F</string>
 			<key>itemuid</key>
-			<string>AE86C8F0-C94D-4B7D-B2D8-F8FFFB6C4ABC</string>
+			<string>56B43470-87C8-4692-94C6-EAA304D76169</string>
 		</dict>
-		<dict>
-			<key>actionconfig</key>
-			<dict>
-				<key>command</key>
-				<integer>10</integer>
-				<key>confirm</key>
-				<true/>
-			</dict>
-			<key>actionuid</key>
-			<string>remote.alfred.systemcommand</string>
-			<key>buttoniconid</key>
-			<string>35E5FEB5-B471-434E-BDC7-B9FB4E24D1CA</string>
-			<key>buttonlabel</key>
-			<string>Eject All</string>
-			<key>itemuid</key>
-			<string>47ECCDB3-54D7-448E-AA67-C633D569B9CB</string>
-		</dict>
-		<dict>
-			<key>actionconfig</key>
-			<dict>
-				<key>command</key>
-				<integer>4</integer>
-				<key>confirm</key>
-				<true/>
-			</dict>
-			<key>actionuid</key>
-			<string>remote.alfred.systemcommand</string>
-			<key>buttoniconid</key>
-			<string>A492984F-B940-4EF2-A31D-1482847A9E42</string>
-			<key>buttonlabel</key>
-			<string>Log Out</string>
-			<key>itemuid</key>
-			<string>6D332C37-9610-4280-8ACF-B6107234E8C2</string>
-		</dict>
-		<dict>
-			<key>actionconfig</key>
-			<dict>
-				<key>command</key>
-				<integer>7</integer>
-				<key>confirm</key>
-				<true/>
-			</dict>
-			<key>actionuid</key>
-			<string>remote.alfred.systemcommand</string>
-			<key>buttoniconid</key>
-			<string>F1E363B3-E478-4D63-8105-7DD64EAA66FE</string>
-			<key>buttonlabel</key>
-			<string>Restart</string>
-			<key>itemuid</key>
-			<string>F2643B1A-3E48-4505-BE8B-4656821FF8A8</string>
-		</dict>
-		<dict>
-			<key>actionconfig</key>
-			<dict>
-				<key>command</key>
-				<integer>8</integer>
-				<key>confirm</key>
-				<true/>
-			</dict>
-			<key>actionuid</key>
-			<string>remote.alfred.systemcommand</string>
-			<key>buttoniconid</key>
-			<string>4A24FC55-3C81-4E45-A050-CBD6E455657E</string>
-			<key>buttonlabel</key>
-			<string>Shut Down</string>
-			<key>itemuid</key>
-			<string>2C2EB81A-984A-4CE4-8677-F2A049DC3663</string>
-		</dict>
-		<dict>
-			<key>actionuid</key>
-			<string>remote.alfred.showalfred</string>
-			<key>buttoniconid</key>
-			<string>E87F29EA-F082-49E2-B564-5CB7F3A744BE</string>
-			<key>buttonlabel</key>
-			<string>Show Alfred</string>
-			<key>itemuid</key>
-			<string>E86953FC-89A9-4658-A541-D15AA79900F7</string>
-		</dict>
+		<dict/>
+		<dict/>
+		<dict/>
 	</array>
 	<key>labelcolor</key>
 	<array>
@@ -291,6 +212,6 @@
 	<key>subtitle</key>
 	<string></string>
 	<key>title</key>
-	<string>System Commands</string>
+	<string>Entertainment</string>
 </dict>
 </plist>
