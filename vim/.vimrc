@@ -53,6 +53,10 @@ set incsearch
 " Backspace fix
 set backspace=indent,eol,start
 
+" Autocomplete
+filetype plugin on
+set omnifunc=syntaxcomplete#Complete
+
 " Change cursor shape between insert and normal mode in tmux
 let &t_SI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=1\x7\<Esc>\\"
 let &t_SR = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=2\x7\<Esc>\\"
@@ -65,7 +69,9 @@ let &t_EI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=0\x7\<Esc>\\"
 :command Wq wq
 :command WQ wq
 :command E e
+:command Q q
 :command PrettyJSON %!python -m json.tool
+:command Paste r!pbpaste
 
 " - - - - - - - - - - - - - - - - - -
 " PLUGINS  / vim-plug               -
