@@ -4,8 +4,6 @@
 <dict>
 	<key>bundleid</key>
 	<string>com.kapeli.dash.workflow</string>
-	<key>category</key>
-	<string>Productivity</string>
 	<key>connections</key>
 	<dict>
 		<key>12B8CAB5-9FEE-46F2-B67E-026F4BE48A88</key>
@@ -17,8 +15,6 @@
 				<integer>0</integer>
 				<key>modifiersubtext</key>
 				<string></string>
-				<key>vitoclose</key>
-				<false/>
 			</dict>
 		</array>
 		<key>406C4166-C9CF-496F-8DB1-D43CE5211BEA</key>
@@ -30,8 +26,6 @@
 				<integer>0</integer>
 				<key>modifiersubtext</key>
 				<string></string>
-				<key>vitoclose</key>
-				<false/>
 			</dict>
 		</array>
 		<key>5C09F008-55F3-4966-BACC-DF3176E148A5</key>
@@ -43,8 +37,6 @@
 				<integer>0</integer>
 				<key>modifiersubtext</key>
 				<string></string>
-				<key>vitoclose</key>
-				<false/>
 			</dict>
 			<dict>
 				<key>destinationuid</key>
@@ -53,8 +45,6 @@
 				<integer>1048576</integer>
 				<key>modifiersubtext</key>
 				<string>Open</string>
-				<key>vitoclose</key>
-				<false/>
 			</dict>
 			<dict>
 				<key>destinationuid</key>
@@ -63,89 +53,6 @@
 				<integer>524288</integer>
 				<key>modifiersubtext</key>
 				<string>Copy</string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
-		<key>dash_keyword_css</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>dash_action_normal</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-			</dict>
-			<dict>
-				<key>destinationuid</key>
-				<string>dash_action_cmd</string>
-				<key>modifiers</key>
-				<integer>1048576</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-			</dict>
-			<dict>
-				<key>destinationuid</key>
-				<string>dash_action_alt</string>
-				<key>modifiers</key>
-				<integer>524288</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-			</dict>
-		</array>
-		<key>dash_keyword_elasticsearch</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>dash_action_normal</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-			</dict>
-			<dict>
-				<key>destinationuid</key>
-				<string>dash_action_cmd</string>
-				<key>modifiers</key>
-				<integer>1048576</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-			</dict>
-			<dict>
-				<key>destinationuid</key>
-				<string>dash_action_alt</string>
-				<key>modifiers</key>
-				<integer>524288</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-			</dict>
-		</array>
-		<key>dash_keyword_express</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>dash_action_normal</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-			</dict>
-			<dict>
-				<key>destinationuid</key>
-				<string>dash_action_cmd</string>
-				<key>modifiers</key>
-				<integer>1048576</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-			</dict>
-			<dict>
-				<key>destinationuid</key>
-				<string>dash_action_alt</string>
-				<key>modifiers</key>
-				<integer>524288</integer>
-				<key>modifiersubtext</key>
-				<string></string>
 			</dict>
 		</array>
 		<key>dash_keyword_github</key>
@@ -202,88 +109,34 @@
 				<string></string>
 			</dict>
 		</array>
-		<key>dash_keyword_lua</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>dash_action_normal</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-			</dict>
-			<dict>
-				<key>destinationuid</key>
-				<string>dash_action_cmd</string>
-				<key>modifiers</key>
-				<integer>1048576</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-			</dict>
-			<dict>
-				<key>destinationuid</key>
-				<string>dash_action_alt</string>
-				<key>modifiers</key>
-				<integer>524288</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-			</dict>
-		</array>
-		<key>dash_keyword_nodejs</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>dash_action_normal</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-			</dict>
-			<dict>
-				<key>destinationuid</key>
-				<string>dash_action_cmd</string>
-				<key>modifiers</key>
-				<integer>1048576</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-			</dict>
-			<dict>
-				<key>destinationuid</key>
-				<string>dash_action_alt</string>
-				<key>modifiers</key>
-				<integer>524288</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-			</dict>
-		</array>
-		<key>dash_keyword_python3</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>dash_action_normal</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-			</dict>
-			<dict>
-				<key>destinationuid</key>
-				<string>dash_action_cmd</string>
-				<key>modifiers</key>
-				<integer>1048576</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-			</dict>
-			<dict>
-				<key>destinationuid</key>
-				<string>dash_action_alt</string>
-				<key>modifiers</key>
-				<integer>524288</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-			</dict>
-		</array>
 		<key>dash_keyword_react</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>dash_action_normal</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>dash_action_cmd</string>
+				<key>modifiers</key>
+				<integer>1048576</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>dash_action_alt</string>
+				<key>modifiers</key>
+				<integer>524288</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+			</dict>
+		</array>
+		<key>dash_keyword_redux</key>
 		<array>
 			<dict>
 				<key>destinationuid</key>
@@ -324,16 +177,10 @@
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>concurrently</key>
-				<false/>
 				<key>escaping</key>
 				<integer>127</integer>
 				<key>script</key>
 				<string>open -g "dash-workflow-callback://{query}"</string>
-				<key>scriptargtype</key>
-				<integer>0</integer>
-				<key>scriptfile</key>
-				<string></string>
 				<key>type</key>
 				<integer>0</integer>
 			</dict>
@@ -342,7 +189,7 @@
 			<key>uid</key>
 			<string>dash_action_normal</string>
 			<key>version</key>
-			<integer>2</integer>
+			<integer>0</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -351,10 +198,6 @@
 				<integer>0</integer>
 				<key>argument</key>
 				<integer>0</integer>
-				<key>focusedappvariable</key>
-				<false/>
-				<key>focusedappvariablename</key>
-				<string></string>
 				<key>hotkey</key>
 				<integer>0</integer>
 				<key>hotmod</key>
@@ -363,29 +206,21 @@
 				<false/>
 				<key>modsmode</key>
 				<integer>0</integer>
-				<key>relatedAppsMode</key>
-				<integer>0</integer>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.trigger.hotkey</string>
 			<key>uid</key>
 			<string>12B8CAB5-9FEE-46F2-B67E-026F4BE48A88</string>
 			<key>version</key>
-			<integer>2</integer>
+			<integer>0</integer>
 		</dict>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>concurrently</key>
-				<false/>
 				<key>escaping</key>
 				<integer>127</integer>
 				<key>script</key>
 				<string>open -g "dash-workflow-callback://{query}&amp;modifierkey=cmd"</string>
-				<key>scriptargtype</key>
-				<integer>0</integer>
-				<key>scriptfile</key>
-				<string></string>
 				<key>type</key>
 				<integer>0</integer>
 			</dict>
@@ -394,39 +229,21 @@
 			<key>uid</key>
 			<string>dash_action_cmd</string>
 			<key>version</key>
-			<integer>2</integer>
+			<integer>0</integer>
 		</dict>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>alfredfiltersresults</key>
-				<false/>
-				<key>alfredfiltersresultsmatchmode</key>
-				<integer>0</integer>
-				<key>argumenttrimmode</key>
-				<integer>0</integer>
 				<key>argumenttype</key>
 				<integer>0</integer>
 				<key>escaping</key>
 				<integer>110</integer>
 				<key>keyword</key>
-				<string>d</string>
-				<key>queuedelaycustom</key>
-				<integer>1</integer>
-				<key>queuedelayimmediatelyinitially</key>
-				<false/>
-				<key>queuedelaymode</key>
-				<integer>0</integer>
-				<key>queuemode</key>
-				<integer>1</integer>
+				<string>dash</string>
 				<key>runningsubtext</key>
 				<string>Searching for "{query}"</string>
 				<key>script</key>
 				<string>./dashAlfredWorkflow "{query}"</string>
-				<key>scriptargtype</key>
-				<integer>0</integer>
-				<key>scriptfile</key>
-				<string></string>
 				<key>subtext</key>
 				<string>Search Dash for "{query}"</string>
 				<key>title</key>
@@ -441,7 +258,7 @@
 			<key>uid</key>
 			<string>5C09F008-55F3-4966-BACC-DF3176E148A5</string>
 			<key>version</key>
-			<integer>2</integer>
+			<integer>0</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -450,10 +267,6 @@
 				<integer>0</integer>
 				<key>argument</key>
 				<integer>1</integer>
-				<key>focusedappvariable</key>
-				<false/>
-				<key>focusedappvariablename</key>
-				<string></string>
 				<key>hotkey</key>
 				<integer>0</integer>
 				<key>hotmod</key>
@@ -462,29 +275,21 @@
 				<false/>
 				<key>modsmode</key>
 				<integer>0</integer>
-				<key>relatedAppsMode</key>
-				<integer>0</integer>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.trigger.hotkey</string>
 			<key>uid</key>
 			<string>406C4166-C9CF-496F-8DB1-D43CE5211BEA</string>
 			<key>version</key>
-			<integer>2</integer>
+			<integer>0</integer>
 		</dict>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>concurrently</key>
-				<false/>
 				<key>escaping</key>
 				<integer>127</integer>
 				<key>script</key>
 				<string>open -g "dash-workflow-callback://{query}&amp;modifierkey=alt"</string>
-				<key>scriptargtype</key>
-				<integer>0</integer>
-				<key>scriptfile</key>
-				<string></string>
 				<key>type</key>
 				<integer>0</integer>
 			</dict>
@@ -493,56 +298,7 @@
 			<key>uid</key>
 			<string>dash_action_alt</string>
 			<key>version</key>
-			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>alfredfiltersresults</key>
-				<false/>
-				<key>alfredfiltersresultsmatchmode</key>
-				<integer>0</integer>
-				<key>argumenttrimmode</key>
-				<integer>0</integer>
-				<key>argumenttype</key>
-				<integer>0</integer>
-				<key>escaping</key>
-				<integer>0</integer>
-				<key>queuedelaycustom</key>
-				<integer>1</integer>
-				<key>queuedelayimmediatelyinitially</key>
-				<false/>
-				<key>queuedelaymode</key>
-				<integer>0</integer>
-				<key>queuemode</key>
-				<integer>1</integer>
-				<key>runningsubtext</key>
-				<string>Please read what's in the "Script:" section below</string>
-				<key>script</key>
-				<string>Dash dynamically updates this workflow with docset and search profile keywords.
-
-Do not try to change the keywords from within Alfred, as Dash will overwrite your changes. If you want to change a keyword, change it from within Dash (in Preferences &gt; Docsets).
-
-That said, you can edit anything else within this workflow (including adding new triggers/actions/hotkeys).</string>
-				<key>scriptargtype</key>
-				<integer>0</integer>
-				<key>scriptfile</key>
-				<string></string>
-				<key>subtext</key>
-				<string>Please read what's in the "Script:" section below</string>
-				<key>title</key>
-				<string>PLEASE README</string>
-				<key>type</key>
-				<integer>0</integer>
-				<key>withspace</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.input.scriptfilter</string>
-			<key>uid</key>
-			<string>dash_note_readme</string>
-			<key>version</key>
-			<integer>2</integer>
+			<integer>0</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -882,93 +638,6 @@ That said, you can edit anything else within this workflow (including adding new
 			<string>alfred.workflow.input.scriptfilter</string>
 			<key>uid</key>
 			<string>dash_note_readme</string>
-			<key>version</key>
-			<integer>0</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>argumenttype</key>
-				<integer>0</integer>
-				<key>escaping</key>
-				<integer>110</integer>
-				<key>keyword</key>
-				<string>css</string>
-				<key>runningsubtext</key>
-				<string>Searching for "{query}"</string>
-				<key>script</key>
-				<string>./dashAlfredWorkflow "css:{query}"</string>
-				<key>subtext</key>
-				<string>Search CSS for "{query}"</string>
-				<key>title</key>
-				<string>Search CSS</string>
-				<key>type</key>
-				<integer>0</integer>
-				<key>withspace</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.input.scriptfilter</string>
-			<key>uid</key>
-			<string>dash_keyword_css</string>
-			<key>version</key>
-			<integer>0</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>argumenttype</key>
-				<integer>0</integer>
-				<key>escaping</key>
-				<integer>110</integer>
-				<key>keyword</key>
-				<string>elasticsearch</string>
-				<key>runningsubtext</key>
-				<string>Searching for "{query}"</string>
-				<key>script</key>
-				<string>./dashAlfredWorkflow "elasticsearch:{query}"</string>
-				<key>subtext</key>
-				<string>Search ElasticSearch for "{query}"</string>
-				<key>title</key>
-				<string>Search ElasticSearch</string>
-				<key>type</key>
-				<integer>0</integer>
-				<key>withspace</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.input.scriptfilter</string>
-			<key>uid</key>
-			<string>dash_keyword_elasticsearch</string>
-			<key>version</key>
-			<integer>0</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>argumenttype</key>
-				<integer>0</integer>
-				<key>escaping</key>
-				<integer>110</integer>
-				<key>keyword</key>
-				<string>express</string>
-				<key>runningsubtext</key>
-				<string>Searching for "{query}"</string>
-				<key>script</key>
-				<string>./dashAlfredWorkflow "express:{query}"</string>
-				<key>subtext</key>
-				<string>Search Express for "{query}"</string>
-				<key>title</key>
-				<string>Search Express</string>
-				<key>type</key>
-				<integer>0</integer>
-				<key>withspace</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.input.scriptfilter</string>
-			<key>uid</key>
-			<string>dash_keyword_express</string>
 			<key>version</key>
 			<integer>0</integer>
 		</dict>
@@ -986,9 +655,9 @@ That said, you can edit anything else within this workflow (including adding new
 				<key>script</key>
 				<string>./dashAlfredWorkflow "github:{query}"</string>
 				<key>subtext</key>
-				<string>Search substack/tape and 9 others for "{query}"</string>
+				<string>Search reactjs/react-redux and 4 others for "{query}"</string>
 				<key>title</key>
-				<string>Search substack/tape</string>
+				<string>Search reactjs/react-redux</string>
 				<key>type</key>
 				<integer>0</integer>
 				<key>withspace</key>
@@ -1038,93 +707,6 @@ That said, you can edit anything else within this workflow (including adding new
 				<key>escaping</key>
 				<integer>110</integer>
 				<key>keyword</key>
-				<string>lua</string>
-				<key>runningsubtext</key>
-				<string>Searching for "{query}"</string>
-				<key>script</key>
-				<string>./dashAlfredWorkflow "lua:{query}"</string>
-				<key>subtext</key>
-				<string>Search Lua 5.3 for "{query}"</string>
-				<key>title</key>
-				<string>Search Lua 5.3</string>
-				<key>type</key>
-				<integer>0</integer>
-				<key>withspace</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.input.scriptfilter</string>
-			<key>uid</key>
-			<string>dash_keyword_lua</string>
-			<key>version</key>
-			<integer>0</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>argumenttype</key>
-				<integer>0</integer>
-				<key>escaping</key>
-				<integer>110</integer>
-				<key>keyword</key>
-				<string>nodejs</string>
-				<key>runningsubtext</key>
-				<string>Searching for "{query}"</string>
-				<key>script</key>
-				<string>./dashAlfredWorkflow "nodejs:{query}"</string>
-				<key>subtext</key>
-				<string>Search Node.js for "{query}"</string>
-				<key>title</key>
-				<string>Search Node.js</string>
-				<key>type</key>
-				<integer>0</integer>
-				<key>withspace</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.input.scriptfilter</string>
-			<key>uid</key>
-			<string>dash_keyword_nodejs</string>
-			<key>version</key>
-			<integer>0</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>argumenttype</key>
-				<integer>0</integer>
-				<key>escaping</key>
-				<integer>110</integer>
-				<key>keyword</key>
-				<string>python3</string>
-				<key>runningsubtext</key>
-				<string>Searching for "{query}"</string>
-				<key>script</key>
-				<string>./dashAlfredWorkflow "python3:{query}"</string>
-				<key>subtext</key>
-				<string>Search Python 3 for "{query}"</string>
-				<key>title</key>
-				<string>Search Python 3</string>
-				<key>type</key>
-				<integer>0</integer>
-				<key>withspace</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.input.scriptfilter</string>
-			<key>uid</key>
-			<string>dash_keyword_python3</string>
-			<key>version</key>
-			<integer>0</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>argumenttype</key>
-				<integer>0</integer>
-				<key>escaping</key>
-				<integer>110</integer>
-				<key>keyword</key>
 				<string>react</string>
 				<key>runningsubtext</key>
 				<string>Searching for "{query}"</string>
@@ -1146,6 +728,35 @@ That said, you can edit anything else within this workflow (including adding new
 			<key>version</key>
 			<integer>0</integer>
 		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>escaping</key>
+				<integer>110</integer>
+				<key>keyword</key>
+				<string>redux</string>
+				<key>runningsubtext</key>
+				<string>Searching for "{query}"</string>
+				<key>script</key>
+				<string>./dashAlfredWorkflow "redux:{query}"</string>
+				<key>subtext</key>
+				<string>Search Redux for "{query}"</string>
+				<key>title</key>
+				<string>Search Redux</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>dash_keyword_redux</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
 	</array>
 	<key>readme</key>
 	<string>Usage:
@@ -1157,90 +768,53 @@ The keyword is either a docset keyword (defined in Preferences &gt; Docsets) or 
 	<dict>
 		<key>12B8CAB5-9FEE-46F2-B67E-026F4BE48A88</key>
 		<dict>
-			<key>xpos</key>
-			<integer>100</integer>
 			<key>ypos</key>
 			<real>60</real>
 		</dict>
 		<key>406C4166-C9CF-496F-8DB1-D43CE5211BEA</key>
 		<dict>
-			<key>xpos</key>
-			<integer>100</integer>
 			<key>ypos</key>
 			<real>210</real>
 		</dict>
 		<key>5C09F008-55F3-4966-BACC-DF3176E148A5</key>
 		<dict>
-			<key>xpos</key>
-			<integer>300</integer>
 			<key>ypos</key>
 			<real>140</real>
 		</dict>
 		<key>dash_action_alt</key>
 		<dict>
-			<key>xpos</key>
-			<integer>500</integer>
 			<key>ypos</key>
 			<real>270</real>
 		</dict>
 		<key>dash_action_cmd</key>
 		<dict>
-			<key>xpos</key>
-			<integer>500</integer>
 			<key>ypos</key>
 			<real>140</real>
 		</dict>
 		<key>dash_action_normal</key>
 		<dict>
-			<key>xpos</key>
-			<integer>500</integer>
 			<key>ypos</key>
 			<real>10</real>
-		</dict>
-		<key>dash_keyword_css</key>
-		<dict>
-			<key>ypos</key>
-			<integer>930</integer>
-		</dict>
-		<key>dash_keyword_elasticsearch</key>
-		<dict>
-			<key>ypos</key>
-			<integer>1050</integer>
-		</dict>
-		<key>dash_keyword_express</key>
-		<dict>
-			<key>ypos</key>
-			<integer>1170</integer>
 		</dict>
 		<key>dash_keyword_github</key>
 		<dict>
 			<key>ypos</key>
-			<integer>1290</integer>
+			<integer>930</integer>
 		</dict>
 		<key>dash_keyword_javascript</key>
 		<dict>
 			<key>ypos</key>
-			<integer>1410</integer>
-		</dict>
-		<key>dash_keyword_lua</key>
-		<dict>
-			<key>ypos</key>
-			<integer>1530</integer>
-		</dict>
-		<key>dash_keyword_nodejs</key>
-		<dict>
-			<key>ypos</key>
-			<integer>1650</integer>
-		</dict>
-		<key>dash_keyword_python3</key>
-		<dict>
-			<key>ypos</key>
-			<integer>1770</integer>
+			<integer>1050</integer>
 		</dict>
 		<key>dash_keyword_react</key>
 		<dict>
 			<key>ypos</key>
-			<integer>1890</integer>
+			<integer>1170</integer>
+		</dict>
+		<key>dash_keyword_redux</key>
+		<dict>
+			<key>ypos</key>
+			<integer>1290</integer>
 		</dict>
 		<key>dash_note_readme</key>
 		<dict>
