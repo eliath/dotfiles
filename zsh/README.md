@@ -1,24 +1,25 @@
 Setting up zsh
 ===============
 
-Install
+Run the setup script.
 
-    $ brew install zsh zsh-completions
+From dotfiles root:
 
+    $ ./zsh/setup.sh
 
-Set $ZDOTDIR
+This script handles:
 
-    $ echo "ZDOTDIR=$HOME/dotfiles/zsh" >> "$HOME/.zshenv"
-
-Change shell
-
-    $ sudo vim /etc/shells
-      # add newline with new zsh path
-    $ chsh -s `which zsh`
-
-Clone presto
-
-    $ git clone --recursive https://github.com/sorin-ionescu/prezto.git "$HOME/dotfiles/zsh/.zprezto"
+1. Install zsh & zsh completions with homebrew
+2. Set ZDOTDIR to be the one in ~/dotfiles
+3. Clone prezto into ZDOTDIR
+4. Echo instructions on how to change the user's shell
 
 
-At this point you should be good to go!
+When you change the users' shell:
+
+- `sudo vim /etc/shells`
+- comment (`#`) the existing zsh definition if present
+- add new zsh bin path
+- `chsh -s` + new bin path
+
+Restart your terminal and everything should work
