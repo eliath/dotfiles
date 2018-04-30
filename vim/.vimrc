@@ -16,6 +16,9 @@ autocmd FileType python setlocal shiftwidth=2 tabstop=2 softtabstop=0 expandtab 
 " Use the mouse
 set mouse=niv
 
+" Use system clipboard (this only works on macOS)
+set clipboard=unnamed
+
 " auto-strip trailing whitespace
 autocmd BufWritePre * %s/\s\+$//e
 
