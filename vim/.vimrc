@@ -100,6 +100,8 @@ Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
 Plug 'heavenshell/vim-jsdoc'
 Plug 'othree/yajs.vim'
+Plug 'styled-components/vim-styled-components'
+
 let g:jsx_ext_required = 0
 
 "Autocomplete
@@ -109,7 +111,7 @@ Plug 'ajh17/VimCompletesMe'
 Plug 'mtscout6/syntastic-local-eslint.vim'
 
 " CSS3 Syntax
-Plug 'alexlafroscia/postcss-syntax.vim'
+Plug 'hail2u/vim-css3-syntax'
 
 " Comments
 Plug 'tpope/vim-commentary'
@@ -120,8 +122,10 @@ Plug 'tpope/vim-surround'
 " Vim sessions
 Plug 'tpope/vim-obsession'
 
-" Auto bracket pairs
+" Auto bracket & xml tag pairs
 Plug 'jiangmiao/auto-pairs'
+Plug 'alvan/vim-closetag'
+let g:closetag_filenames = '*.html,*.xhtml,*.js,*.jsx'
 
 " Vim rename
 Plug 'danro/rename.vim'
@@ -136,9 +140,6 @@ let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standar
 " Python Syntax
 Plug 'hdima/python-syntax'
 let g:python_highlight_all = 1
-
-Plug 'alvan/vim-closetag'
-let g:closetag_filenames = '*.html,*.xhtml,*.js,*.jsx'
 
 call plug#end()
 " - - - - - - - - - - - - - - - - - -
