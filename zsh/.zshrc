@@ -58,6 +58,7 @@ zstyle ':prezto:load' pmodule \
   'utility' \
   'completion' \
   'git' \
+  'node' \
   'syntax-highlighting' \
   'history-substring-search'
 
