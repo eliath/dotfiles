@@ -100,6 +100,7 @@ autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
 "JavaScript Syntaxes
 Plug 'pangloss/vim-javascript'
+Plug 'mxw/vim-jsx'
 Plug 'heavenshell/vim-jsdoc'
 Plug 'styled-components/vim-styled-components'
 
