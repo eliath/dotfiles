@@ -102,7 +102,6 @@ autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
 Plug 'heavenshell/vim-jsdoc'
-Plug 'othree/yajs.vim'
 Plug 'styled-components/vim-styled-components'
 
 let g:jsx_ext_required = 0
