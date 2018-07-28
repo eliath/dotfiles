@@ -5,7 +5,7 @@ if brew ls --versions python > /dev/null; then
   brew install python
 fi
 
-pip install --user powerline-status
-pip install --user powerline-gitstatus
+gpip install powerline-status
+gpip install powerline-gitstatus
 mkdir -p "$HOME/.config"
 ln -s "$DOTFILES/powerline" "$HOME/.config/powerline"

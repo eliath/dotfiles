@@ -22,9 +22,6 @@ setopt HIST_EXPIRE_DUPS_FIRST
 ###########
 # PATHS   #
 ###########
-# Prefer Homebrew python
-export PATH="/usr/local/opt/python/libexec/bin:$PATH"
-
 # torch packages
 export PATH="$HOME/torch/install/bin:$PATH"
 
@@ -40,6 +37,19 @@ export PATH="$HOME/local/bin:$PATH"
 
 # autojump
 [[ -s `brew --prefix`/etc/autojump.sh ]] && . `brew --prefix`/etc/autojump.sh
+
+# python virtualenv
+source /usr/local/bin/virtualenvwrapper.sh
+export PIP_REQUIRE_VIRTUALENV=true
+# create commands to override pip restriction.
+# use `gpip` or `gpip3` to force installation of
+# a package in the global python environment
+gpip(){
+   PIP_REQUIRE_VIRTUALENV="" pip "$@"
+}
+gpip3(){
+   PIP_REQUIRE_VIRTUALENV="" pip3 "$@"
+}
 
 
 ############
@@ -68,7 +78,7 @@ export CLICOLOR_FORCE=1
 
 # powerline
 powerline-daemon -q
-. `python -m site --user-site`/powerline/bindings/zsh/powerline.zsh
+. "/usr/local/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh"
 
 # Start TMUX on login
 if which tmux >/dev/null 2>&1; then
