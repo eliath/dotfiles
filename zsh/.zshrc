@@ -22,11 +22,8 @@ setopt HIST_EXPIRE_DUPS_FIRST
 ###########
 # PATHS   #
 ###########
-# pip packages
-export PATH="$HOME/Library/Python/2.7/bin:$PATH"
-
-# yarn packages
-# export PATH="$(yarn global bin):$PATH"
+# Prefer Homebrew python
+export PATH="/usr/local/opt/python/libexec/bin:$PATH"
 
 # torch packages
 export PATH="$HOME/torch/install/bin:$PATH"
