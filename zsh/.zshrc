@@ -77,8 +77,9 @@ export CLICOLOR=1
 export CLICOLOR_FORCE=1
 
 # powerline
+PY3_SITE_PACKAGES=`python3 -c "import site; print(site.getsitepackages()[0])"`
 powerline-daemon -q
-. "/usr/local/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh"
+. "$PY3_SITE_PACKAGES/powerline/bindings/zsh/powerline.zsh"
 
 # Start TMUX on login
 if which tmux >/dev/null 2>&1; then
