@@ -107,7 +107,7 @@ Plug 'styled-components/vim-styled-components'
 let g:jsx_ext_required = 0
 
 "Autocomplete
-Plug 'ajh17/VimCompletesMe'
+Plug 'zxqfl/tabnine-vim'
 
 " Prefer local eslint
 Plug 'mtscout6/syntastic-local-eslint.vim'
