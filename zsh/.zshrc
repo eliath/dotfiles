@@ -1,26 +1,14 @@
 # Aliases
-alias ll="ls -lG"
-alias la="ls -laG"
 alias git=hub
 alias hgrep='history | grep'
-alias ps='ps aux'
 alias psgrep='ps aux | grep -v grep | grep -i -e VSZ -e'
 
 # Functions
-source "./.zfunctions"
+source "$ZDOTDIR/.zfunctions"
 
 # Editors
 export EDITOR='vim'
 export VISUAL='vim'
-
-# History options
-setopt BANG_HIST
-setopt SHARE_HISTORY
-setopt INC_APPEND_HISTORY
-setopt HIST_IGNORE_SPACE
-setopt HIST_SAVE_NO_DUPS
-setopt HIST_IGNORE_DUPS
-setopt HIST_EXPIRE_DUPS_FIRST
 
 ###########
 # PATHS   #
@@ -54,23 +42,29 @@ gpip3(){
    PIP_REQUIRE_VIRTUALENV="" pip3 "$@"
 }
 
-
 ############
 # PREZTO   #
 ############
 zstyle ':prezto:load' pmodule \
+  'osx' \
   'environment' \
   'terminal' \
-  'editor' \
   'history' \
+  'editor' \
   'directory' \
+  'homebrew' \
   'spectrum' \
   'utility' \
   'completion' \
   'git' \
   'node' \
+  'python' \
+  'tmux' \
   'syntax-highlighting' \
   'history-substring-search'
+
+# Start TMUX on login
+zstyle ':prezto:module:tmux:auto-start' local 'yes'
 
 # Activate Prezto
 PREZTO_INIT="$ZDOTDIR/.zprezto/init.zsh"
@@ -83,9 +77,3 @@ export CLICOLOR_FORCE=1
 PY3_SITE_PACKAGES=`python3 -c "import site; print(site.getsitepackages()[0])"`
 powerline-daemon -q
 . "$PY3_SITE_PACKAGES/powerline/bindings/zsh/powerline.zsh"
-
-# Start TMUX on login
-if which tmux >/dev/null 2>&1; then
-  test -z "$TMUX" && (tmux attach || exec tmux new-session && exit)
-fi
-:
