@@ -6,6 +6,9 @@ alias hgrep='history | grep'
 alias ps='ps aux'
 alias psgrep='ps aux | grep -v grep | grep -i -e VSZ -e'
 
+# Functions
+source "./.zfunctions"
+
 # Editors
 export EDITOR='vim'
 export VISUAL='vim'
