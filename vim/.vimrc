@@ -143,6 +143,9 @@ let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standar
 Plug 'hdima/python-syntax'
 let g:python_highlight_all = 1
 
+" Terraform (HCL) Syntax
+Plug 'hashivim/vim-terraform'
+
 call plug#end()
 " - - - - - - - - - - - - - - - - - -
 
