@@ -13,7 +13,7 @@ TARGETS=(
   "brew"
   "git"
   "node"
-  "torch"
+  "torch" # dont need this anymore!
   "tmux"
   "vim"
   "powerline"
