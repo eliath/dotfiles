@@ -2,6 +2,7 @@
 alias git=hub
 alias hgrep='history | grep'
 alias psgrep='ps aux | grep -v grep | grep -i -e VSZ -e'
+alias python='python3'
 
 # Functions
 source "$ZDOTDIR/.zfunctions"
@@ -13,8 +14,10 @@ export VISUAL='vim'
 ###########
 # PATHS   #
 ###########
+
+## NOTE: NOT USING TORCH ANYMORE
 # torch packages
-export PATH="$HOME/torch/install/bin:$PATH"
+# export PATH="$HOME/torch/install/bin:$PATH"
 
 # A place for local binaries
 export PATH="$HOME/local/bin:$PATH"
@@ -23,13 +26,16 @@ export PATH="$HOME/local/bin:$PATH"
 #####################
 # ACTIVATE SOFTWARE #
 #####################
+
+## NOTE: NOT USING TORCH ANYMORE
 # torch
-. "$HOME/torch/install/bin/torch-activate"
+# . "$HOME/torch/install/bin/torch-activate"
 
 # autojump
 [[ -s `brew --prefix`/etc/autojump.sh ]] && . `brew --prefix`/etc/autojump.sh
 
 # python virtualenv
+export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3
 source /usr/local/bin/virtualenvwrapper.sh
 export PIP_REQUIRE_VIRTUALENV=true
 # create commands to override pip restriction.
