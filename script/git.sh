@@ -1,7 +1,7 @@
 # create gitconfig if not there already
 if [ ! -f ~/.gitconfig ]; then
   echo "[user]
-  email = eliasmartinezcohen@gmail.com" > ~/.gitconfig
+  email = emc@eliath.biz" > ~/.gitconfig
 fi
 
 echo "[include]
