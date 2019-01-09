@@ -4,42 +4,31 @@
 Installation
 ------------
 
-1. Clone this repo: `git clone --recursive github.com/eliath/dotfiles.git ~/dotfiles`
+1. Clone this repo: `git clone --recursive https://github.com/eliath/dotfiles.git ~/dotfiles`
 
     a. This will prompt to install dev tools, if it doesn't prompt,
        install them anyway: `xcode-select --install`
 
     b. if you didn't install submodules when you cloned do it now:
-
-     `git submodule update --init --recursive`
+      `git submodule update --init --recursive`
 
 2. While that does its thing, configure basic prefs, e.g. dock apps,
    background,  menubar, timezone,  etc.
+   
+   a. Background image, remove all dock apps, change select color, mouse tracking speed...
+   
+   b. Optionally set the computer name with `scutil`
 
-    a. Background image, remove all dock apps, change select color, mouse tracking speed...
-
-    b. Set the computer name with:
-
-    `sudo scutil --set HostName <hostname>.eliath.biz`
-
-    `sudo scutil --set LocalHostName <hostname>`
-
-    `sudo scutil --set ComputerName <hostname>`
-
-    `dscacheutil -flushcache`
-
-    c. Change the spotlight keyboard shortcuts in System Prefs, and de-activate all
-    mission control shortcuts.
+   c. Change the spotlight keyboard shortcuts in System Prefs, and de-activate all
+      mission control shortcuts.
 
 3. Some App Store stuff:
 
-    a. 1password
+   a. 1password
 
-    b. Newton
+   b. spectacles
 
-    c. BreakTime
-
-    d. Amphetamine
+   c. amphetamine
 
 Everything else should be taken care of by the setup script:
 
