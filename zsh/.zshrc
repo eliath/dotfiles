@@ -83,3 +83,10 @@ export CLICOLOR_FORCE=1
 PY3_SITE_PACKAGES=`python3 -c "import site; print(site.getsitepackages()[0])"`
 powerline-daemon -q
 . "$PY3_SITE_PACKAGES/powerline/bindings/zsh/powerline.zsh"
+
+# Less highlighting
+# source: https://gist.github.com/textarcana/4611277#gistcomment-1701305
+# Setup: "brew install highlight"
+export LESSOPEN="| $(which highlight) %s --out-format xterm256 --quiet --force --style solarized-dark"
+export LESS=" -R"
+alias less='less -m -n -g -i --underline-special'
