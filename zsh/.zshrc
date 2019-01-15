@@ -22,6 +22,9 @@ export VISUAL='vim'
 # A place for local binaries
 export PATH="$HOME/local/bin:$PATH"
 
+# Set the GOPATH to use proper nucleus paths
+export GOROOT="$HOME/workspace/nucleus/bazel-nucleus/external/go_sdk"
+export GOPATH="$HOME/.nucleus/bazel-gopath:$GOPATH" # nucleus default gopath
 
 #####################
 # ACTIVATE SOFTWARE #
