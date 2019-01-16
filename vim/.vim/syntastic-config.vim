@@ -26,6 +26,4 @@ let g:syntastic_javascript_checkers = ['eslint']
 let g:syntastic_python_checker_args='--rcfile="~/workspace/source/pants-support/pylint/pylint.rc"'
 
 " Go
-let g:syntastic_go_checkers = ['golint', 'govet']
-let g:go_list_type = "quickfix"
-let g:syntastic_mode_map = { 'mode': 'active', 'passive_filetypes': ['go'] } " helps prevent lag
+let g:syntastic_go_checkers = ['go', 'golint', 'gofmt', 'govet']

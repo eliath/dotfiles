@@ -146,9 +146,6 @@ let g:python_highlight_all = 1
 " Terraform (HCL) Syntax
 Plug 'hashivim/vim-terraform'
 
-" Go Language Syntax
-Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
-
 " Bazel integration
 Plug 'google/vim-maktaba' " required for vim-bazel
 Plug 'bazelbuild/vim-bazel'
