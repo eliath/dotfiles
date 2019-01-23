@@ -2,7 +2,6 @@
 alias git=hub
 alias hgrep='history | grep'
 alias psgrep='ps aux | grep -v grep | grep -i -e VSZ -e'
-alias python='python3'
 
 # Functions
 source "$ZDOTDIR/.zfunctions"
