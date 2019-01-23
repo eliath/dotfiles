@@ -17,7 +17,7 @@
 			"theme": "default"
 		},
 		"shell": {
-			"colorscheme": "solarized",
+			"colorscheme": "solarizedrel",
 			"theme": "eliath",
 			"local_themes": {
 				"continuation": "continuation",
