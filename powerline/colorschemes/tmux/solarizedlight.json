@@ -5,6 +5,7 @@
     "information:regular":  { "fg": "solarized:base01", "bg": "solarized:base2", "attrs": [] },
     "information:additional":  { "fg": "solarized:base1", "bg": "solarized:base2", "attrs": [] },
     "information:highlighted": { "fg": "solarized:base01", "bg": "solarized:base2", "attrs": ["bold"] },
+    "information:priority": { "fg": "solarized:base01", "bg": "solarized:base2", "attrs": ["bold"] },
     "information:inverted": { "fg": "solarized:base2", "bg": "solarized:base01", "attrs": [] },
 		"active_window_status": "information:regular",
 		"window_status":        "information:additional",
@@ -16,12 +17,18 @@
 		"window_name":          { "fg": "solarized:base2",  "bg": "solarized:base01", "attrs": ["bold"] },
 		"session":              { "fg": "solarized:base1", "bg": "solarized:base2", "attrs": ["bold"] },
 		"session:prefix":       "session",
-    "hostname":             "time",
+    "hostname":             "information:additional",
 		"date":                 "information:inverted",
 		"time":                 "information:inverted",
-		"time:divider":         "time",
-    "battery":              { "fg": "solarized:base01", "bg": "solarized:base01", "attrs": [] },
-    "battery_gradient":     { "fg": "green_yellow_red", "bg": "solarized:base01", "attrs": [] },
-    "music":                "information:additional"
+		"time:divider":         "information:divider",
+    "battery":              { "fg": "solarized:base01", "bg": "solarized:base01" },
+    "battery_gradient":     { "fg": "green_yellow_red", "bg": "solarized:base01" },
+    "battery:divider":      { "fg": "solarized:base0", "bg": "solarized:base01" },
+    "music":                "information:additional",
+		"network_load":            "information:additional",
+		"network_load:divider":    "information:additional",
+		"system_load":            "information:additional",
+		"system_load:divider":    "information:additional",
+    "system_load_bad":      { "fg": "solarized:red", "bg": "solarized:base2" }
 	}
 }

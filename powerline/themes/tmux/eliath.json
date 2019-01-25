@@ -1,11 +1,28 @@
 {
 	"segments": {
 		"right": [
+			{
+				"function": "powerline.segments.common.sys.system_load",
+				"priority": 30,
+        "before": "⌗ ",
+        "args": {
+          "threshold_good": 2,
+          "threshold_bad": 6
+        }
+			},
       {
-        "function": "powerline.segments.common.players.itunes",
-        "name": "music",
-        "priority": 50
+        "function": "powerline.segments.common.net.network_load",
+        "priority": 40,
+        "args": {
+          "recv_format": "⬇ {value:>4}",
+          "sent_format": " | ⬆ {value:>4}"
+        }
       },
+			{
+				"function": "powerline.segments.common.net.hostname",
+        "name": "hostname",
+        "priority": 45
+			},
 			{
 				"function": "powerline.segments.common.bat.battery",
         "name": "battery",
@@ -13,20 +30,16 @@
           "gamify": false,
           "online": "🔌 ",
           "offline": "🔋 "
-        }
+        },
+        "priority": 25
 			},
 			{
 				"function": "powerline.segments.common.time.date",
 				"name": "time",
 				"args": {
-					"format": "%H:%M",
-					"istime": true
-				}
-			},
-			{
-				"function": "powerline.segments.common.net.hostname",
-        "name": "hostname",
-        "priority": 10
+					"format": "%H:%M"
+				},
+        "priority": 25
 			}
 		]
 	}
