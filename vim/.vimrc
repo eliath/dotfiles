@@ -1,9 +1,10 @@
 " Solarized color scheme
 syntax enable
-set background=light
 colorscheme solarized
+set background=light
 " Vertical split bars
-hi VertSplit ctermfg=14 ctermbg=00
+hi VertSplit ctermfg=12 ctermbg=7 " light
+" hi VertSplit ctermfg=12 ctermbg=0 " dark
 
 " Tab width = 2
 filetype plugin indent on

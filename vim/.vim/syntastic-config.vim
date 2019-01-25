@@ -10,10 +10,10 @@ let g:syntastic_error_symbol = '⨯'
 let g:syntastic_style_error_symbol = '⨯'
 let g:syntastic_warning_symbol = '▸'
 let g:syntastic_style_warning_symbol ='▸'
-highlight SignColumn ctermfg=07 ctermbg=00
-highlight SyntasticErrorSign ctermfg=01 ctermbg=00
-highlight SyntasticWarningSign ctermfg=03 ctermbg=00
-highlight SyntasticError ctermfg=07 ctermbg=09
+highlight SignColumn ctermfg=10 ctermbg=07
+highlight SyntasticErrorSign ctermfg=01 ctermbg=07
+highlight SyntasticWarningSign ctermfg=03 ctermbg=07
+highlight SyntasticError ctermfg=07 ctermbg=01
 highlight SyntasticWarning ctermfg=07 ctermbg=03
 
 " Lua
