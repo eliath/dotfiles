@@ -1,0 +1,40 @@
+{
+	"name": "Solarized light for shell",
+	"groups": {
+		"background":              { "fg": "solarized:base0", "bg": "solarized:base2", "attrs": [] },
+		"background:divider":      "background",
+		"information:regular":     "background",
+		"information:additional":  "information:regular",
+		"information:highlighted": { "fg": "solarized:base0", "bg": "solarized:base2", "attrs": ["bold"]},
+		"information:priority":    { "fg": "solarized:base3", "bg": "solarized:yellow", "attrs": [] },
+		"mode":                    { "fg": "solarized:base3", "bg": "solarized:green", "attrs": ["bold"] },
+		"user":                    { "fg": "solarized:base2", "bg": "solarized:blue", "attrs": ["bold"] },
+		"cwd":                     "information:regular",
+		"cwd:current_folder":      "information:highlighted",
+		"cwd:divider":             "information:regular",
+		"environment":             { "fg": "solarized:base3", "bg": "solarized:green", "attrs": [] },
+		"virtualenv":              "environment",
+    "gitstatus":               "background",
+    "gitstatus:divider":       "gitstatus",
+    "gitstatus_branch":        "gitstatus",
+    "gitstatus_branch_clean":  "gitstatus",
+    "gitstatus_branch_dirty":  "gitstatus",
+    "gitstatus_branch_detached": { "fg": "solarized:magenta",    "bg": "solarized:base2", "attrs": []  },
+    "gitstatus_tag":           { "fg": "solarized:cyan",        "bg": "solarized:base2", "attrs": []  },
+    "gitstatus_behind":        { "fg": "solarized:violet",          "bg": "solarized:base2", "attrs": []  },
+    "gitstatus_ahead":         { "fg": "solarized:base01",          "bg": "solarized:base2", "attrs": []  },
+    "gitstatus_staged":        { "fg": "solarized:green",           "bg": "solarized:base2", "attrs": []  },
+    "gitstatus_unmerged":      { "fg": "solarized:magenta",       "bg": "solarized:base2", "attrs": []  },
+    "gitstatus_changed":       { "fg": "solarized:yellow",    "bg": "solarized:base2", "attrs": []  },
+    "gitstatus_untracked":     { "fg": "solarized:red", "bg": "solarized:base2", "attrs": []  },
+    "gitstatus_stashed":       { "fg": "solarized:blue",        "bg": "solarized:base2", "attrs": []  },
+    "gitstatus:divider":       { "fg": "solarized:base1", "bg": "solarized:base2", "attrs": [] }
+	},
+	"mode_translations": {
+		"vicmd": {
+			"groups": {
+				"mode": { "fg": "solarized:base3", "bg": "solarized:blue", "attrs": ["bold"] }
+			}
+		}
+	}
+}
