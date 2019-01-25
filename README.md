@@ -14,9 +14,9 @@ Installation
 
 2. While that does its thing, configure basic prefs, e.g. dock apps,
    background,  menubar, timezone,  etc.
-   
+
    a. Background image, remove all dock apps, change select color, mouse tracking speed...
-   
+
    b. Optionally set the computer name with `scutil`
 
    c. Change the spotlight keyboard shortcuts in System Prefs, and de-activate all
@@ -46,4 +46,15 @@ Additional Setup
 - iterm
   - General > Load Preferences From Folder > dotfiles/iTerm
 - Load humble tab settings in chrome: `~/dotfiles/chrome/humble-tab-settings.json`
+
+
+
+---
+
+## Bonus: Theme switch
+
+1. Swap iTerm theme with touchbar
+2. In vim, `:ToggleBG`
+3. Overwrite config.json symlink in ~/dotfiles/powerline/
+4. Refresh the iTerm config: `prefix + r`
 
