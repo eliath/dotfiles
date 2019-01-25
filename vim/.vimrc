@@ -1,6 +1,6 @@
 " Solarized color scheme
 syntax enable
-set background=dark
+set background=light
 colorscheme solarized
 " Vertical split bars
 hi VertSplit ctermfg=14 ctermbg=00
