@@ -6,6 +6,9 @@ alias psgrep='ps aux | grep -v grep | grep -i -e VSZ -e'
 # Functions
 source "$ZDOTDIR/.zfunctions"
 
+# Nvidia-specific configurations
+source "$ZDOTDIR/nvidia.zsh"
+
 # Editors
 export EDITOR='vim'
 export VISUAL='vim'
