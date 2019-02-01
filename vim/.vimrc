@@ -151,6 +151,10 @@ Plug 'hashivim/vim-terraform'
 Plug 'google/vim-maktaba' " required for vim-bazel
 Plug 'bazelbuild/vim-bazel'
 
+" Go - Vim
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+
+
 call plug#end()
 " - - - - - - - - - - - - - - - - - -
 
