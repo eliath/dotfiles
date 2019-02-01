@@ -73,9 +73,6 @@ zstyle ':prezto:load' pmodule \
   'syntax-highlighting' \
   'history-substring-search'
 
-# Start TMUX on login
-zstyle ':prezto:module:tmux:auto-start' local 'yes'
-
 # Activate Prezto
 PREZTO_INIT="$ZDOTDIR/.zprezto/init.zsh"
 [ -f "$PREZTO_INIT" ] && source "$PREZTO_INIT"
