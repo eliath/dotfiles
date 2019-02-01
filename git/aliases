@@ -4,7 +4,8 @@
    ci = commit
    co = checkout
    br = branch
-   publish = "!git push -u origin $(git branch-name)" # Push the current branch + set it to track upstream branch
+   # Push the current branch + set it to track upstream branch
+   publish = "!git push -u origin $(git branch-name)"
    unpublish = "!git push origin :$(git branch-name)"
    kill-branch = "!f() { git push origin :$@; git br -D $@;  }; f"
    unstage = reset HEAD --
@@ -14,3 +15,7 @@
    delete-merged-branches = "!git co master && git branch --merged | grep -v '\\*' | xargs -n 1 git branch -d"
    flush = "!git branch --merged | grep -v '*' | xargs -n 1 git branch -d"
    rm-orig = "!git ls-files --others --exclude-standard | grep '\\.orig$' | xargs rm"
+   # Gerrit aliases
+   push-review = push origin HEAD:refs/for/master
+   push-wip = push origin HEAD:refs/for/master%wip
+   push-ready = push origin HEAD:refs/for/master%ready
