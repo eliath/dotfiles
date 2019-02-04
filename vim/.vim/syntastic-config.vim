@@ -27,4 +27,4 @@ let g:syntastic_json_checkers = ['jsonlint']
 let g:syntastic_python_checker_args='--rcfile="~/workspace/source/pants-support/pylint/pylint.rc"'
 
 " Go
-let g:syntastic_go_checkers = ['go', 'golint', 'gofmt', 'govet']
+let g:syntastic_go_checkers = ['golint', 'gofmt', 'govet']
