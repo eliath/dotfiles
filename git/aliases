@@ -19,3 +19,4 @@
    push-review = push origin HEAD:refs/for/master
    push-wip = push origin HEAD:refs/for/master%wip
    push-ready = push origin HEAD:refs/for/master%ready
+   pomr = pull origin master --rebase
