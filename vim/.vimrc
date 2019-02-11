@@ -21,7 +21,7 @@ set mouse=niv
 set clipboard=unnamed
 
 " auto-strip trailing whitespace
-autocmd BufWritePre *.{c,cpp,go,java,js,lua,py,tf,ts,xml} %s/\s\+$//e
+autocmd BufWritePre *.{bazel,c,cpp,go,java,js,lua,py,tpl,tf,ts,xml,yaml} %s/\s\+$//e
 
 " Force watch updates
 set backupcopy=yes
