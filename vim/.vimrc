@@ -104,8 +104,10 @@ Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
 Plug 'heavenshell/vim-jsdoc'
 Plug 'styled-components/vim-styled-components'
-
 let g:jsx_ext_required = 0
+
+"Typescript Syntax
+Plug 'leafgarland/typescript-vim'
 
 "Autocomplete
 Plug 'zxqfl/tabnine-vim'
