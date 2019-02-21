@@ -99,15 +99,16 @@ map <silent> <C-b> :NERDTreeToggle<CR>
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
-"JavaScript Syntaxes
+"JavaScript Syntax + Plugins
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
 Plug 'heavenshell/vim-jsdoc'
 Plug 'styled-components/vim-styled-components'
 let g:jsx_ext_required = 0
 
-"Typescript Syntax
+"Typescript Syntax + Plugins
 Plug 'leafgarland/typescript-vim'
+Plug 'Quramy/tsuquyomi'
 
 "Autocomplete
 Plug 'zxqfl/tabnine-vim'
