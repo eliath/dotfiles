@@ -20,9 +20,6 @@ set mouse=niv
 " Use system clipboard (this only works on macOS)
 set clipboard=unnamed
 
-" auto-strip trailing whitespace
-autocmd BufWritePre *.{bazel,c,cpp,go,java,js,json,lua,py,tpl,tf,ts,xml,yaml} %s/\s\+$//e
-
 " Force watch updates
 set backupcopy=yes
 set autoread
@@ -89,9 +86,9 @@ Plug 'christoomey/vim-tmux-navigator'
 Plug 'altercation/vim-colors-solarized'
 so ~/.vim/plugged/vim-colors-solarized/autoload/togglebg.vim
 
-" Syntastic (linting)
-Plug 'vim-syntastic/syntastic'
-source ~/.vim/syntastic-config.vim
+" ALE - cross-lang linting, fixing, completion
+so ~/.vim/ale-config.vim
+Plug 'w0rp/ale'
 
 " NERDTree
 Plug 'scrooloose/nerdtree'
@@ -106,9 +103,8 @@ Plug 'heavenshell/vim-jsdoc'
 Plug 'styled-components/vim-styled-components'
 let g:jsx_ext_required = 0
 
-"Typescript Syntax + Plugins
+"Typescript Syntax
 Plug 'leafgarland/typescript-vim'
-Plug 'Quramy/tsuquyomi'
 
 "Autocomplete
 Plug 'zxqfl/tabnine-vim'
@@ -155,7 +151,7 @@ Plug 'google/vim-maktaba' " required for vim-bazel
 Plug 'bazelbuild/vim-bazel'
 
 " Go - Vim
-Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+" Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
 
 call plug#end()
