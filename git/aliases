@@ -19,4 +19,5 @@
    push-review = push origin HEAD:refs/for/master
    push-wip = push origin HEAD:refs/for/master%wip
    push-ready = push origin HEAD:refs/for/master%ready
+   push-review-silent = push origin HEAD:refs/for/master%notify=NONE
    pomr = pull origin master --rebase
