@@ -1,15 +1,20 @@
 let g:ale_completion_enabled = 1
 set completeopt=menu,menuone,preview,noselect,noinsert
+let g:ale_set_quickfix = 1
+let g:ale_set_loclist = 0
+let g:ale_open_list = 0
 
-let g:ale_go_gometalinter_options = '--fast'
 let g:ale_linters = {
-\ 'go': ['gometalinter']
+\ 'go': ['golint', 'staticcheck']
 \}
+let g:ale_go_staticcheck_lint_package = 1
 
 let g:ale_fix_on_save = 1
 let g:ale_fixers = {
 \ 'go': [
-\   'gofmt'
+\   'gofmt',
+\   'trim_whitespace',
+\   'remove_trailing_lines'
 \ ],
 \ 'javascript': [
 \   'eslint',
@@ -40,8 +45,15 @@ let g:ale_pattern_options = {
 
 " Configure SignColumn appearance
 highlight SignColumn ctermfg=10 ctermbg=07
-let g:ale_sign_error = '✖'
-let g:ale_sign_warning = '◆'
+
 hi clear ALEError
 highlight ALEError cterm=underline
 highlight ALEWarning cterm=underline
+
+highlight ALEErrorSign ctermfg=1 ctermbg=07
+highlight ALEWarningSign ctermfg=3 ctermbg=07
+highlight ALEInfoSign ctermfg=13 ctermbg=07
+
+let g:ale_sign_error = '✖'
+let g:ale_sign_warning = '◆'
+let g:ale_sign_info = '●'
