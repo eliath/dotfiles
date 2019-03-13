@@ -24,6 +24,7 @@ export PATH="$HOME/local/bin:$PATH"
 
 # Set the GOPATH to use proper nucleus paths
 export GOPATH="$HOME/.nucleus/bazel-gopath:$GOPATH" # nucleus default gopath
+export GOROOT=$HOME/workspace/nucleus/bazel-nucleus/external/go_sdk # as instructed by gopath.sh
 
 #####################
 # ACTIVATE SOFTWARE #
