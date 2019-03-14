@@ -15,7 +15,7 @@ export VISUAL='vim'
 # PATHS   #
 ###########
 
-## NOTE: NOT USING TORCH ANYMORE
+## DEPRECATED: TORCH
 # torch packages
 # export PATH="$HOME/torch/install/bin:$PATH"
 
@@ -30,12 +30,16 @@ export GOROOT=$HOME/workspace/nucleus/bazel-nucleus/external/go_sdk # as instruc
 # ACTIVATE SOFTWARE #
 #####################
 
-## NOTE: NOT USING TORCH ANYMORE
+## DEPRECATED: TORCH
 # torch
 # . "$HOME/torch/install/bin/torch-activate"
 
 # autojump
 [[ -s `brew --prefix`/etc/autojump.sh ]] && . `brew --prefix`/etc/autojump.sh
+
+# use python3 as python by adding homebrew aliases to $PATH
+# NOTE: system python2 available at /usr/bin/python
+export PATH="/usr/local/opt/python/libexec/bin:$PATH"
 
 # python virtualenv
 export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3
