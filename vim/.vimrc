@@ -72,93 +72,11 @@ let &t_EI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=0\x7\<Esc>\\"
 :command WQ wq
 :command E e
 :command Q q
+:command Qa qa
 :command PrettyJSON %!python -m json.tool
 :command Paste r!pbpaste
 
-" - - - - - - - - - - - - - - - - - -
-" PLUGINS  / vim-plug               -
-" - - - - - - - - - - - - - - - - - -
-call plug#begin()
-
-" Seamless tmux/vim navigation
-Plug 'christoomey/vim-tmux-navigator'
-
-" Solarized
-Plug 'altercation/vim-colors-solarized'
-so ~/.vim/plugged/vim-colors-solarized/autoload/togglebg.vim
-
-" Vim sessions
-Plug 'tpope/vim-obsession'
-
-" Comments
-Plug 'tpope/vim-commentary'
-
-" Auto-surround
-Plug 'tpope/vim-surround'
-
-"Autocomplete
-Plug 'zxqfl/tabnine-vim'
-
-" Vim rename
-Plug 'danro/rename.vim'
-
-" Vim CamelCase movement
-Plug 'chaoren/vim-wordmotion'
-
-" Vim fuzzy file search
-Plug 'ctrlpvim/ctrlp.vim'
-let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
-
-" NERDTree
-Plug 'scrooloose/nerdtree'
-map <silent> <C-b> :NERDTreeToggle<CR>
-autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
-
-" ALE - cross-lang linting, fixing, completion
-so ~/.vim/ale-config.vim
-Plug 'w0rp/ale'
-
-"JavaScript Syntax + Plugins
-Plug 'pangloss/vim-javascript'
-Plug 'mxw/vim-jsx'
-Plug 'heavenshell/vim-jsdoc'
-let g:jsx_ext_required = 0
-
-"Typescript Syntax
-Plug 'leafgarland/typescript-vim'
-
-" Prefer local eslint
-Plug 'mtscout6/syntastic-local-eslint.vim'
-
-" CSS3 Syntax
-Plug 'hail2u/vim-css3-syntax'
-"
-" Auto bracket & xml tag pairs
-Plug 'jiangmiao/auto-pairs'
-Plug 'alvan/vim-closetag'
-let g:closetag_filenames = '*.html,*.xhtml,*.js,*.jsx'
-
-" Python Syntax
-Plug 'hdima/python-syntax'
-let g:python_highlight_all = 1
-
-" Terraform (HCL) Syntax
-Plug 'hashivim/vim-terraform'
-
-" Bazel integration
-Plug 'google/vim-maktaba' " required for vim-bazel
-Plug 'bazelbuild/vim-bazel'
-
-" Go - Vim
-Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
-" let ALE handle gofmt
-let g:go_fmt_autosave = 0
-let g:go_fmt_fail_silently = 1
-let g:go_list_type='quickfix'
-
-call plug#end()
-" - - - - - - - - - - - - - - - - - -
+so ~/.vim/plugins.vim " Load Plugins
 
 " Powerline setup
 python3 from powerline.vim import setup as powerline_setup
