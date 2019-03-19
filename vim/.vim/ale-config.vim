@@ -5,35 +5,16 @@ let g:ale_set_loclist = 0
 let g:ale_open_list = 0
 
 let g:ale_linters = {
-\ 'go': ['golint', 'staticcheck']
+\ 'go': ['golint', 'go vet']
 \}
-let g:ale_go_staticcheck_lint_package = 1
 
 let g:ale_fix_on_save = 1
 let g:ale_fixers = {
-\ 'go': [
-\   'gofmt',
-\   'trim_whitespace',
-\   'remove_trailing_lines'
-\ ],
-\ 'javascript': [
-\   'eslint',
-\   'trim_whitespace',
-\   'remove_trailing_lines'
-\ ],
-\ 'lua': [
-\   'luac',
-\   'luacheck'
-\ ],
-\ 'typescript': [
-\   'tslint',
-\   'trim_whitespace',
-\   'remove_trailing_lines'
-\ ],
-\ '*': [
-\   'trim_whitespace',
-\   'remove_trailing_lines'
-\ ]
+\ 'go': ['gofmt'],
+\ 'javascript': ['eslint'],
+\ 'lua': ['luac', 'luacheck'],
+\ 'typescript': ['tslint'],
+\ '*': ['trim_whitespace', 'remove_trailing_lines']
 \}
 
 " Disable trim_whitespace for markdown
