@@ -3,13 +3,15 @@ set completeopt=menu,menuone,preview,noselect,noinsert
 let g:ale_set_quickfix = 1
 let g:ale_set_loclist = 0
 let g:ale_open_list = 0
+let g:ale_fix_on_save = 1
+let g:ale_lint_on_text_changed = 'never'
 
+" ideally golint + staticcheck
 let g:ale_linters = {
 \ 'go': ['golint', 'staticcheck']
 \}
 let g:ale_go_staticcheck_lint_package = 1
 
-let g:ale_fix_on_save = 1
 let g:ale_fixers = {
 \ 'go': ['gofmt'],
 \ 'javascript': ['eslint'],
