@@ -21,3 +21,4 @@
    push-ready = push origin HEAD:refs/for/master%ready
    push-review-silent = push origin HEAD:refs/for/master%notify=NONE
    pomr = pull origin master --rebase
+   fb = "!f() { git checkout -b $@ origin/master; }; f"
