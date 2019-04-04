@@ -24,12 +24,6 @@ set clipboard=unnamed
 set backupcopy=yes
 set autoread
 
-" REMOVED - Disable autocomment for `//`
-" This is causing too many problems
-" inoremap <expr> <enter> getline('.') =~ '^\s*//' ? '<enter><esc>S' : '<enter>'
-" nnoremap <expr> O getline('.') =~ '^\s*//' ? 'O<esc>S' : 'O'
-" nnoremap <expr> o getline('.') =~ '^\s*//' ? 'o<esc>S' : 'o'
-
 " Splits
 set splitright
 set splitbelow
@@ -76,6 +70,7 @@ let &t_EI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=0\x7\<Esc>\\"
 :command PrettyJSON %!python -m json.tool
 :command Paste r!pbpaste
 
+so ~/.vim/toggle-numbers.vim " run :Nums to toggle numbers
 so ~/.vim/plugins.vim " Load Plugins
 
 " Powerline setup
