@@ -20,3 +20,5 @@
     path = ./aliases
 [credential]
     helper = osxkeychain
+[pager]
+    branch = false
