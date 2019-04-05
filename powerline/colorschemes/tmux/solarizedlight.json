@@ -21,14 +21,15 @@
 		"date":                 "information:inverted",
 		"time":                 "information:inverted",
 		"time:divider":         "information:divider",
+    "music":                "information:additional",
     "battery":              { "fg": "solarized:base01", "bg": "solarized:base01" },
     "battery_gradient":     { "fg": "green_yellow_red", "bg": "solarized:base01" },
     "battery:divider":      { "fg": "solarized:base0", "bg": "solarized:base01" },
-    "music":                "information:additional",
-		"network_load":            "information:additional",
-		"network_load:divider":    "information:additional",
-		"system_load":            "information:additional",
-		"system_load:divider":    "information:additional",
-    "system_load_bad":      { "fg": "solarized:red", "bg": "solarized:base2" }
-	}
+		"network_load":         "information:additional",
+		"network_load:divider": "network_load",
+		"system_load":          "information:additional",
+		"system_load:divider":  "system_load",
+    "system_load_gradient": { "fg": "gray_to_magenta", "bg": "solarized:base2" },
+    "cpu_load_percent_gradient": { "fg": "gray_to_magenta", "bg": "solarized:base2" }
+  }
 }

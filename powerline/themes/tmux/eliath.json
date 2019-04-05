@@ -2,22 +2,10 @@
 	"segments": {
 		"right": [
 			{
-				"function": "powerline.segments.common.sys.system_load",
+				"function": "powerline.segments.common.sys.cpu_load_percent",
 				"priority": 30,
-        "before": "⌗ ",
-        "args": {
-          "threshold_good": 2,
-          "threshold_bad": 6
-        }
+        "before": "⌗ "
 			},
-      {
-        "function": "powerline.segments.common.net.network_load",
-        "priority": 40,
-        "args": {
-          "recv_format": "⬇ {value:>4}",
-          "sent_format": " | ⬆ {value:>4}"
-        }
-      },
 			{
 				"function": "powerline.segments.common.net.hostname",
         "name": "hostname",
