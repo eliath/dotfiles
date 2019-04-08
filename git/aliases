@@ -19,6 +19,6 @@
    push-review = push origin HEAD:refs/for/master
    push-wip = push origin HEAD:refs/for/master%wip
    push-ready = push origin HEAD:refs/for/master%ready
-   push-review-silent = push origin HEAD:refs/for/master%notify=NONE
+   push-review-silent = push origin HEAD:refs/for/master%notify=NONE,private
    pomr = pull origin master --rebase
    fb = "!f() { git checkout -b $@ origin/master; }; f"
