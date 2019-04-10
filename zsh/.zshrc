@@ -15,24 +15,12 @@ export VISUAL='vim'
 # PATHS   #
 ###########
 
-## DEPRECATED: TORCH
-# torch packages
-# export PATH="$HOME/torch/install/bin:$PATH"
-
 # A place for local binaries
 export PATH="$HOME/local/bin:$PATH"
-
-# Set the GOPATH to use proper nucleus paths
-export GOPATH="$HOME/.nucleus/bazel-gopath" # nucleus default gopath
-export GOROOT=$HOME/workspace/nucleus/bazel-nucleus/external/go_sdk # as instructed by gopath.sh
 
 #####################
 # ACTIVATE SOFTWARE #
 #####################
-
-## DEPRECATED: TORCH
-# torch
-# . "$HOME/torch/install/bin/torch-activate"
 
 # autojump
 [[ -s `brew --prefix`/etc/autojump.sh ]] && . `brew --prefix`/etc/autojump.sh
@@ -41,11 +29,11 @@ export GOROOT=$HOME/workspace/nucleus/bazel-nucleus/external/go_sdk # as instruc
 # NOTE: system python2 available at /usr/bin/python
 export PATH="/usr/local/opt/python/libexec/bin:$PATH"
 
-# python virtualenv
+# virtualenv (python)
 export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3
 source /usr/local/bin/virtualenvwrapper.sh
 export PIP_REQUIRE_VIRTUALENV=true
-# create commands to override pip restriction.
+# create commands to override pip restrictions
 # use `gpip` or `gpip3` to force installation of
 # a package in the global python environment
 gpip(){
@@ -95,5 +83,5 @@ export LESSOPEN="| $(which highlight) %s --out-format xterm256 --quiet --force -
 export LESS=" -R"
 alias less='less -m -n -g -i --underline-special'
 
-# Nvidia-specific configurations
+# Load nvidia-specific config
 source "$ZDOTDIR/nvidia.zsh"
