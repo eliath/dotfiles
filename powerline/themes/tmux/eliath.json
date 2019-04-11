@@ -3,13 +3,21 @@
 		"right": [
 			{
 				"function": "powerline.segments.common.sys.cpu_load_percent",
-				"priority": 30,
+				"priority": 20,
         "before": "⌗ "
 			},
+      {
+        "function": "powerline.segments.common.net.network_load",
+        "priority": 30,
+        "args": {
+          "recv_format": "⬇ {value:>4}",
+          "sent_format": " | ⬆ {value:>4}"
+        }
+      },
 			{
 				"function": "powerline.segments.common.net.hostname",
         "name": "hostname",
-        "priority": 45
+        "priority": 50
 			},
 			{
 				"function": "powerline.segments.common.bat.battery",
@@ -19,7 +27,7 @@
           "online": "🔌 ",
           "offline": "🔋 "
         },
-        "priority": 25
+        "priority": 15
 			},
 			{
 				"function": "powerline.segments.common.time.date",
@@ -27,7 +35,7 @@
 				"args": {
 					"format": "%H:%M"
 				},
-        "priority": 25
+        "priority": 10
 			}
 		]
 	}
