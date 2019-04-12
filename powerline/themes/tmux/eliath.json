@@ -4,14 +4,14 @@
 			{
 				"function": "powerline.segments.common.sys.cpu_load_percent",
 				"priority": 20,
-        "before": "⌗ "
+        "before": "﬙ "
 			},
       {
         "function": "powerline.segments.common.net.network_load",
         "priority": 30,
         "args": {
-          "recv_format": "⬇ {value:>4}",
-          "sent_format": " | ⬆ {value:>4}"
+          "recv_format": " {value:>4}",
+          "sent_format": " | 祝{value:>4}"
         }
       },
 			{
@@ -24,8 +24,8 @@
         "name": "battery",
         "args": {
           "gamify": false,
-          "online": "🔌 ",
-          "offline": "🔋 "
+          "online": "ﮣ",
+          "offline": ""
         },
         "priority": 15
 			},

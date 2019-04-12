@@ -39,6 +39,6 @@ highlight ALEErrorSign ctermfg=1 ctermbg=07
 highlight ALEWarningSign ctermfg=3 ctermbg=07
 highlight ALEInfoSign ctermfg=13 ctermbg=07
 
-let g:ale_sign_error = '✖'
-let g:ale_sign_warning = '◆'
-let g:ale_sign_info = '●'
+let g:ale_sign_error = ''
+let g:ale_sign_warning = ''
+let g:ale_sign_info = ''

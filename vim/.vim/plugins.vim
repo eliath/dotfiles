@@ -52,7 +52,6 @@ Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
 Plug 'heavenshell/vim-jsdoc'
 let g:jsx_ext_required = 0
-Plug 'mtscout6/syntastic-local-eslint.vim' " Prefer local eslint
 " ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
 
 Plug 'leafgarland/typescript-vim' " Typescript
@@ -72,5 +71,8 @@ let g:go_fmt_autosave = 0 " ALE handles gofmt
 let g:go_fmt_fail_silently = 1
 let g:go_list_type='quickfix'
 "  ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+
+Plug 'ryanoasis/vim-devicons' " developer icons
+let g:webdevicons_enable_nerdtree = 0
 
 call plug#end()

@@ -1,3 +1,5 @@
+set encoding=UTF-8
+
 " Solarized color scheme
 syntax enable
 colorscheme solarized

@@ -8,17 +8,12 @@
 			{
 				"function": "visual_range",
 				"include_modes": ["v", "V", "^V", "s", "S", "^S"],
-				"priority": 10
-			},
-			{
-				"function": "paste_indicator",
-				"exclude_modes": ["nc"],
-				"priority": 10
+				"priority": 30
 			},
 			{
 				"function": "branch",
 				"exclude_modes": ["nc"],
-				"priority": 20
+				"priority": 10
 			},
 			{
 				"function": "readonly_indicator",
@@ -31,7 +26,9 @@
 			},
 			{
 				"function": "file_directory",
-				"priority": 30,
+        "shorten_user": true,
+        "shorten_cwd": true,
+				"priority": 5,
 				"draw_soft_divider": false
 			},
 			{
@@ -48,12 +45,6 @@
 				"before": " "
 			},
 			{
-				"exclude_modes": ["i", "R", "Rv"],
-				"function": "trailing_whitespace",
-				"display": false,
-				"priority": 75
-			},
-			{
 				"type": "string",
 				"highlight_groups": ["background"],
 				"draw_soft_divider": false,
@@ -63,9 +54,13 @@
 		],
 		"right": [
       {
+        "function": "powerline.segments.vim.plugin.ale.ale",
         "exclude_modes": ["nc"],
-        "function": "powerline.segments.vim.plugin.syntastic.syntastic",
-        "priority": 20
+        "priority": 10,
+        "args": {
+          "err_format": "E:{first_line} ({num})",
+          "warn_format": "W:{first_line} ({num})"
+        }
       },
 			{
 				"function": "file_format",
@@ -78,18 +73,18 @@
 				"exclude_modes": ["nc"],
 				"priority": 75
 			},
-			{
+      {
 				"function": "file_type",
 				"priority": 20
 			},
 			{
 				"function": "csv_col_current",
-				"priority": 30
+				"priority": 5
 			},
       {
         "function": "position",
 				"exclude_modes": ["nc"],
-        "priority": 25
+        "priority": 30
       },
 			{
 				"type": "string",
