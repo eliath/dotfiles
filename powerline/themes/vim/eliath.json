@@ -8,11 +8,10 @@
 			{
 				"function": "visual_range",
 				"include_modes": ["v", "V", "^V", "s", "S", "^S"],
-				"priority": 30
+				"priority": 40
 			},
 			{
 				"function": "branch",
-				"exclude_modes": ["nc"],
 				"priority": 10
 			},
 			{
@@ -22,7 +21,7 @@
 			},
 			{
 				"function": "file_scheme",
-				"priority": 40
+				"priority": 35
 			},
 			{
 				"function": "file_directory",
@@ -87,19 +86,14 @@
         "priority": 30
       },
 			{
-				"type": "string",
-				"name": "line_current_symbol",
-				"highlight_groups": ["line_current_symbol", "line_current"]
-			},
-			{
 				"function": "line_current",
-				"draw_soft_divider": false,
+        "before": "",
 				"align": "r"
 			},
 			{
 				"function": "virtcol_current",
 				"draw_soft_divider": false,
-				"before": ":",
+				"before": "",
 				"align": "l"
       }
     ]
