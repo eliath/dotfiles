@@ -15,10 +15,9 @@
    delete-merged-branches = "!git co master && git branch --merged | grep -v '\\*' | xargs -n 1 git branch -d"
    flush = "!git branch --merged | grep -v '*' | xargs -n 1 git branch -d"
    rm-orig = "!git ls-files --others --exclude-standard | grep '\\.orig$' | xargs rm"
-   # Gerrit aliases
-   push-review = push origin HEAD:refs/for/master
-   push-wip = push origin HEAD:refs/for/master%wip
-   push-ready = push origin HEAD:refs/for/master%ready
-   push-review-silent = push origin HEAD:refs/for/master%notify=NONE,private
-   pomr = pull origin master --rebase
    fb = "!f() { git checkout -b $@ origin/master; }; f"
+   # Gerrit aliases
+   review = push origin HEAD:refs/for/master
+   review-wip = push origin HEAD:refs/for/master%wip
+   review-ready = push origin HEAD:refs/for/master%ready
+   review-private = push origin HEAD:refs/for/master%notify=NONE,private
