@@ -18,15 +18,19 @@ let g:ale_fixers = {
 \ 'javascript': ['eslint'],
 \ 'lua': ['luac', 'luacheck'],
 \ 'typescript': ['tslint'],
+\ 'python': ['black'],
 \ '*': ['trim_whitespace', 'remove_trailing_lines']
 \}
 
 " Disable trim_whitespace for markdown
 let g:ale_pattern_options = {
 \ '\.md$': {
-\   'ale_fixers': ['remove_trailing_lines']
+\   'ale_fixers': ['trim_whitespace', 'remove_trailing_lines', 'prettier']
 \ }
 \}
+
+" Python Linter - Flake8 opts
+let g:ale_python_flake8_options = '--max-line-length 88'
 
 " Configure SignColumn appearance
 highlight SignColumn ctermfg=10 ctermbg=07
