@@ -18,6 +18,7 @@ autocmd FileType python setlocal shiftwidth=4 tabstop=4 softtabstop=4 expandtab 
 
 " Use the mouse
 set mouse=niv
+set ttymouse=sgr
 
 " Use system clipboard (this only works on macOS)
 set clipboard=unnamed
@@ -29,12 +30,6 @@ set autoread
 " Splits
 set splitright
 set splitbelow
-
-" Disable arrow keys
-noremap <Up> <NOP>
-noremap <Down> <NOP>
-noremap <Left> <NOP>
-noremap <Right> <NOP>
 
 " Pane nav
 nnoremap <C-J> <C-W><C-J>

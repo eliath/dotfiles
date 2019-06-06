@@ -21,10 +21,7 @@ Plug 'christoomey/vim-tmux-navigator' " tmux-style navigation
 
 " CTRL+P - fuzzy file search
 Plug 'ctrlpvim/ctrlp.vim'
-let g:ctrlp_user_command = [
-\  '.git',
-\  'cd %s && git ls-files -co --exclude-standard'
-\]
+let g:ctrlp_by_filename = 1
 
 " NERDTree
 Plug 'scrooloose/nerdtree'
