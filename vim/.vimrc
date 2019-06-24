@@ -43,6 +43,12 @@ nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
+" Line nav - used w/ iTerm CMD+Arrow key mod
+nnoremap <C-a> <Home>
+inoremap <C-a> <Home>
+nnoremap <C-e> <End>
+inoremap <C-e> <End>
+
 " Ctrl-I to insert single char
 :nmap <C-i> i_<esc>r
 
