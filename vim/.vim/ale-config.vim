@@ -8,7 +8,9 @@ let g:ale_lint_on_text_changed = 'never'
 
 " ideally golint + staticcheck
 let g:ale_linters = {
-\ 'go': ['golint', 'staticchecknomod']
+\ 'go': ['golint', 'staticchecknomod'],
+\ 'markdown': ['alex', 'write-good'],
+\ 'text': ['write-good']
 \}
 let g:ale_go_staticcheck_lint_package = 1
 let g:ale_go_staticcheck_GO111MODULE = 'off'
@@ -25,7 +27,7 @@ let g:ale_fixers = {
 " Disable trim_whitespace for markdown
 let g:ale_pattern_options = {
 \ '\.md$': {
-\   'ale_fixers': ['trim_whitespace', 'remove_trailing_lines', 'prettier']
+\   'ale_fixers': ['remove_trailing_lines', 'prettier']
 \ }
 \}
 
