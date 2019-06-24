@@ -13,14 +13,20 @@ filetype plugin indent on
 set tabstop=2
 set shiftwidth=2
 set expandtab
+" filetype tab widths
 autocmd FileType lua setlocal shiftwidth=3 tabstop=3
 autocmd FileType python setlocal shiftwidth=4 tabstop=4 softtabstop=4 expandtab smarttab
+
+" Auto-line-wrap in .md and .txt files
+au BufRead,BufNewFile *.md setlocal textwidth=88
+au BufRead,BufNewFile *.txt setlocal textwidth=88
+
 
 " Use the mouse
 set mouse=niv
 set ttymouse=sgr
 
-" Use system clipboard (this only works on macOS)
+" Use system clipboard (only works on macOS)
 set clipboard=unnamed
 
 " Force watch updates
