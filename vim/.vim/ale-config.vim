@@ -8,7 +8,7 @@ let g:ale_lint_on_text_changed = 'never'
 
 " ideally golint + staticcheck
 let g:ale_linters = {
-\ 'go': ['golint', 'staticchecknomod'],
+\ 'go': ['golint', 'govetnomod'],
 \ 'markdown': ['alex', 'write-good'],
 \ 'text': ['write-good']
 \}
