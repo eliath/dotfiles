@@ -13,13 +13,31 @@ filetype plugin indent on
 set tabstop=2
 set shiftwidth=2
 set expandtab
-" filetype tab widths
-autocmd FileType lua setlocal shiftwidth=3 tabstop=3
-autocmd FileType python setlocal shiftwidth=4 tabstop=4 softtabstop=4 expandtab smarttab
+
+augroup filetypes_python
+  autocmd!
+  " 4 spaces in python
+  autocmd FileType python setlocal shiftwidth=4 tabstop=4 softtabstop=4 expandtab smarttab
+augroup END
+
+augroup filetype_lua
+  autocmd!
+  " 3 spaces in Lua
+  autocmd FileType lua setlocal shiftwidth=3 tabstop=3
+augroup END
 
 " Auto-line-wrap in .md and .txt files
-au BufRead,BufNewFile *.md setlocal textwidth=88
-au BufRead,BufNewFile *.txt setlocal textwidth=88
+augroup writing
+  autocmd!
+  au BufRead,BufNewFile *.md setlocal textwidth=88
+  au BufRead,BufNewFile *.txt setlocal textwidth=88
+augroup END
+
+augroup all_files
+  autocmd!
+  " Highlight currently open buffer in NERDTree
+  autocmd BufEnter * call nerdsync#SyncTree()
+augroup END
 
 
 " Use the mouse
@@ -81,6 +99,7 @@ let &t_EI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=0\x7\<Esc>\\"
 
 so ~/.vim/toggle-numbers.vim " run :Nums to toggle numbers
 so ~/.vim/plugins.vim " Load Plugins
+so ~/.vim/nvidia.vim " nvidia-specific configs
 
 " Powerline setup
 python3 from powerline.vim import setup as powerline_setup
