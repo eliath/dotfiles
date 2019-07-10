@@ -62,7 +62,8 @@ zstyle ':prezto:load' pmodule \
   'python' \
   'tmux' \
   'syntax-highlighting' \
-  'history-substring-search'
+  'history-substring-search' \
+  'docker'
 
 # Activate Prezto
 PREZTO_INIT="$ZDOTDIR/.zprezto/init.zsh"
