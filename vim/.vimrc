@@ -67,6 +67,9 @@ inoremap <C-a> <Home>
 nnoremap <C-e> <End>
 inoremap <C-e> <End>
 
+" Integrate <Opt>+<Right> w/ iTerm 'natural text editing' preset
+nnoremap f e
+
 " Ctrl-I to insert single char
 :nmap <C-i> i_<esc>r
 

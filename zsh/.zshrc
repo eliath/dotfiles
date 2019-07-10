@@ -71,6 +71,9 @@ unset LSCOLORS
 export CLICOLOR=1
 export CLICOLOR_FORCE=1
 
+# vim editor bindings
+zstyle ':prezto:module:editor' key-bindings 'vi'
+
 # powerline
 PY3_SITE_PACKAGES=`python3 -c "import site; print(site.getsitepackages()[0])"`
 powerline-daemon -q
