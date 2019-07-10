@@ -4,14 +4,18 @@
 
 " Check if NERDTree is open or active
 function! nerdsync#IsNERDTreeOpen()
-  return exists("t:NERDTreeBufName") && (bufwinnr(t:NERDTreeBufName) != -1)
+  return exists('t:NERDTreeBufName') && (bufwinnr(t:NERDTreeBufName) != -1)
 endfunction
 
-" Call NERDTreeFind iff NERDTree is active, current window contains a modifiable
-" file, and we're not in vimdiff
+" Check if current buffer file exists, is modifiable, and is within NERDTree
+function! nerdsync#IsFileSyncable()
+  return &modifiable && strlen(expand('%')) > 0
+endfunction
+
+" Call NERDTreeFind iff NERDTree is active, file is syncable,
+" and we're not in vimdiff
 function! nerdsync#SyncTree()
-  if &modifiable && nerdsync#IsNERDTreeOpen() && strlen(expand('%')) > 0 && !&diff
-    NERDTreeFind
-    wincmd p
+  if nerdsync#IsNERDTreeOpen() && nerdsync#IsFileSyncable() && !&diff
+    NERDTreeFind && wincmd p
   endif
 endfunction
