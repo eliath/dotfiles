@@ -1,3 +1,4 @@
+scriptencoding utf-8
 let g:ale_completion_enabled = 1
 set completeopt=menu,menuone,preview,noselect,noinsert
 let g:ale_set_quickfix = 1

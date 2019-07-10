@@ -1,4 +1,6 @@
-set encoding=UTF-8
+set encoding=utf-8
+scriptencoding utf-8
+
 
 " Solarized color scheme
 syntax enable
