@@ -16,6 +16,7 @@ endfunction
 " and we're not in vimdiff
 function! nerdsync#SyncTree()
   if nerdsync#IsNERDTreeOpen() && nerdsync#IsFileSyncable() && !&diff
-    NERDTreeFind && wincmd p
+    NERDTreeFind
+    wincmd p
   endif
 endfunction
