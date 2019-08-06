@@ -75,6 +75,9 @@ nnoremap f e
 " Ctrl-I to insert single char
 :nmap <C-i> i_<esc>r
 
+" Don't yank when pasting in visual mode
+vnoremap p "_dP
+
 "Search Highlight
 set incsearch
 
