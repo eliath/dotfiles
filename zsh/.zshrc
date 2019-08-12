@@ -87,5 +87,8 @@ export LESSOPEN="| $(which highlight) %s --out-format xterm256 --quiet --force -
 export LESS=" -R"
 alias less='less -m -n -g -i --underline-special'
 
-# Load nvidia-specific config
-source "$ZDOTDIR/nvidia.zsh"
+# Load local configs/overrides
+local_profile="${HOME}/local/profile.zsh"
+if [[ -a $local_profile ]]; then
+  source $local_profile
+fi
