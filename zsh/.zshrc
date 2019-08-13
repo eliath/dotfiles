@@ -5,7 +5,7 @@ alias psgrep='ps aux | grep -v grep | grep -i -e VSZ -e'
 alias clr='clear'
 
 # Functions
-source "$ZDOTDIR/.zfunctions"
+source "$ZDOTDIR/functions.zsh"
 
 # Editors
 export EDITOR='vim'
