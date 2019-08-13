@@ -107,7 +107,10 @@ let &t_EI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=0\x7\<Esc>\\"
 
 so ~/.vim/toggle-numbers.vim " run :Nums to toggle numbers
 so ~/.vim/plugins.vim " Load Plugins
-so ~/.vim/nvidia.vim " nvidia-specific configs
+so ~/local/profile.vim " local config override
+
+" Show hidden files by default
+let NERDTreeShowHidden=1
 
 " Powerline setup
 python3 from powerline.vim import setup as powerline_setup
