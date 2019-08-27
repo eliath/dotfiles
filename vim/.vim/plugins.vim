@@ -23,7 +23,7 @@ Plug 'christoomey/vim-tmux-navigator' " tmux-style navigation
 Plug 'ctrlpvim/ctrlp.vim'
 let g:ctrlp_by_filename = 1
 
-" NERDTree
+" NERDTree -------------------------------------
 Plug 'scrooloose/nerdtree'
 map <silent> <C-b> :NERDTreeToggle<CR>
 augroup nerdtree
@@ -38,7 +38,13 @@ augroup nerdtree
   " Close if only NERDTree window left open
   autocmd bufenter * if (winnr('$') == 1 && exists('b:NERDTree') &&
   \   b:NERDTree.isTabTree()) | q | endif
+  " Sync NERDTree to the current buffer
+  autocmd BufEnter * call nerdsync#SyncTree()
 augroup END
+
+" Show hidden files by default
+let NERDTreeShowHidden=1
+
 
 " LANGUAGE SYNTAX + LINT -------------------------------------
 

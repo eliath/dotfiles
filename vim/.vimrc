@@ -35,13 +35,6 @@ augroup writing
   au BufRead,BufNewFile *.txt setlocal textwidth=88
 augroup END
 
-augroup all_files
-  autocmd!
-  " Highlight currently open buffer in NERDTree
-  autocmd BufEnter * call nerdsync#SyncTree()
-augroup END
-
-
 " Use the mouse
 set mouse=niv
 set ttymouse=sgr
@@ -108,9 +101,6 @@ let &t_EI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=0\x7\<Esc>\\"
 so ~/.vim/toggle-numbers.vim " run :Nums to toggle numbers
 so ~/.vim/plugins.vim " Load Plugins
 so ~/local/profile.vim " local config override
-
-" Show hidden files by default
-let NERDTreeShowHidden=1
 
 " Powerline setup
 python3 from powerline.vim import setup as powerline_setup

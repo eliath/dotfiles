@@ -9,7 +9,9 @@ endfunction
 
 " Check if current buffer file exists, is modifiable, and is within NERDTree
 function! nerdsync#IsFileSyncable()
-  return &modifiable && strlen(expand('%')) > 0
+  let l:root = g:NERDTree.ForCurrentTab().getRoot().path.str()
+  let l:file = expand('%:p')
+  return &modifiable && strlen(expand('%')) > 0 && match(l:file, l:root) != -1
 endfunction
 
 " Call NERDTreeFind iff NERDTree is active, file is syncable,
