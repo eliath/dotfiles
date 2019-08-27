@@ -9,12 +9,12 @@ let g:ale_lint_on_text_changed = 'never'
 
 " ideally golint + staticcheck
 let g:ale_linters = {
-\ 'go': ['golint', 'govetnomod'],
+\ 'go': ['golint', 'govet'],
 \ 'markdown': ['alex', 'write-good'],
 \ 'text': ['write-good']
 \}
+let g:ale_go_go111module = 'off'
 let g:ale_go_staticcheck_lint_package = 1
-let g:ale_go_staticcheck_GO111MODULE = 'off'
 
 let g:ale_fixers = {
 \ 'go': ['gofmt'],
