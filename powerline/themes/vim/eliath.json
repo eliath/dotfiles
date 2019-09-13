@@ -3,16 +3,17 @@
 		"left": [
 			{
 				"function": "mode",
-				"exclude_modes": ["nc"]
+				"exclude_modes": ["nc"],
+        "priority": 1
 			},
 			{
 				"function": "visual_range",
 				"include_modes": ["v", "V", "^V", "s", "S", "^S"],
-				"priority": 40
+				"priority": 3
 			},
 			{
 				"function": "branch",
-				"priority": 10
+				"priority": 4
 			},
 			{
 				"function": "readonly_indicator",
@@ -21,13 +22,13 @@
 			},
 			{
 				"function": "file_scheme",
-				"priority": 35
+				"priority": 5
 			},
 			{
 				"function": "file_directory",
         "shorten_user": true,
         "shorten_cwd": true,
-				"priority": 5,
+				"priority": 1,
 				"draw_soft_divider": false
 			},
 			{
@@ -55,7 +56,7 @@
       {
         "function": "powerline.segments.vim.plugin.ale.ale",
         "exclude_modes": ["nc"],
-        "priority": 10,
+        "priority": 3,
         "args": {
           "err_format": "E:{first_line} ({num})",
           "warn_format": "W:{first_line} ({num})"
@@ -65,25 +66,25 @@
 				"function": "file_format",
 				"draw_soft_divider": false,
 				"exclude_modes": ["nc"],
-				"priority": 90
+				"priority": 9
 			},
 			{
 				"function": "file_encoding",
 				"exclude_modes": ["nc"],
-				"priority": 75
+				"priority": 9
 			},
       {
 				"function": "file_type",
-				"priority": 20
+				"priority": 5
 			},
 			{
 				"function": "csv_col_current",
-				"priority": 5
+				"priority": 1
 			},
       {
         "function": "position",
 				"exclude_modes": ["nc"],
-        "priority": 30
+        "priority": 6
       },
 			{
 				"function": "line_current",
