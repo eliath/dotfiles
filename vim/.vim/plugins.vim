@@ -72,6 +72,8 @@ Plug 'bazelbuild/vim-bazel'       " Bazel integration
 " Vim-Go ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 let g:go_fmt_autosave = 0 " ALE handles gofmt
+let g:go_def_mode='gopls'
+let g:go_info_mode='gopls'
 let g:go_fmt_fail_silently = 1
 let g:go_list_type='quickfix'
 "  ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
