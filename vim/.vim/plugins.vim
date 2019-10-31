@@ -22,8 +22,13 @@ Plug 'ryanoasis/vim-devicons' " developer icons
 
 let g:lexima_enable_basic_rules = 0 " only insert pairs for newlines
 
+" fzf config
+let g:fzf_layout = { 'down': '~38.2%' }
+let g:fzf_buffers_jump = 1
 " CMD+P to fuzzy search files
 nnoremap <silent> <C-p> :Files<CR>
+nnoremap <silent> <C-_> :Ag<CR>
+
 
 " SYNTAX + LINT -------------------------------------
 " ale
