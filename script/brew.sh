@@ -15,6 +15,7 @@ brew install htop
 brew install source-highlight
 brew install the_silver_searcher
 brew install fd
+brew install fzf
 
 # cask apps
 brew tap caskroom/cask
