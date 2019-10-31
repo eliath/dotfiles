@@ -13,6 +13,7 @@ so ~/.vim/plugged/vim-colors-solarized/autoload/togglebg.vim
 Plug 'tpope/vim-commentary'   " Comments
 Plug 'tpope/vim-surround'     " Edit brackets + quotes in pairs
 Plug 'cohama/lexima.vim'   " Auto bracket
+let g:lexima_enable_basic_rules = 0
 Plug 'chaoren/vim-wordmotion' " CamelCase movement
 Plug 'danro/rename.vim'       " :Rename command
 Plug 'tpope/vim-obsession'    " Sessions
