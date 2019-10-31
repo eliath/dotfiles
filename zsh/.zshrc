@@ -25,6 +25,10 @@ export PATH="$HOME/local/bin:$PATH"
 # autojump
 [[ -s `brew --prefix`/etc/autojump.sh ]] && . `brew --prefix`/etc/autojump.sh
 
+
+# fzf
+export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -g ""'
+
 # use python3 as python by adding homebrew aliases to $PATH
 # NOTE: system python2 available at /usr/bin/python
 export PATH="/usr/local/opt/python/libexec/bin:$PATH"

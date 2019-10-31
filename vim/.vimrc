@@ -1,7 +1,6 @@
 set encoding=utf-8
 scriptencoding utf-8
 
-
 " Solarized color scheme
 syntax enable
 colorscheme solarized
@@ -81,6 +80,17 @@ set backspace=indent,eol,start
 filetype plugin on
 set omnifunc=syntaxcomplete#Complete
 
+" File explorer
+let g:netrw_liststyle = 3 " Open netrw in tree mode
+augroup ProjectDrawer
+    autocmd!
+    " open file exporer when launching vim
+    autocmd VimEnter * if argc() == 0 | Explore! | endif
+    " open file explorer at dir on dir args
+    autocmd VimEnter * if argc() == 1 && isdirectory(expand(argv()[0])) |
+          \  exe 'Explore! '.argv()[0] | exe 'cd '.argv()[0] | endif
+augroup END
+
 " Change cursor shape between insert and normal mode in tmux
 let &t_SI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=1\x7\<Esc>\\"
 let &t_SR = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=2\x7\<Esc>\\"
@@ -100,7 +110,8 @@ let &t_EI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=0\x7\<Esc>\\"
 
 so ~/.vim/toggle-numbers.vim " run :Nums to toggle numbers
 so ~/.vim/plugins.vim " Load Plugins
-so ~/local/profile.vim " local config override
+
+so ~/local/profile.vim " local configs override
 
 " Powerline setup
 python3 from powerline.vim import setup as powerline_setup
