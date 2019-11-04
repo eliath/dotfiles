@@ -25,9 +25,8 @@ export PATH="$HOME/local/bin:$PATH"
 # autojump
 [[ -s `brew --prefix`/etc/autojump.sh ]] && . `brew --prefix`/etc/autojump.sh
 
-
 # fzf
-export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -g ""'
+source "${ZDOTDIR}/fzf_config.zsh"
 
 # use python3 as python by adding homebrew aliases to $PATH
 # NOTE: system python2 available at /usr/bin/python
@@ -76,6 +75,12 @@ unset LSCOLORS
 export CLICOLOR=1
 export CLICOLOR_FORCE=1
 
+# Completions w/ Homebrew
+if type brew &>/dev/null; then
+  FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
+fi
+
+
 # vim editor bindings
 zstyle ':prezto:module:editor' key-bindings 'vi'
 
@@ -90,6 +95,9 @@ powerline-daemon -q
 export LESSOPEN="| $(which highlight) %s --out-format xterm256 --quiet --force --style solarized-dark"
 export LESS=" -R"
 alias less='less -m -n -g -i --underline-special'
+
+# asdf version manager
+. $(brew --prefix asdf)/asdf.sh
 
 # Load local configs/overrides
 local_profile="${HOME}/local/profile.zsh"
