@@ -68,7 +68,7 @@ nnoremap f e
 :nmap <C-i> i_<esc>r
 
 " Don't yank when pasting in visual mode
-vnoremap p "_dP
+vnoremap p "_dp
 
 "Search Highlight
 set incsearch
