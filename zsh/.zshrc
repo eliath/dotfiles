@@ -14,9 +14,6 @@ export VISUAL='vim'
 # PATHS   #
 ###########
 
-# tmp
-export TMPDIR="/private/tmp"
-
 # A place for local binaries
 export PATH="$HOME/local/bin:$PATH"
 
