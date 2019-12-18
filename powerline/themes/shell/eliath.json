@@ -4,34 +4,40 @@
       {
         "left": [
           {
-            "function": "powerline.segments.common.net.hostname",
-            "priority": 40
-          },
-          {
             "function": "powerline.segments.common.env.user",
-            "priority": 30
-          },
-          {
-            "function": "powerline.segments.common.env.virtualenv",
-            "before": " ",
-            "priority": 25
+            "priority": 3,
+            "draw_soft_divider": false,
+            "after": " "
           },
           {
             "function": "powerline.segments.shell.cwd",
-            "priority": 10
+            "priority": 1,
+            "args": {
+              "use_path_separator": true
+            },
+            "draw_soft_divider": false
           },
           {
             "function": "powerline_gitstatus.gitstatus",
-            "priority": 20
+            "priority": 2,
+            "before": "  "
           }
         ]
       }
     ],
     "left": [
       {
+        "function": "powerline.segments.common.env.virtualenv",
+        "before": " ",
+        "priority": 4
+      },
+      {
         "type": "string",
         "contents": "→",
-        "highlight_groups": ["background"]
+        "highlight_groups": ["prompt-icon"],
+        "draw_soft_divider": false,
+        "draw_hard_divider": false,
+        "after": " "
       }
     ]
   }
