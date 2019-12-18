@@ -19,6 +19,7 @@ Plug 'cohama/lexima.vim'      " Auto brackets
 Plug '/usr/local/opt/fzf'     " Fuzzy file search
 Plug 'junegunn/fzf.vim'       " fzf vim integrations
 Plug 'ryanoasis/vim-devicons' " developer icons
+Plug 'houtsnip/vim-emacscommandline' " word-motion in command line
 
 let g:lexima_enable_basic_rules = 0 " only insert pairs for newlines
 
