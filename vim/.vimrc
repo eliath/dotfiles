@@ -34,6 +34,11 @@ augroup writing
   au BufRead,BufNewFile *.txt setlocal textwidth=88
 augroup END
 
+" Auto-folding
+set foldmethod=syntax
+set foldlevelstart=99
+hi Folded ctermbg=15
+
 " Use the mouse
 set mouse=niv
 set ttymouse=sgr
