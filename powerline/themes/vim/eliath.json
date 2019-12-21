@@ -3,17 +3,13 @@
 		"left": [
 			{
 				"function": "mode",
-				"exclude_modes": ["nc"],
-        "priority": 1
-			},
-			{
-				"function": "visual_range",
-				"include_modes": ["v", "V", "^V", "s", "S", "^S"],
-				"priority": 3
+        "priority": 1,
+        "exclude_modes": ["nc"]
 			},
 			{
 				"function": "branch",
-				"priority": 4
+				"priority": 4,
+        "exclude_modes": ["nc"]
 			},
 			{
 				"function": "readonly_indicator",
@@ -22,13 +18,13 @@
 			},
 			{
 				"function": "file_scheme",
-				"priority": 5
+				"priority": 10
 			},
 			{
 				"function": "file_directory",
         "shorten_user": true,
         "shorten_cwd": true,
-				"priority": 1,
+				"priority": 2,
 				"draw_soft_divider": false
 			},
 			{
@@ -42,7 +38,8 @@
 			},
 			{
 				"function": "modified_indicator",
-				"before": " "
+				"before": " ",
+        "draw_soft_divider": false
 			},
 			{
 				"type": "string",
@@ -53,49 +50,44 @@
 			}
 		],
 		"right": [
+			{
+				"function": "visual_range",
+				"include_modes": ["v", "V", "^V", "s", "S", "^S"],
+				"priority": 3
+			},
+      {
+				"function": "file_type",
+				"priority": 7,
+        "draw_soft_divider": false
+			},
+			{
+				"function": "file_encoding",
+				"priority": 8
+			},
       {
         "function": "powerline.segments.vim.plugin.ale.ale",
         "exclude_modes": ["nc"],
-        "priority": 3,
+        "priority": 5,
         "args": {
           "err_format": "E:{first_line} ({num})",
           "warn_format": "W:{first_line} ({num})"
         }
       },
 			{
-				"function": "file_format",
-				"draw_soft_divider": false,
-				"exclude_modes": ["nc"],
-				"priority": 9
-			},
-			{
-				"function": "file_encoding",
-				"exclude_modes": ["nc"],
-				"priority": 9
-			},
-      {
-				"function": "file_type",
-				"priority": 5
-			},
-			{
 				"function": "csv_col_current",
-				"priority": 1
+				"priority": 9
 			},
-      {
-        "function": "position",
-				"exclude_modes": ["nc"],
-        "priority": 6
-      },
 			{
 				"function": "line_current",
         "before": "",
-				"align": "r"
+				"align": "l"
 			},
 			{
 				"function": "virtcol_current",
 				"draw_soft_divider": false,
-				"before": "",
-				"align": "l"
+				"before": " ",
+				"align": "r",
+        "priority": 6
       }
     ]
 	}

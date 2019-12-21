@@ -24,8 +24,6 @@
 		"position_gradient":        { "fg": "green_yellow_red", "bg": "gray4", "attrs": [] },
 		"line_current":             { "fg": "gray1", "bg": "gray10", "attrs": ["bold"] },
 		"line_current_symbol":      { "fg": "gray1", "bg": "gray10", "attrs": [] },
-		"virtcol_current_gradient": { "fg": "dark_GREEN_Orange_red", "bg": "gray10", "attrs": [] },
-		"col_current":              { "fg": "gray6", "bg": "gray10", "attrs": [] },
 		"modified_buffers":         { "fg": "brightyellow", "bg": "gray2", "attrs": [] },
 		"attached_clients":         { "fg": "gray8", "bg": "gray2", "attrs": [] },
 		"error":                    { "fg": "brightestred", "bg": "darkred", "attrs": ["bold"] },
@@ -72,7 +70,6 @@
 			},
 			"groups": {
 				"mode":               { "fg": "darkestcyan", "bg": "white", "attrs": ["bold"] },
-				"background:divider": { "fg": "darkcyan", "bg": "darkestblue", "attrs": [] },
 				"branch:divider":     { "fg": "darkcyan", "bg": "darkblue", "attrs": [] }
 			}
 		},
