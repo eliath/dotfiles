@@ -42,6 +42,7 @@ let g:go_fmt_autosave = 0 " ALE handles gofmt
 let g:go_def_mode='gopls'
 let g:go_info_mode='gopls'
 let g:go_list_type='quickfix'
+let g:go_decls_mode = 'fzf'
 
 " JavaScript
 Plug 'leafgarland/typescript-vim' " Typescript
