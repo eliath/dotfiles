@@ -29,7 +29,18 @@
       {
         "function": "powerline.segments.common.env.virtualenv",
         "before": " ",
-        "priority": 4
+        "priority": 5
+      },
+      {
+        "function": "powerline_kubernetes.kubernetes",
+        "priority": 4,
+        "args": {
+          "show_kube_logo": true,
+          "show_cluster": true,
+          "show_namespace": true,
+          "show_default_namespace": false,
+          "alerts": ["live", "cluster:live"]
+        }
       },
       {
         "type": "string",

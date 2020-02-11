@@ -48,6 +48,11 @@
     "gitstatus_untracked":       { "fg": "solarized:red", "bg": "solarized:base02", "attrs": []  },
     "gitstatus_stashed":         { "fg": "solarized:violet",        "bg": "solarized:base02", "attrs": []  },
     "gitstatus:divider":         { "fg": "solarized:base1", "bg": "solarized:base02", "attrs": [] },
-    "battery_gradient":            { "fg": "green_yellow_red", "bg": "solarized:base02", "attrs": [] }
+    "battery_gradient":          { "fg": "green_yellow_red", "bg": "solarized:base02", "attrs": [] },
+    "kubernetes_cluster":         { "fg": "solarized:base02", "bg": "solarized:blue", "attrs": [] },
+    "kubernetes_cluster:alert":   { "fg": "solarized:red", "bg": "solarized:blue",  "attrs": [] },
+    "kubernetes_namespace":       { "fg": "solarized:base02", "bg": "solarized:blue", "attrs": [] },
+    "kubernetes_namespace:alert": { "fg": "solarized:base02", "bg": "solarized:red",     "attrs": [] },
+    "kubernetes:divider":         { "fg": "solarized:base02",  "bg": "solarized:blue", "attrs": [] }
   }
 }
