@@ -1,0 +1,29 @@
+#!/usr/bin/env zsh
+set -eu
+
+source "${HOME}/dotfiles/lib/common.zsh"
+
+dotmsg "uninstalling dotfiles"
+
+read -q "REPLY?This action could destroy your user configs. Are you sure? [y/n] "
+echo "
+$REPLY - Continuing uninstall..."
+defaults write com.apple.screencapture location $HOME/Desktop/
+
+# remove zsh config
+rm -f ~/.zshenv
+
+# remove symlinks
+rm -rf ~/.vim ~/.vimrc
+rm -rf ~/.tmux ~/.tmux.conf
+
+# reset gitconfig
+rm -f ~/.gitconfig
+
+log_todo "Did not uninstall brew tools  (use \`brew leaves\` to see what to remove)"
+log_todo "Did not uninstall asdf or its installed binaries"
+log_todo "Did not uninstall pip packages (use \`pip list --not-required\` to see what to remove)"
+log_todo "Remove the dotfiles repository to complete uninstall"
+log_todo "Restart your shell for changes to take full effect"
+
+print_result

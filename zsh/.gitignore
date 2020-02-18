@@ -1,5 +1,5 @@
-.zprezto/
+.zcompcache
 .zcompdump
 .zhistory
-.zcompcache
-nvidia.zsh
+.zprezto/
+.zsh_history

@@ -116,10 +116,7 @@ let &t_EI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=0\x7\<Esc>\\"
 so ~/.vim/toggle-numbers.vim " run :Nums to toggle numbers
 so ~/.vim/plugins.vim " Load Plugins
 
-so ~/local/profile.vim " local configs override
-
-" Powerline setup
-python3 from powerline.vim import setup as powerline_setup
-python3 powerline_setup()
-python3 del powerline_setup
-set laststatus=2
+" local configs override
+if filereadable(expand("~/local/profile.vim"))
+  so ~/local/profile.vim
+endif

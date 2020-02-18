@@ -1,0 +1,152 @@
+#!/usr/bin/env zsh
+set -eu
+
+source "${HOME}/dotfiles/lib/common.zsh"
+
+# Install Script - macOS only
+
+# macOS
+dotmsg "setting up macOS defaults..."
+mkdir -p ~/code
+mkdir -p ~/.config
+# screenshot location
+defaults write com.apple.screencapture location /tmp/
+
+# homebrew
+if ! hash brew > /dev/null; then
+  dotmsg "installing homebrew..."
+  /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+  brew update
+  brew tap caskroom/cask
+  brew install coreutils gpg # required to verify downloads
+else
+  dotmsg "updating homebrew..."
+  brew update
+fi
+
+# zsh
+if ! brew list zsh >/dev/null; then
+  dotmsg "installing zsh (from homebrew)..."
+  brew install zsh zsh-completions
+
+  zsh_path=`which zsh`
+  log_todo "Ensure zsh in /etc/shells and set default shell:
+   $zsh_path
+   \`chsh -s $zsh_path\`"
+fi
+
+dotmsg "configuring zsh..."
+zshenv=$HOME/.zshenv
+zdotdir=$DOTFILES/zsh
+zpreztodir=$zdotdir/.zprezto
+
+[[ -s $zshenv ]] && rm -f $zshenv
+echo 'ZDOTDIR="'$zdotdir'"' > $zshenv
+
+# Prezto + prezto-contrib
+if [ ! -d $zpreztodir ]; then
+  dotmsg "installing prezto..."
+  git clone --recursive https://github.com/sorin-ionescu/prezto.git $zpreztodir
+  git clone --recurse-submodules https://github.com/belak/prezto-contrib $zpreztodir/contrib
+fi
+
+# fzf
+if ! brew list fzf >/dev/null; then
+  dotmsg "installing fzf..."
+  brew install fzf
+  $(brew --prefix)/opt/fzf/install
+fi
+
+# autojump
+if ! brew list autojump >/dev/null; then
+  dotmsg "installing autojump..."
+  brew install autojump
+fi
+
+# vim
+if ! brew list vim >/dev/null; then
+  dotmsg "installing vim (from homebrew)..."
+  brew install vim --with-override-system-vi
+fi
+
+dotmsg "configuring vim..."
+rm -rf ~/.vim
+rm -f ~/.vimrc
+
+cfg_dir=$DOTFILES/vim
+vim_dir=$cfg_dir/.vim
+vimrc=$cfg_dir/.vimrc
+
+ln -s $vim_dir $HOME/.vim
+ln -s $vimrc $HOME/.vimrc
+
+# install vim-plug
+dotmsg "installing vim-plug..."
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+log_todo "Run :PlugInstall in a vim buffer to complete plugin installations"
+
+# tmux
+if ! brew list tmux >/dev/null; then
+  dotmsg "installing tmux..."
+  brew install tmux
+fi
+
+dotmsg "configuring tmux..."
+tmux_plugins=$HOME/.tmux/plugins
+tmuxconf=$HOME/.tmux.conf
+rm -f $tmuxconf
+ln -s $DOTFILES/tmux/.tmux.conf $tmuxconf
+
+if [ ! -d $tmux_plugins ]; then
+  dotmsg "installing tmux plugins..."
+  mkdir -p $tmux_plugins
+  git clone https://github.com/tmux-plugins/tpm $tmux_plugins/tpm
+  $tmux_plugins/tpm/bin/install_plugins
+fi
+
+# git
+if ! brew list git >/dev/null; then
+  dotmsg "installing git (from homebrew)..."
+  brew install git
+fi
+gitcfg=$HOME/.gitconfig
+if [ ! -s $gitcfg ]; then
+  dotmsg "setting up git config"
+  echo "[include]
+  path = $DOTFILES/git/config" > $gitcfg
+fi
+
+# asdf version manager
+if ! brew list asdf >/dev/null; then
+  dotmsg "installing asdf dependencies..."
+  brew install \
+    coreutils automake autoconf openssl \
+    libyaml readline libxslt libtool unixodbc \
+    unzip curl
+  dotmsg "installing asdf..."
+  brew install asdf
+fi
+
+asdf_plugins=(
+  "python"
+  "node"
+  "golang"
+)
+
+for p in $asdf_plugins; do
+  if ! asdf which $p >/dev/null 2>&1; then
+    dotmsg "installing $p plugin for asdf..."
+    if [ $p = "node" ]; then
+      p="nodejs"
+    fi
+    set +e
+    asdf plugin add $p
+    set -e
+    log_todo "to install $p versions:
+     asdf install $p [semver]"
+  fi
+done
+
+log_todo "Restart shell for all changes to take effect"
+print_result
