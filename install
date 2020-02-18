@@ -31,8 +31,8 @@ if ! brew list zsh >/dev/null; then
 
   zsh_path=`which zsh`
   log_todo "Ensure zsh in /etc/shells and set default shell:
-   $zsh_path
-   \`chsh -s $zsh_path\`"
+    $zsh_path
+    \`chsh -s $zsh_path\`"
 fi
 
 dotmsg "configuring zsh..."
@@ -117,6 +117,12 @@ if [ ! -s $gitcfg ]; then
   path = $DOTFILES/git/config" > $gitcfg
 fi
 
+# highlight
+if ! brew list highlight >/dev/null; then
+  dotmsg "installing highlight..."
+  brew install highlight
+fi
+
 # asdf version manager
 if ! brew list asdf >/dev/null; then
   dotmsg "installing asdf dependencies..."
@@ -134,15 +140,22 @@ asdf_plugins=(
   "golang"
 )
 
+install_node_asdf() {
+  asdf plugin add nodejs
+  dotmsg "updating nodejs keyring..."
+  bash ~/.asdf/plugins/nodejs/bin/import-release-team-keyring
+}
+
 for p in $asdf_plugins; do
   if ! asdf which $p >/dev/null 2>&1; then
     dotmsg "installing $p plugin for asdf..."
     if [ $p = "node" ]; then
-      p="nodejs"
+      install_node_asdf
+    else
+      set +e
+      asdf plugin add $p
+      set -e
     fi
-    set +e
-    asdf plugin add $p
-    set -e
     log_todo "to install $p versions:
      asdf install $p [semver]"
   fi
