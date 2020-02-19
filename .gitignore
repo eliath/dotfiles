@@ -1,7 +1,3 @@
 .DS_Store
-vim/.vim/plugged
 *.swp
-vim/.vim/.netrwhist
-
-# Dash alfred workflow comes bundled with dash
-user.workflow.F2DDEE82-2DBB-439D-948B-4D75D55D5A2B/
+*.code-workspace
