@@ -10,7 +10,7 @@
 [merge]
    tool = opendiff
 [core]
-   editor = vim
+   editor = code --wait
    excludesfile = ~/dotfiles/git/ignore
 [push]
    default = simple
