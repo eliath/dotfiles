@@ -11,6 +11,9 @@ mkdir -p ~/code
 mkdir -p ~/.config
 # screenshot location
 defaults write com.apple.screencapture location /tmp/
+# hidden files
+defaults write com.apple.Finder AppleShowAllFiles true
+log_todo "you may need to \`killall Finder\` to show hidden files"
 
 # homebrew
 if ! hash brew > /dev/null; then
