@@ -1,4 +1,3 @@
-brew "asdf"
 brew "autojump"
 brew "fd"
 brew "fzf"

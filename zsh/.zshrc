@@ -40,10 +40,7 @@ brew_prefix=`brew --prefix`
 . "${ZDOTDIR}/fzf_config.zsh"
 
 # asdf version manager
-. $(brew --prefix asdf)/asdf.sh
-export ASDF_DIR=$(brew --prefix asdf)
-
-
+. ${HOME}/.asdf/asdf.sh
 
 # Python software via asdf
 if asdf which python >/dev/null 2>&1; then
