@@ -25,7 +25,7 @@ alias less='less -m -n -g -i --underline-special'
 ###########
 
 # A place for local binaries
-export PATH="$HOME/local/bin:$PATH"
+export PATH="${HOME}/local/bin:${PATH}"
 
 #####################
 # ACTIVATE SOFTWARE #

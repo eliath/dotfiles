@@ -14,7 +14,7 @@ Plug 'tpope/vim-obsession'    " Sessions
 Plug 'tpope/vim-vinegar'      " File explorer
 Plug 'christoomey/vim-tmux-navigator' " tmux-style navigation
 Plug 'danro/rename.vim'       " :Rename command
-Plug 'zxqfl/tabnine-vim'      " TabNine Autocomplete
+" Plug 'zxqfl/tabnine-vim'      " TabNine Autocomplete
 Plug 'cohama/lexima.vim'      " Auto brackets
 Plug '/usr/local/opt/fzf'     " Fuzzy file search
 Plug 'junegunn/fzf.vim'       " fzf vim integrations

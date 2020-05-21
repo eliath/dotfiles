@@ -29,3 +29,19 @@ extract() {
     fi
   fi
 }
+
+# host file refresh
+refresh-hosts() {
+  sudo dscacheutil -flushcache && sudo killall -HUP mDNSResponder
+}
+
+docker-purge() {
+  dps=`docker ps -a -q`
+  if [ ${#dps[@]} -ne 0 ]; then
+    docker rm -vf $(docker ps -a -q)
+  fi
+  dki=`docker images -a -q`
+  if [ ${#dki[@]} -ne 0 ]; then
+    docker rmi -f $(docker images -a -q)
+  fi
+}

@@ -4,7 +4,7 @@ scriptencoding utf-8
 " Solarized color scheme
 syntax enable
 colorscheme solarized
-set background=light
+set background=dark
 " Vertical split bars
 hi VertSplit ctermfg=12 ctermbg=7 " light
 " hi VertSplit ctermfg=12 ctermbg=0 " dark
