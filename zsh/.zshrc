@@ -39,12 +39,15 @@ brew_prefix=`brew --prefix`
 [ -f ${HOME}/.fzf.zsh ] && . ${HOME}/.fzf.zsh
 . "${ZDOTDIR}/fzf_config.zsh"
 
-# asdf version manager
-. ${HOME}/.asdf/asdf.sh
-
 # Python software via asdf
 if asdf which python >/dev/null 2>&1; then
   asdf reshim python
+fi
+
+# asdf version manager
+. ${HOME}/.asdf/asdf.sh
+if (( ${+ASDF_DIR} )); then
+  fpath=(${ASDF_DIR}/completions $fpath)
 fi
 
 # PREZTO #############################################
