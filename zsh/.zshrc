@@ -79,10 +79,8 @@ prezto_init=$ZDOTDIR/.zprezto/init.zsh
 zstyle ':prezto:module:editor' key-bindings 'vi'
 . $ZDOTDIR/spaceship.zsh
 
-# homebrew completions
-if type brew &>/dev/null; then
-  FPATH=$brew_prefix/share/zsh/site-functions:$FPATH
-fi
+# de-dup fpath
+fpath=(${(u)fpath[@]})
 
 # Load local configs/overrides
 local_profile="${HOME}/local/profile.zsh"
