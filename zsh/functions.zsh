@@ -6,7 +6,6 @@ extract() {
  else
     if [ -f "$1" ] ; then
         NAME=${1%.*}
-        #mkdir $NAME && cd $NAME
         case "$1" in
           *.tar.bz2)   tar xvjf ./"$1"    ;;
           *.tar.gz)    tar xvzf ./"$1"    ;;
@@ -28,5 +27,21 @@ extract() {
     else
         echo "'$1' - file does not exist"
     fi
+  fi
+}
+
+# host file refresh
+refresh-hosts() {
+  sudo dscacheutil -flushcache && sudo killall -HUP mDNSResponder
+}
+
+docker-purge() {
+  dps=`docker ps -a -q`
+  if [ ${#dps[@]} -ne 0 ]; then
+    docker rm -vf $(docker ps -a -q)
+  fi
+  dki=`docker images -a -q`
+  if [ ${#dki[@]} -ne 0 ]; then
+    docker rmi -f $(docker images -a -q)
   fi
 }

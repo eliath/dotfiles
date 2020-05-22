@@ -14,8 +14,7 @@ Plug 'tpope/vim-obsession'    " Sessions
 Plug 'tpope/vim-vinegar'      " File explorer
 Plug 'christoomey/vim-tmux-navigator' " tmux-style navigation
 Plug 'danro/rename.vim'       " :Rename command
-Plug 'zxqfl/tabnine-vim'      " TabNine Autocomplete
-
+" Plug 'zxqfl/tabnine-vim'      " TabNine Autocomplete
 Plug 'cohama/lexima.vim'      " Auto brackets
 Plug '/usr/local/opt/fzf'     " Fuzzy file search
 Plug 'junegunn/fzf.vim'       " fzf vim integrations
@@ -39,11 +38,10 @@ Plug 'w0rp/ale'
 
 " Go
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
-" let g:go_fmt_autosave = 0 \" ALE handles gofmt
+let g:go_fmt_autosave = 0 " ALE handles gofmt
 let g:go_def_mode='gopls'
 let g:go_info_mode='gopls'
 let g:go_list_type='quickfix'
-let g:go_decls_mode = 'fzf'
 
 " JavaScript
 Plug 'leafgarland/typescript-vim' " Typescript

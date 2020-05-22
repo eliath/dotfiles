@@ -7,16 +7,16 @@ let g:ale_open_list = 0
 let g:ale_fix_on_save = 1
 let g:ale_lint_on_text_changed = 'never'
 
-" ideally golint + bazel build errors
-" NOTE: do not enable govet, it cripples perf
+" ideally golint + staticcheck
 let g:ale_linters = {
 \ 'go': ['golint'],
 \ 'markdown': ['write-good', 'languagetool'],
 \ 'text': ['write-good', 'languagetool']
 \}
+let g:ale_go_go111module = 'off'
 
-" \ 'go': ['gofmt'],
 let g:ale_fixers = {
+\ 'go': ['gofmt'],
 \ 'javascript': ['eslint'],
 \ 'lua': ['luac', 'luacheck'],
 \ 'typescript': ['tslint'],
