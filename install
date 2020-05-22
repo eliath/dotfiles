@@ -48,7 +48,8 @@ fi
 
 # fzf
 if brew list fzf >/dev/null; then
-  $(brew --prefix)/opt/fzf/install
+  $(brew --prefix)/opt/fzf/install --key-bindings --completion \
+    --no-bash --no-zsh --no-fish
 fi
 
 dotmsg "configuring vim..."
