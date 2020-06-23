@@ -79,6 +79,9 @@ prezto_init=$ZDOTDIR/.zprezto/init.zsh
 zstyle ':prezto:module:editor' key-bindings 'vi'
 . $ZDOTDIR/spaceship.zsh
 
+# small shortcut for git feature branch
+alias gfb='git switch -t origin/master -c'
+
 # de-dup fpath
 fpath=(${(u)fpath[@]})
 
