@@ -10,14 +10,14 @@
    kill-branch = "!f() { git push origin :$@; git br -D $@;  }; f"
    unstage = reset HEAD --
    ls = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate
-   since = !git log $(git merge-base --fork-point master)..HEAD
+   since = !git log $(git merge-base --fork-point main)..HEAD
    conflicts = !git ls-files -u  | cut -f 2 | sort -u
-   delete-merged-branches = "!git co master && git branch --merged | grep -v '\\*' | xargs -n 1 git branch -d"
+   delete-merged-branches = "!git co main && git branch --merged | grep -v '\\*' | xargs -n 1 git branch -d"
    flush = "!git branch --merged | grep -v '*' | xargs -n 1 git branch -d"
    rm-orig = "!git ls-files --others --exclude-standard | grep '\\.orig$' | xargs rm"
-   fb = "!f() { git checkout -b $@ origin/master; }; f"
+   fb = "!f() { git checkout -b $@ origin/main; }; f"
    # Gerrit aliases
-   review = push origin HEAD:refs/for/master
-   review-wip = push origin HEAD:refs/for/master%wip
-   review-ready = push origin HEAD:refs/for/master%ready
-   review-private = push origin HEAD:refs/for/master%notify=NONE,private
+   review = push origin HEAD:refs/for/main
+   review-wip = push origin HEAD:refs/for/main%wip
+   review-ready = push origin HEAD:refs/for/main%ready
+   review-private = push origin HEAD:refs/for/main%notify=NONE,private
