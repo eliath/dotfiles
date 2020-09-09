@@ -45,3 +45,9 @@ docker-purge() {
     docker rmi -f $(docker images -a -q)
   fi
 }
+
+# utility to send a macOS notification when the previous command finishes
+notify-done() {
+  last_cmd="$(echo $history[$HISTCMD] | sed 's/notify-done//')"
+  osascript -e 'display notification "'"${last_cmd}"'" with title "Done"'
+}
