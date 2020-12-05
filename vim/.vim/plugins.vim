@@ -1,6 +1,12 @@
 " Plugins configuration
 " plugin manager: vim-plug | https://github.com/junegunn/vim-plug
 " =============================================
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
+
 call plug#begin()
 
 " Solarized color scheme
@@ -14,7 +20,6 @@ Plug 'tpope/vim-obsession'    " Sessions
 Plug 'tpope/vim-vinegar'      " File explorer
 Plug 'christoomey/vim-tmux-navigator' " tmux-style navigation
 Plug 'danro/rename.vim'       " :Rename command
-" Plug 'zxqfl/tabnine-vim'      " TabNine Autocomplete
 Plug 'cohama/lexima.vim'      " Auto brackets
 Plug '/usr/local/opt/fzf'     " Fuzzy file search
 Plug 'junegunn/fzf.vim'       " fzf vim integrations
