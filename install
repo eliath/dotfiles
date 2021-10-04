@@ -3,39 +3,32 @@ set -eu
 
 source "${HOME}/dotfiles/lib/common.zsh"
 
-# Install Script - macOS only
-
-# macOS
-dotmsg "setting up macOS defaults..."
+# Basic setup
+dotmsg "preparing directories..."
 mkdir -p ~/code
 mkdir -p ~/.config
-# screenshot location
-defaults write com.apple.screencapture location /tmp/
-# hidden files
-defaults write com.apple.Finder AppleShowAllFiles true
-log_todo "you may need to \`killall Finder\` to show hidden files"
+mkdir -p ~/local
 
-# homebrew
-if ! hash brew > /dev/null; then
-  dotmsg "installing homebrew..."
-  /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+# macOS settings
+if is_macos; then
+  dotmsg "performing macOS setup..."
+  source "${DOTFILES}/lib/install-mac.zsh"
+else
+  dotmsg "performing Linux setup..."
+  source "${DOTFILES}/lib/install-linux.zsh"
 fi
-dotmsg "updating homebrew..."
-brew update
-dotmsg "installing system dependencies (homebrew)..."
-brew bundle
 
 # zsh
 zsh_path=`which zsh`
 log_todo "Ensure zsh in /etc/shells and set default shell:
-    $zsh_path
-    \`chsh -s $zsh_path\`"
+    chsh -s ${zsh_path}"
 
 dotmsg "configuring zsh..."
 zshenv=$HOME/.zshenv
 zdotdir=$DOTFILES/zsh
 zpreztodir=$zdotdir/.zprezto
 
+# rewrite zshenv with our settings
 [[ -s $zshenv ]] && rm -f $zshenv
 echo 'ZDOTDIR="'$zdotdir'"' > $zshenv
 
@@ -44,12 +37,6 @@ if [ ! -d $zpreztodir ]; then
   dotmsg "installing prezto..."
   git clone --recursive https://github.com/sorin-ionescu/prezto.git $zpreztodir
   git clone --recurse-submodules https://github.com/belak/prezto-contrib $zpreztodir/contrib
-fi
-
-# fzf
-if brew list fzf >/dev/null; then
-  $(brew --prefix)/opt/fzf/install --key-bindings --completion \
-    --no-bash --no-zsh --no-fish
 fi
 
 dotmsg "configuring vim..."
@@ -94,6 +81,7 @@ if [ ! -d $asdf_root ]; then
   pushd $asdf_root >/dev/null
   git checkout "$(git describe --abbrev=0 --tags)"
   popd >/dev/null
+  . ${asdf_root}/asdf.sh # make asdf available for the next step
 fi
 
 asdf_plugins=(
@@ -121,7 +109,8 @@ for p in $asdf_plugins; do
     set -e
   fi
   log_todo "to install $p versions:
-    asdf install $p [semver]"
+    asdf list-all $p
+    asdf install $p [version]"
 done
 
 log_todo "Restart shell for all changes to take effect"

@@ -2,6 +2,14 @@
 
 export DOTFILES=$HOME/dotfiles
 
+# Function to check if we're on macOS
+is_macos() {
+  if uname | grep -q "Darwin"; then
+    return 0
+  fi
+  return 1
+}
+
 dotmsg() {
   echo "----------"
   echo "[dotfiles] $@"

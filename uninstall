@@ -20,7 +20,11 @@ rm -rf ~/.tmux ~/.tmux.conf
 # reset gitconfig
 rm -f ~/.gitconfig
 
-log_todo "Did not uninstall brew tools  (use \`brew leaves\` to see what to remove)"
+if is_macos(); then
+    log_todo "Did not uninstall brew tools  (use \`brew leaves\` to see what to remove)"
+else
+    log_todo "Did not uninstall brew tools  (use \`apt-mark showmanual\` to see what to remove)"
+fi
 log_todo "Did not uninstall asdf or its installed binaries"
 log_todo "Did not uninstall pip packages (use \`pip list --not-required\` to see what to remove)"
 log_todo "Remove the dotfiles repository to complete uninstall"
