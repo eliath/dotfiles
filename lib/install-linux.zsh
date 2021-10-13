@@ -4,6 +4,9 @@
 # verified on Ubuntu 20.04
 log_todo "Enable hidden files in Files>Show Hidden Files"
 
+# ubuntu drivers
+sudo ubuntu-drivers autoinstall
+
 # apt packages
 dotmsg "installing apt packages..."
 sudo apt update
