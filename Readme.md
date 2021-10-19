@@ -1,6 +1,9 @@
 # emc dotfiles
 
-use ./install
+Before cloning this repo you likely need to setup ssh keys for the new computer.
+Not going to list instructions for mapping caps to esc, setting up desktop env, etc.
+
+Once ready, use ./install
 
 The script handles:
 

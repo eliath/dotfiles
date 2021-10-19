@@ -12,7 +12,7 @@ log_todo "you may need to \`killall Finder\` to show hidden files"
 # homebrew
 if ! hash brew > /dev/null; then
   dotmsg "installing homebrew..."
-  /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 fi
 dotmsg "updating homebrew..."
 brew update
