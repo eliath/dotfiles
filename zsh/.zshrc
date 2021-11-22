@@ -1,6 +1,7 @@
 # Aliases
 alias hgrep='history | grep'
 alias psgrep='ps aux | grep -v grep | grep -i -e VSZ -e'
+alias incognito=' unset HISTFILE'
 # Functions
 source "$ZDOTDIR/functions.zsh"
 
@@ -24,6 +25,7 @@ else # Linux
   alias ls='ls --group-directories-first -F --color=auto'
   # nordVPN
   alias nord='nordvpn' # ubuntu
+  alias cbcopy='xclip -sel clip'
 fi
 export LESS=" -R "
 
