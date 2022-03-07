@@ -25,7 +25,6 @@ else # Linux
   alias ls='ls --group-directories-first -F --color=auto'
   # nordVPN
   alias nord='nordvpn' # ubuntu
-  alias cbcopy='xclip -sel clip'
 fi
 export LESS=" -R "
 
