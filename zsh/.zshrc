@@ -6,8 +6,8 @@ alias incognito=' unset HISTFILE'
 source "$ZDOTDIR/functions.zsh"
 
 # Editors/pagers
-export EDITOR=vim
-export VISUAL=vim
+export EDITOR='code --wait'
+export VISUAL='code --wait'
 export PAGER=less
 
 if [[ "$(uname)" == "Darwin" ]]; then
