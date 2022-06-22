@@ -73,6 +73,7 @@ zstyle ':prezto:load' pmodule \
   'homebrew' \
   'node' \
   'spectrum' \
+  'ssh' \
   'syntax-highlighting' \
   'terminal' \
   'tmux' \
