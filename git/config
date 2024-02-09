@@ -12,13 +12,20 @@
 [core]
    editor = code --wait
    excludesfile = ~/dotfiles/git/ignore
+   compression = 9
+   packedGitLimit = 8096m
+   packedGitWindowSize = 8096m
 [push]
    default = simple
 [color "status"]
    changed = yellow
 [include]
-    path = ./aliases
+   path = ./aliases
 [credential]
-    helper = osxkeychain
+   helper = osxkeychain
 [pager]
-    branch = false
+   branch = false
+[pack]
+   deltaCacheSize = 2047m
+   packSizeLimit = 2047m
+   windowMemory = 2047m
