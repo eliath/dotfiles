@@ -86,6 +86,7 @@ prezto_init=$ZDOTDIR/.zprezto/init.zsh
 
 # extra git alias not provided by prezto
 alias gfb='git fb'
+alias gwdn='git --no-pager diff --name-only'
 
 # prezto settings
 zstyle ':prezto:module:editor' key-bindings 'vi'
