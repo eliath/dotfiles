@@ -1,7 +1,8 @@
 # emc dotfiles
 
-Before cloning this repo you likely need to setup ssh keys for the new computer.
 Not going to list instructions for mapping caps to esc, setting up desktop env, etc.
+
+Setup an SSH key for the new computer, add the SSH key to github, and clone the repo into your home directory.
 
 Once ready, use ./install
 

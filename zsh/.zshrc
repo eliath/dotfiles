@@ -23,8 +23,6 @@ else # Linux
   export LESSOPEN="| /usr/share/source-highlight/src-hilite-lesspipe.sh %s"
   # ls colors
   alias ls='ls --group-directories-first -F --color=auto'
-  # nordVPN
-  alias nord='nordvpn' # ubuntu
 fi
 export LESS=" -R "
 
@@ -38,8 +36,12 @@ export PATH="${HOME}/local/bin:${PATH}"
 #####################
 # ACTIVATE SOFTWARE #
 #####################
-if type brew &>/dev/null; then
-  . "${ZDOTDIR}/brew-activate.zsh"
+if [[ "$(uname)" == "Darwin" ]]; then
+  if [ -d "/opt/homebrew/bin" ]; then
+    # Homebrew activation
+    export PATH="/opt/homebrew/bin:$PATH"
+    . "${ZDOTDIR}/brew-activate.zsh"
+  fi
 elif [[ "$(uname)" == "Linux" ]]; then
   . "${ZDOTDIR}/apt-activate.zsh"
 fi

@@ -90,24 +90,14 @@ asdf_plugins=(
   "golang"
 )
 
-install_node_asdf() {
-  asdf plugin add nodejs
-  dotmsg "updating nodejs keyring..."
-  bash ~/.asdf/plugins/nodejs/bin/import-release-team-keyring
-}
-
 for p in $asdf_plugins; do
   if asdf which $p >/dev/null 2>&1; then
     continue
   fi
   dotmsg "installing asdf/$p..."
-  if [ $p = "node" ]; then
-    install_node_asdf
-  else
-    set +e
-    asdf plugin add $p
-    set -e
-  fi
+  set +e
+  asdf plugin add $p
+  set -e
   log_todo "to install $p versions:
     asdf list-all $p
     asdf install $p [version]"

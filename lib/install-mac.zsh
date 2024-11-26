@@ -4,6 +4,7 @@
 
 # screenshot location
 defaults write com.apple.screencapture location /tmp/
+dotmsg "screenshots will write to /tmp"
 
 # show hidden files
 defaults write com.apple.Finder AppleShowAllFiles true
@@ -13,6 +14,7 @@ log_todo "you may need to \`killall Finder\` to show hidden files"
 if ! hash brew > /dev/null; then
   dotmsg "installing homebrew..."
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+  export PATH="/opt/homebrew/bin:$PATH"
 fi
 dotmsg "updating homebrew..."
 brew update
