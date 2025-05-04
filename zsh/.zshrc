@@ -46,6 +46,13 @@ elif [[ "$(uname)" == "Linux" ]]; then
   . "${ZDOTDIR}/apt-activate.zsh"
 fi
 
+# asdf version manager
+export ASDF_DATA_DIR="${HOME}/.asdf"
+export PATH="$ASDF_DATA_DIR/shims:$PATH"
+if [ -d "${ASDF_DATA_DIR}/completions" ]; then
+  fpath=("${ASDF_DATA_DIR}/completions" $fpath)
+fi
+
 # fzf
 [ -f ${HOME}/.fzf.zsh ] && . ${HOME}/.fzf.zsh
 . "${ZDOTDIR}/fzf_config.zsh"
@@ -53,12 +60,6 @@ fi
 # Python software via asdf
 if asdf which python >/dev/null 2>&1; then
   asdf reshim python
-fi
-
-# asdf version manager
-. ${HOME}/.asdf/asdf.sh
-if (( ${+ASDF_DIR} )); then
-  fpath=(${ASDF_DIR}/completions $fpath)
 fi
 
 # PREZTO #############################################
