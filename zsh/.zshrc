@@ -64,24 +64,23 @@ fi
 
 # PREZTO #############################################
 zstyle ':prezto:load' pmodule \
-  'contrib-prompt' \
-  'prompt' \
-  'completion' \
-  'directory' \
-  'docker' \
   'environment' \
-  'git' \
+  'terminal' \
   'history' \
   'history-substring-search' \
+  'directory' \
+  'spectrum' \
+  'utility' \
+  'syntax-highlighting' \
+  'ssh' \
+  'git' \
+  'contrib-prompt' \
+  'docker' \
   'homebrew' \
   'node' \
-  'spectrum' \
-  'ssh' \
-  'syntax-highlighting' \
-  'terminal' \
-  'tmux' \
-  'utility' \
-  'command-not-found'
+  'command-not-found' \
+  'completion' \
+  'prompt'
 
 # activate Prezto
 prezto_init=$ZDOTDIR/.zprezto/init.zsh
