@@ -103,5 +103,23 @@ for p in $asdf_plugins; do
     asdf install $p [version]"
 done
 
+# atuin
+atuin_bin="${HOME}/.atuin/bin/atuin"
+if [ ! -f $atuin_bin ]; then
+  dotmsg "installing atuin..."
+  curl --proto '=https' --tlsv1.2 -LsSf https://setup.atuin.sh | sh
+  dotmsg "importing shell history to atuin..."
+  $atuin_bin import auto
+else
+  dotmsg "atuin already installed"
+fi
+
+dotmsg "configuring atuin..."
+atuin_config_dir="${HOME}/.config/atuin"
+atuin_config="${atuin_config_dir}/config.toml"
+mkdir -p $atuin_config_dir
+rm -f $atuin_config
+ln -s $DOTFILES/atuin/config.toml $atuin_config
+
 log_todo "Restart shell for all changes to take effect"
 print_result

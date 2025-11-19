@@ -1,0 +1,20 @@
+## Atuin configuration for local-only use
+
+# Disable sync (local-only mode)
+auto_sync = false
+sync_frequency = "0"
+
+# Search settings
+search_mode = "fuzzy"
+filter_mode = "global"
+
+# UI preferences
+inline_height = 40
+style = "auto"
+show_preview = true
+
+# Store all commands including failed ones
+store_failed = true
+
+# Update checks
+update_check = true

@@ -101,3 +101,11 @@ fpath=(${(u)fpath[@]})
 # Load local configs/overrides
 local_profile="${HOME}/local/profile.zsh"
 [[ -s $local_profile ]] && . $local_profile
+
+# atuin - magical shell history
+if [ -f "${HOME}/.atuin/bin/atuin" ]; then
+  export PATH="${HOME}/.atuin/bin:${PATH}"
+  eval "$(atuin init zsh)"
+fi
+
+. "$HOME/.atuin/bin/env"
