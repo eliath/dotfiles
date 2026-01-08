@@ -39,6 +39,17 @@ if [ ! -d $zpreztodir ]; then
   git clone --recurse-submodules https://github.com/belak/prezto-contrib $zpreztodir/contrib
 fi
 
+# Upgrade spaceship prompt to v4 (prezto-contrib ships with v3)
+spaceship_dir=$zpreztodir/contrib/contrib-prompt/external/spaceship
+spaceship_version_file=$spaceship_dir/.spaceship-v4
+if [ ! -f $spaceship_version_file ]; then
+  dotmsg "upgrading spaceship prompt to v4..."
+  rm -rf $spaceship_dir
+  git clone --depth 1 --branch v4.9.1 https://github.com/spaceship-prompt/spaceship-prompt.git $spaceship_dir
+  rm -rf $spaceship_dir/.git
+  touch $spaceship_version_file
+fi
+
 dotmsg "configuring vim..."
 rm -rf ~/.vim
 rm -f ~/.vimrc

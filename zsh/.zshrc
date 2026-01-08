@@ -82,6 +82,10 @@ zstyle ':prezto:load' pmodule \
   'completion' \
   'prompt'
 
+# Spaceship prompt configuration
+zstyle ':prezto:module:prompt' theme 'spaceship'
+export SPACESHIP_CONFIG="$ZDOTDIR/spaceship.zsh"
+
 # activate Prezto
 prezto_init=$ZDOTDIR/.zprezto/init.zsh
 [[ -s $prezto_init ]] && . $prezto_init
@@ -90,10 +94,6 @@ prezto_init=$ZDOTDIR/.zprezto/init.zsh
 alias gfb='git fb'
 alias gwdn='git --no-pager diff --name-only'
 alias gwdn1='git --no-pager diff --name-only HEAD~1'
-
-# prezto settings
-zstyle ':prezto:module:editor' key-bindings 'vi'
-. $ZDOTDIR/spaceship.zsh
 
 # de-dup fpath
 fpath=(${(u)fpath[@]})
