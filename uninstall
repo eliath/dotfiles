@@ -15,7 +15,6 @@ rm -f ~/.zshenv
 
 # remove symlinks
 rm -rf ~/.vim ~/.vimrc
-rm -rf ~/.tmux ~/.tmux.conf
 
 # reset gitconfig
 rm -f ~/.gitconfig

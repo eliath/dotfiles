@@ -2,3 +2,4 @@
 *.swp
 *.code-workspace
 zsh/.zsh_sessions
+zsh/**/*.zwc
