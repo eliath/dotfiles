@@ -51,15 +51,8 @@ if [ ! -f $spaceship_version_file ]; then
 fi
 
 dotmsg "configuring vim..."
-rm -rf ~/.vim
 rm -f ~/.vimrc
-
-cfg_dir=$DOTFILES/vim
-vim_dir=$cfg_dir/.vim
-vimrc=$cfg_dir/.vimrc
-
-ln -s $vim_dir $HOME/.vim
-ln -s $vimrc $HOME/.vimrc
+ln -s $DOTFILES/vim/.vimrc $HOME/.vimrc
 
 
 # git
