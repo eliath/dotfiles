@@ -12,7 +12,7 @@ SPACESHIP_PROMPT_ORDER=(
 
 SPACESHIP_RPROMPT_ORDER=(
   venv          # Python virtual environment
-  python        # Python version (asdf-aware)
+  python        # Python version (mise-aware)
   golang        # Go section
   node          # Node.js section
   aws           # Amazon Web Services section
@@ -34,7 +34,7 @@ SPACESHIP_VENV_SHOW=true
 SPACESHIP_VENV_SYMBOL="🐍 "
 SPACESHIP_VENV_COLOR="blue"
 
-# Python version settings (asdf-aware)
+# Python version settings (mise-aware)
 SPACESHIP_PYTHON_SHOW=true
 
 # Kubectl settings (disabled by default in v4)

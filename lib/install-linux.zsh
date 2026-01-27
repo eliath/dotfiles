@@ -11,7 +11,3 @@ sudo ubuntu-drivers autoinstall
 dotmsg "installing apt packages..."
 sudo apt update
 xargs -a ${DOTFILES}/lib/apt-packages sudo apt install -y
-
-# asdf install
-dotmsg "installing latest asdf release..."
-$DOTFILES/lib/download-asdf-linux.zsh

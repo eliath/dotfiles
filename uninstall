@@ -24,7 +24,7 @@ if is_macos(); then
 else
     log_todo "Did not uninstall brew tools  (use \`apt-mark showmanual\` to see what to remove)"
 fi
-log_todo "Did not uninstall asdf or its installed binaries"
+log_todo "Did not uninstall mise or its installed tools (use \`mise ls\` to see installed versions)"
 log_todo "Did not uninstall pip packages (use \`pip list --not-required\` to see what to remove)"
 log_todo "Remove the dotfiles repository to complete uninstall"
 log_todo "Restart your shell for changes to take full effect"

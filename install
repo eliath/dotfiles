@@ -64,34 +64,27 @@ if [ ! -s $gitcfg ]; then
 fi
 
 
-# asdf
-asdf_root="${HOME}/.asdf"
-if [ ! -d $asdf_root ]; then
-  dotmsg "installing asdf-vm..."
-  git clone https://github.com/asdf-vm/asdf.git $asdf_root
-  pushd $asdf_root >/dev/null
-  git checkout "$(git describe --abbrev=0 --tags)"
-  popd >/dev/null
-  . ${asdf_root}/asdf.sh # make asdf available for the next step
+# mise (tool version manager)
+mise_bin="${HOME}/.local/bin/mise"
+if [ ! -f $mise_bin ]; then
+  dotmsg "installing mise..."
+  curl https://mise.run | sh
 fi
 
-asdf_plugins=(
+mise_tools=(
   "python"
   "node"
-  "golang"
+  "go"
 )
 
-for p in $asdf_plugins; do
-  if asdf which $p >/dev/null 2>&1; then
+for tool in $mise_tools; do
+  if mise which $tool >/dev/null 2>&1; then
     continue
   fi
-  dotmsg "installing asdf/$p..."
-  set +e
-  asdf plugin add $p
-  set -e
-  log_todo "to install $p versions:
-    asdf list-all $p
-    asdf install $p [version]"
+  dotmsg "mise: $tool plugin available..."
+  log_todo "to install $tool versions:
+    mise use --global $tool@latest
+    # or specific version: mise use --global $tool@X.Y.Z"
 done
 
 # atuin

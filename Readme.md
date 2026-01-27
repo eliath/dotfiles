@@ -11,7 +11,7 @@ Once ready, use `./install`
 The script handles:
 
 1. Install software packages like git, zsh, fzf ...
-2. Install asdf package manager for things like python
+2. Install mise package manager for things like python, node, go
 3. System Configurations like ZDOTDIR and git configs
 4. Plugin configurations such as prezto for zsh
 
