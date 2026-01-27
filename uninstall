@@ -8,24 +8,43 @@ dotmsg "uninstalling dotfiles"
 read -q "REPLY?This action could destroy your user configs. Are you sure? [y/n] "
 echo "
 $REPLY - Continuing uninstall..."
-defaults write com.apple.screencapture location $HOME/Desktop/
+
+# macOS settings
+if is_macos(); then
+  defaults write com.apple.screencapture location $HOME/Desktop/
+  defaults write com.apple.Finder AppleShowAllFiles false
+  log_todo "Run \`killall Finder\` to apply Finder settings"
+fi
 
 # remove zsh config
 rm -f ~/.zshenv
 
-# remove symlinks
-rm -rf ~/.vim ~/.vimrc
+# remove vim symlink
+rm -f ~/.vimrc
+
+# remove atuin config symlink
+rm -f ~/.config/atuin/config.toml
 
 # reset gitconfig
 rm -f ~/.gitconfig
 
+# remove Prezto
+zpreztodir=$DOTFILES/zsh/.zprezto
+if [ -d "$zpreztodir" ]; then
+  dotmsg "removing Prezto..."
+  rm -rf "$zpreztodir"
+fi
+
 if is_macos(); then
     log_todo "Did not uninstall brew tools  (use \`brew leaves\` to see what to remove)"
 else
-    log_todo "Did not uninstall brew tools  (use \`apt-mark showmanual\` to see what to remove)"
+    log_todo "Did not uninstall apt packages (use \`apt-mark showmanual\` to see what to remove)"
 fi
 log_todo "Did not uninstall mise or its installed tools (use \`mise ls\` to see installed versions)"
-log_todo "Did not uninstall pip packages (use \`pip list --not-required\` to see what to remove)"
+log_todo "Did not uninstall atuin binary at ~/.atuin/bin/atuin"
+log_todo "Did not remove ~/.local/bin/mise binary"
+log_todo "Did not remove mise config at ~/.config/mise/"
+log_todo "Did not remove directories: ~/code, ~/.config, ~/local"
 log_todo "Remove the dotfiles repository to complete uninstall"
 log_todo "Restart your shell for changes to take full effect"
 
