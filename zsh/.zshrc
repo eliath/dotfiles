@@ -31,7 +31,9 @@ export LESS=" -R "
 ###########
 
 # A place for local binaries
-export PATH="${HOME}/local/bin:${PATH}"
+# TODO: we should stop using the ~/local/bin directory and converge on using ~/.local/bin
+add_to_path "${HOME}/local/bin"
+add_to_path "${HOME}/.local/bin"
 
 #####################
 # ACTIVATE SOFTWARE #

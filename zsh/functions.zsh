@@ -62,3 +62,8 @@ ssh-listkeys() {
         done | column -t | grep --color=auto "$line" || echo "$line";
     done < <(ssh-add -l | awk '{print $2}')
 }
+
+# Helper to add to PATH if not already present
+add_to_path() {
+  [[ ":$PATH:" != *":$1:"* ]] && export PATH="$1:${PATH}"
+}
