@@ -4,7 +4,9 @@ Not going to list instructions for mapping caps to esc, setting up desktop env, 
 
 Setup an SSH key for the new computer, add the SSH key to github, and clone the repo into your home directory.
 
-Once ready, use ./install
+Install requires zsh. Install it first with `apt install zsh` or `brew install zsh` if not already available.
+
+Once ready, use `./install`
 
 The script handles:
 

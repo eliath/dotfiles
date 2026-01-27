@@ -9,15 +9,6 @@ mkdir -p ~/code
 mkdir -p ~/.config
 mkdir -p ~/local
 
-# macOS settings
-if is_macos; then
-  dotmsg "performing macOS setup..."
-  source "${DOTFILES}/lib/install-mac.zsh"
-else
-  dotmsg "performing Linux setup..."
-  source "${DOTFILES}/lib/install-linux.zsh"
-fi
-
 # zsh
 zsh_path=`which zsh`
 log_todo "Ensure zsh in /etc/shells and set default shell:
@@ -31,6 +22,15 @@ zpreztodir=$zdotdir/.zprezto
 # rewrite zshenv with our settings
 [[ -s $zshenv ]] && rm -f $zshenv
 echo 'ZDOTDIR="'$zdotdir'"' > $zshenv
+
+# platform specific setup: macOS vs linux
+if is_macos; then
+  dotmsg "performing macOS setup..."
+  source "${DOTFILES}/lib/install-mac.zsh"
+else
+  dotmsg "performing Linux setup..."
+  source "${DOTFILES}/lib/install-linux.zsh"
+fi
 
 # Prezto + prezto-contrib
 if [ ! -d $zpreztodir ]; then
