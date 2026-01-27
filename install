@@ -61,6 +61,8 @@ if [ ! -s $gitcfg ]; then
   dotmsg "setting up git config"
   echo "[include]
   path = $DOTFILES/git/config" > $gitcfg
+  log_todo "remember to configure an email for git:
+    git config --global user.email 'your.email@example.com'"
 fi
 
 
