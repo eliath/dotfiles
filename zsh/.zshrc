@@ -88,10 +88,6 @@ alias gwdn1='git --no-pager diff --name-only HEAD~1'
 # de-dup fpath
 fpath=(${(u)fpath[@]})
 
-# Load local configs/overrides
-local_profile="${HOME}/local/profile.zsh"
-[[ -s $local_profile ]] && . $local_profile
-
 # atuin - magical shell history
 if [ -f "${HOME}/.atuin/bin/atuin" ]; then
   export PATH="${HOME}/.atuin/bin:${PATH}"
@@ -104,3 +100,7 @@ fi
 if command -v mise >/dev/null 2>&1; then
   eval "$(mise activate zsh)"
 fi
+
+# Load local configs/overrides
+local_profile="${HOME}/local/profile.zsh"
+[[ -s $local_profile ]] && . $local_profile
