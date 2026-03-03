@@ -36,6 +36,3 @@ SPACESHIP_VENV_COLOR="blue"
 
 # Python version settings (mise-aware)
 SPACESHIP_PYTHON_SHOW=true
-
-# Kubectl settings (disabled by default in v4)
-SPACESHIP_KUBECTL_SHOW=true
