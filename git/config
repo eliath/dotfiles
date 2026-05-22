@@ -10,7 +10,6 @@
 [merge]
    tool = opendiff
 [core]
-   editor = code --wait
    excludesfile = ~/dotfiles/git/ignore
    compression = 9
    packedGitLimit = 8096m

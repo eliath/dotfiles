@@ -96,6 +96,11 @@ fi
 
 . "$HOME/.atuin/bin/env"
 
+# AppImage sets ARGV0 to the AppImage path, which mise reads to identify the
+# shim being called. Unset it before activating mise so it doesn't mistake
+# AppImages for shims.
+[[ -n "$APPIMAGE" ]] && unset ARGV0
+
 # mise version manager (load this last to prevent being overwritten)
 if command -v mise >/dev/null 2>&1; then
   eval "$(mise activate zsh)"
