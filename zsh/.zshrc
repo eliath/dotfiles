@@ -85,6 +85,21 @@ alias gfb='git fb'
 alias gwdn='git --no-pager diff --name-only'
 alias gwdn1='git --no-pager diff --name-only HEAD~1'
 
+function gbxm() {
+  local branch
+  branch="$(git branch --show-current)" || return
+  if [[ -z "$branch" ]]; then
+    echo "gbxm: not on a branch" >&2
+    return 1
+  fi
+  if [[ "$branch" == "main" ]]; then
+    echo "gbxm: already on main" >&2
+    return 1
+  fi
+
+  git checkout main && git pull --ff-only origin main && git branch --delete --force "$branch"
+}
+
 # de-dup fpath
 fpath=(${(u)fpath[@]})
 
