@@ -30,9 +30,6 @@ export LESS=" -R "
 # PATHS   #
 ###########
 
-# A place for local binaries
-# TODO: we should stop using the ~/local/bin directory and converge on using ~/.local/bin
-add_to_path "${HOME}/local/bin"
 add_to_path "${HOME}/.local/bin"
 
 #####################
@@ -121,6 +118,6 @@ if command -v mise >/dev/null 2>&1; then
   eval "$(mise activate zsh)"
 fi
 
-# Load local configs/overrides
-local_profile="${HOME}/local/profile.zsh"
+# Machine-local overrides (not in this repo)
+local_profile="${HOME}/.config/zsh/profile.zsh"
 [[ -s $local_profile ]] && . $local_profile

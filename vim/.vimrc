@@ -75,7 +75,3 @@ let g:netrw_liststyle = 3
 :command Q q
 :command Qa qa
 
-" Optional local config override
-if filereadable(expand("~/local/profile.vim"))
-  so ~/local/profile.vim
-endif

@@ -7,7 +7,6 @@ source "${HOME}/dotfiles/lib/common.zsh"
 dotmsg "preparing directories..."
 mkdir -p ~/code
 mkdir -p ~/.config
-mkdir -p ~/local
 
 # zsh
 zsh_path=`which zsh`

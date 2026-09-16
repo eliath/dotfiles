@@ -44,7 +44,7 @@ log_todo "Did not uninstall mise or its installed tools (use \`mise ls\` to see 
 log_todo "Did not uninstall atuin binary at ~/.atuin/bin/atuin"
 log_todo "Did not remove ~/.local/bin/mise binary"
 log_todo "Did not remove mise config at ~/.config/mise/"
-log_todo "Did not remove directories: ~/code, ~/.config, ~/local"
+log_todo "Did not remove directories: ~/code, ~/.config"
 log_todo "Remove the dotfiles repository to complete uninstall"
 log_todo "Restart your shell for changes to take full effect"
 
