@@ -5,6 +5,10 @@ scriptencoding utf-8
 syntax enable
 set background=dark
 
+" Block cursor in normal, bar in insert
+let &t_SI = "\e[6 q"
+let &t_EI = "\e[2 q"
+
 " Tab width = 2
 filetype plugin indent on
 set tabstop=2
@@ -38,18 +42,6 @@ set autoread
 set splitright
 set splitbelow
 
-" Pane navigation
-nnoremap <C-J> <C-W><C-J>
-nnoremap <C-K> <C-W><C-K>
-nnoremap <C-L> <C-W><C-L>
-nnoremap <C-H> <C-W><C-H>
-
-" File navigation - CMD+Arrow up/down to go to beginning/end of file
-nnoremap <C-a> <Home>
-inoremap <C-a> <Home>
-nnoremap <C-e> <End>
-inoremap <C-e> <End>
-
 " Don't yank when pasting in visual mode
 vnoremap p "_dp
 
@@ -59,13 +51,6 @@ set hlsearch
 
 " Backspace fix
 set backspace=indent,eol,start
-
-" Autocomplete
-filetype plugin on
-set omnifunc=syntaxcomplete#Complete
-
-" File explorer
-let g:netrw_liststyle = 3
 
 " Command aliases
 :command W w
