@@ -30,6 +30,10 @@ rm -f ~/.vimrc
 # remove atuin config symlink
 rm -f ~/.config/atuin/config.toml
 
+# remove ghostty config symlink and restore any backup
+[[ -L ~/.config/ghostty ]] && rm ~/.config/ghostty
+[[ -d ~/.config/ghostty.bak && ! -e ~/.config/ghostty ]] && mv ~/.config/ghostty.bak ~/.config/ghostty
+
 # reset gitconfig
 rm -f ~/.gitconfig
 

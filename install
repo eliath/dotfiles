@@ -106,5 +106,17 @@ mkdir -p "$atuin_config_dir"
 rm -f "$atuin_config"
 ln -s "$DOTFILES/atuin/config.toml" "$atuin_config"
 
+# ghostty
+dotmsg "configuring ghostty..."
+ghostty_dir="$HOME/.config/ghostty"
+if [[ -d "$ghostty_dir" && ! -L "$ghostty_dir" ]]; then
+  # refuse rather than nest one backup inside another
+  [[ -e "$ghostty_dir.bak" ]] && { echo "$ghostty_dir.bak already exists; move it aside and re-run" >&2; exit 1; }
+  mv "$ghostty_dir" "$ghostty_dir.bak"
+  log_todo "Moved your old Ghostty config to $ghostty_dir.bak. Put machine-specific
+    settings such as font-size in $DOTFILES/ghostty/local, then delete the backup"
+fi
+ln -sfn "$DOTFILES/ghostty" "$ghostty_dir"
+
 log_todo "Restart shell for all changes to take effect"
 print_result
