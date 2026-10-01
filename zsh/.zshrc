@@ -106,8 +106,8 @@ fi
 command -v zoxide >/dev/null && eval "$(zoxide init zsh --cmd j)"
 
 # atuin - magical shell history
-if [ -f "${HOME}/.atuin/bin/atuin" ]; then
-  export PATH="${HOME}/.atuin/bin:${PATH}"
+[[ -d "$HOME/.atuin/bin" ]] && export PATH="$HOME/.atuin/bin:$PATH"
+if command -v atuin >/dev/null; then
   eval "$(atuin init zsh)"
 fi
 

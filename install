@@ -69,8 +69,9 @@ fi
 
 
 # mise (tool version manager)
-mise_bin="$HOME/.local/bin/mise"
-if [[ ! -f "$mise_bin" ]]; then
+# Check the command and the installer path together: ~/.local/bin and
+# ~/.atuin/bin may not be on PATH yet during a first install.
+if ! command -v mise >/dev/null && [[ ! -x "$HOME/.local/bin/mise" ]]; then
   dotmsg "installing mise..."
   curl https://mise.run | sh
 fi
@@ -89,7 +90,7 @@ done
 
 # atuin
 atuin_bin="$HOME/.atuin/bin/atuin"
-if [[ ! -f "$atuin_bin" ]]; then
+if ! command -v atuin >/dev/null && [[ ! -x "$atuin_bin" ]]; then
   dotmsg "installing atuin..."
   curl --proto '=https' --tlsv1.2 -LsSf https://setup.atuin.sh | sh
   dotmsg "importing shell history to atuin..."
