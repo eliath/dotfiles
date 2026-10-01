@@ -1,13 +1,16 @@
-brew "autojump"
+# Tinycast launcher, third-party tap. Needs macOS 26 or newer.
+tap "abue-ammar/tinycast"
+
+brew "bat"
 brew "fd"
 brew "fzf"
 brew "git"
 brew "gnupg"
-brew "highlight"
-brew "htop"
-brew "mosh"
-brew "the_silver_searcher"
+brew "btop"
+brew "ripgrep"
 brew "tmux"
 brew "vim"
-brew "zsh-completions"
-brew "zsh"
+brew "zoxide"
+
+# Apple silicon build; Intel Macs use "tinycast-universal"
+cask "tinycast"

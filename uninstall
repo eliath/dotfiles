@@ -1,19 +1,25 @@
-#!/usr/bin/env zsh
-set -eu
+#!/usr/bin/env bash
+set -euo pipefail
 
-source "${HOME}/dotfiles/lib/common.zsh"
+# shellcheck source=lib/common.sh
+source "$HOME/dotfiles/lib/common.sh"
 
 dotmsg "uninstalling dotfiles"
 
-read -q "REPLY?This action could destroy your user configs. Are you sure? [y/n] "
-echo "
-$REPLY - Continuing uninstall..."
+read -r -p "This action could destroy your user configs. Are you sure? [y/n] " reply
+[[ $reply == [yY] ]] || { echo "Aborted."; exit 1; }
 
 # macOS settings
-if is_macos(); then
-  defaults write com.apple.screencapture location $HOME/Desktop/
+if is_macos; then
+  defaults delete com.apple.screencapture target || true
+  killall SystemUIServer || true
   defaults write com.apple.Finder AppleShowAllFiles false
   log_todo "Run \`killall Finder\` to apply Finder settings"
+  defaults write com.apple.dock autohide -bool false
+  defaults write com.apple.dock show-recents -bool true
+  killall Dock || true
+  rm -f "$HOME/.local/state/dotfiles/dock-cleared"
+  log_todo "Pinned Dock apps were not restored; re-add them manually"
 fi
 
 # remove zsh config
@@ -25,20 +31,24 @@ rm -f ~/.vimrc
 # remove atuin config symlink
 rm -f ~/.config/atuin/config.toml
 
+# remove ghostty config symlink and restore any backup
+[[ -L ~/.config/ghostty ]] && rm ~/.config/ghostty
+[[ -d ~/.config/ghostty.bak && ! -e ~/.config/ghostty ]] && mv ~/.config/ghostty.bak ~/.config/ghostty
+
 # reset gitconfig
 rm -f ~/.gitconfig
 
 # remove Prezto
-zpreztodir=$DOTFILES/zsh/.zprezto
-if [ -d "$zpreztodir" ]; then
+zpreztodir="$DOTFILES/zsh/.zprezto"
+if [[ -d "$zpreztodir" ]]; then
   dotmsg "removing Prezto..."
   rm -rf "$zpreztodir"
 fi
 
-if is_macos(); then
-    log_todo "Did not uninstall brew tools  (use \`brew leaves\` to see what to remove)"
+if is_macos; then
+  log_todo "Did not uninstall brew tools  (use \`brew leaves\` to see what to remove)"
 else
-    log_todo "Did not uninstall apt packages (use \`apt-mark showmanual\` to see what to remove)"
+  log_todo "Did not uninstall apt packages (use \`apt-mark showmanual\` to see what to remove)"
 fi
 log_todo "Did not uninstall mise or its installed tools (use \`mise ls\` to see installed versions)"
 log_todo "Did not uninstall atuin binary at ~/.atuin/bin/atuin"

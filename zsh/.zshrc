@@ -11,16 +11,12 @@ export VISUAL='code --wait'
 export PAGER=less
 
 if [[ "$(uname)" == "Darwin" ]]; then
-  # less syntax highlight (source: https://gist.github.com/textarcana/4611277#gistcomment-1701305)
-  export LESSOPEN="| $(which highlight) %s --out-format xterm256 --quiet --force --style solarized-light"
   alias less='less -m -n -g -i --underline-special'
   # ls colors
   unset LS_COLORS
   CLICOLOR=1
   CLICOLOR_FORCE=1
 else # Linux
-  # less syntax highlight
-  export LESSOPEN="| /usr/share/source-highlight/src-hilite-lesspipe.sh %s"
   # ls colors
   alias ls='ls --group-directories-first -F --color=auto'
 fi
@@ -32,22 +28,17 @@ export LESS=" -R "
 
 add_to_path "${HOME}/.local/bin"
 
+# less syntax highlight. After PATH setup: on Ubuntu, bat is a symlink in
+# ~/.local/bin.
+command -v bat >/dev/null && export LESSOPEN="| bat --color=always --style=plain %s"
+
 #####################
 # ACTIVATE SOFTWARE #
 #####################
-if [[ "$(uname)" == "Darwin" ]]; then
-  if [ -d "/opt/homebrew/bin" ]; then
-    # Homebrew activation
-    export PATH="/opt/homebrew/bin:$PATH"
-    . "${ZDOTDIR}/brew-activate.zsh"
-  fi
-elif [[ "$(uname)" == "Linux" ]]; then
-  . "${ZDOTDIR}/apt-activate.zsh"
+# Homebrew: sets PATH, MANPATH, INFOPATH and HOMEBREW_PREFIX
+if [[ -x /opt/homebrew/bin/brew ]]; then
+  eval "$(/opt/homebrew/bin/brew shellenv)"
 fi
-
-# fzf
-[ -f ${HOME}/.fzf.zsh ] && . ${HOME}/.fzf.zsh
-. "${ZDOTDIR}/fzf_config.zsh"
 
 # PREZTO #############################################
 zstyle ':prezto:load' pmodule \
@@ -100,13 +91,27 @@ function gbxm() {
 # de-dup fpath
 fpath=(${(u)fpath[@]})
 
+# fzf key bindings and completion. Load after Prezto, whose editor module
+# resets all keymaps and would drop these bindings. fzf 0.48+ generates
+# its own zsh setup; older apt packages ship the scripts under /usr/share/doc.
+if fzf --zsh >/dev/null 2>&1; then
+  source <(fzf --zsh)
+elif [[ -f /usr/share/doc/fzf/examples/key-bindings.zsh ]]; then
+  source /usr/share/doc/fzf/examples/key-bindings.zsh
+  source /usr/share/doc/fzf/examples/completion.zsh
+fi
+export FZF_DEFAULT_COMMAND='fd --type f --hidden --exclude .git'
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+export FZF_ALT_C_COMMAND='fd --type d --hidden --exclude .git'
+
+# zoxide, with j as the command to keep autojump muscle memory
+command -v zoxide >/dev/null && eval "$(zoxide init zsh --cmd j)"
+
 # atuin - magical shell history
-if [ -f "${HOME}/.atuin/bin/atuin" ]; then
-  export PATH="${HOME}/.atuin/bin:${PATH}"
+[[ -d "$HOME/.atuin/bin" ]] && export PATH="$HOME/.atuin/bin:$PATH"
+if command -v atuin >/dev/null; then
   eval "$(atuin init zsh)"
 fi
-
-. "$HOME/.atuin/bin/env"
 
 # AppImage sets ARGV0 to the AppImage path, which mise reads to identify the
 # shim being called. Unset it before activating mise so it doesn't mistake
