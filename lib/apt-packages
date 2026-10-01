@@ -14,5 +14,6 @@ nordvpn
 source-highlight
 command-not-found
 font-manager
-silversearcher-ag
+ripgrep
+fd-find
 jq

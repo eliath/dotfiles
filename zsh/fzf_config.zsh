@@ -1,7 +1,9 @@
 # fzf configurations
 
-# use ag for search
-export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -g ""'
+# use fd for search
+export FZF_DEFAULT_COMMAND='fd --type f --hidden --exclude .git'
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+export FZF_ALT_C_COMMAND='fd --type d --hidden --exclude .git'
 
 # solarized color scheme
 _gen_fzf_default_opts() {
