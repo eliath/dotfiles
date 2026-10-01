@@ -5,6 +5,7 @@ SPACESHIP_PROMPT_ORDER=(
   host          # Hostname section
   git           # Git section (git_branch + git_status)
   exit_code     # Exit code section
+  async         # Async jobs indicator; Spaceship warns if this is missing
   line_sep      # Line break
   jobs          # Background jobs indicator
   char          # Prompt character
