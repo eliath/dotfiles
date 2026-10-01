@@ -43,10 +43,6 @@ if [[ "$(uname)" == "Darwin" ]]; then
   fi
 fi
 
-# fzf
-[ -f ${HOME}/.fzf.zsh ] && . ${HOME}/.fzf.zsh
-. "${ZDOTDIR}/fzf_config.zsh"
-
 # PREZTO #############################################
 zstyle ':prezto:load' pmodule \
   'environment' \
@@ -97,6 +93,17 @@ function gbxm() {
 
 # de-dup fpath
 fpath=(${(u)fpath[@]})
+
+# fzf key bindings and completion. Load after Prezto, whose editor module
+# resets all keymaps and would drop these bindings. fzf 0.48+ generates
+# its own zsh setup; older apt packages ship the scripts under /usr/share/doc.
+if fzf --zsh >/dev/null 2>&1; then
+  source <(fzf --zsh)
+elif [[ -f /usr/share/doc/fzf/examples/key-bindings.zsh ]]; then
+  source /usr/share/doc/fzf/examples/key-bindings.zsh
+  source /usr/share/doc/fzf/examples/completion.zsh
+fi
+. "${ZDOTDIR}/fzf_config.zsh"
 
 # zoxide, with j as the command to keep autojump muscle memory
 command -v zoxide >/dev/null && eval "$(zoxide init zsh --cmd j)"
