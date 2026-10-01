@@ -41,8 +41,6 @@ if [[ "$(uname)" == "Darwin" ]]; then
     export PATH="/opt/homebrew/bin:$PATH"
     . "${ZDOTDIR}/brew-activate.zsh"
   fi
-elif [[ "$(uname)" == "Linux" ]]; then
-  . "${ZDOTDIR}/apt-activate.zsh"
 fi
 
 # fzf
@@ -99,6 +97,9 @@ function gbxm() {
 
 # de-dup fpath
 fpath=(${(u)fpath[@]})
+
+# zoxide, with j as the command to keep autojump muscle memory
+command -v zoxide >/dev/null && eval "$(zoxide init zsh --cmd j)"
 
 # atuin - magical shell history
 if [ -f "${HOME}/.atuin/bin/atuin" ]; then

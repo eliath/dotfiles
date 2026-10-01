@@ -5,7 +5,7 @@ zsh
 fzf
 ffmpeg
 libheif-examples
-autojump
+zoxide
 glances
 mosh
 tmux

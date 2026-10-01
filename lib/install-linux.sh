@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Linux setup
-# last verified on Ubuntu 20.04
+# needs Ubuntu 21.04 or newer: older apt repos lack zoxide
 log_todo "Enable hidden files in Files>Show Hidden Files"
 
 # ubuntu drivers
