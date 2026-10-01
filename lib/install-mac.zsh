@@ -23,6 +23,6 @@ brew bundle --file $DOTFILES/lib/Brewfile
 
 # install fzf
 if brew list fzf >/dev/null; then
-  $(brew --prefix)/opt/fzf/install --key-bindings --completion \
+  "$(brew --prefix)"/opt/fzf/install --key-bindings --completion \
     --no-bash --no-zsh --no-fish
 fi

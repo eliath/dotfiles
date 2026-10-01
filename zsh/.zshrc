@@ -106,8 +106,6 @@ if [ -f "${HOME}/.atuin/bin/atuin" ]; then
   eval "$(atuin init zsh)"
 fi
 
-. "$HOME/.atuin/bin/env"
-
 # AppImage sets ARGV0 to the AppImage path, which mise reads to identify the
 # shim being called. Unset it before activating mise so it doesn't mistake
 # AppImages for shims.
