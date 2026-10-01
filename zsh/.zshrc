@@ -125,4 +125,8 @@ fi
 
 # Machine-local overrides (not in this repo)
 local_profile="${HOME}/.config/zsh/profile.zsh"
-[[ -s $local_profile ]] && . $local_profile
+# `if`, not `&&`: a failed test would leave $? at 1 and show ✘1 in the
+# first prompt on machines without a local profile.
+if [[ -s $local_profile ]]; then
+  . $local_profile
+fi
