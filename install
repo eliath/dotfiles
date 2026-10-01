@@ -1,85 +1,84 @@
-#!/usr/bin/env zsh
-set -eu
+#!/usr/bin/env bash
+set -euo pipefail
 
-source "${HOME}/dotfiles/lib/common.zsh"
+# shellcheck source=lib/common.sh
+source "$HOME/dotfiles/lib/common.sh"
 
 # Basic setup
 dotmsg "preparing directories..."
 mkdir -p ~/code
 mkdir -p ~/.config
 
-# zsh
-zsh_path=`which zsh`
-log_todo "Ensure zsh in /etc/shells and set default shell:
-    chsh -s ${zsh_path}"
-
 dotmsg "configuring zsh..."
-zshenv=$HOME/.zshenv
-zdotdir=$DOTFILES/zsh
-zpreztodir=$zdotdir/.zprezto
+zshenv="$HOME/.zshenv"
+zdotdir="$DOTFILES/zsh"
+zpreztodir="$zdotdir/.zprezto"
 
 # rewrite zshenv with our settings
-[[ -s $zshenv ]] && rm -f $zshenv
-echo 'ZDOTDIR="'$zdotdir'"' > $zshenv
+rm -f "$zshenv"
+echo "ZDOTDIR=\"$zdotdir\"" > "$zshenv"
 
 # platform specific setup: macOS vs linux
 if is_macos; then
   dotmsg "performing macOS setup..."
-  source "${DOTFILES}/lib/install-mac.zsh"
+  # shellcheck source=lib/install-mac.sh
+  source "$DOTFILES/lib/install-mac.sh"
 else
   dotmsg "performing Linux setup..."
-  source "${DOTFILES}/lib/install-linux.zsh"
+  # shellcheck source=lib/install-linux.sh
+  source "$DOTFILES/lib/install-linux.sh"
 fi
 
+# zsh exists by now: macOS ships it, and the Linux setup installs it from apt
+zsh_path="$(command -v zsh)"
+log_todo "Ensure zsh in /etc/shells and set default shell:
+    chsh -s $zsh_path"
+
 # Prezto + prezto-contrib
-if [ ! -d $zpreztodir ]; then
+if [[ ! -d "$zpreztodir" ]]; then
   dotmsg "installing prezto..."
-  git clone --recursive https://github.com/sorin-ionescu/prezto.git $zpreztodir
-  git clone --recurse-submodules https://github.com/belak/prezto-contrib $zpreztodir/contrib
+  git clone --recursive https://github.com/sorin-ionescu/prezto.git "$zpreztodir"
+  git clone --recurse-submodules https://github.com/belak/prezto-contrib "$zpreztodir/contrib"
 fi
 
 # Upgrade spaceship prompt to v4 (prezto-contrib ships with v3)
-spaceship_dir=$zpreztodir/contrib/contrib-prompt/external/spaceship
-spaceship_version_file=$spaceship_dir/.spaceship-v4
-if [ ! -f $spaceship_version_file ]; then
+spaceship_dir="$zpreztodir/contrib/contrib-prompt/external/spaceship"
+spaceship_version_file="$spaceship_dir/.spaceship-v4"
+if [[ ! -f "$spaceship_version_file" ]]; then
   dotmsg "upgrading spaceship prompt to v4..."
-  rm -rf $spaceship_dir
-  git clone --depth 1 --branch v4.9.1 https://github.com/spaceship-prompt/spaceship-prompt.git $spaceship_dir
-  rm -rf $spaceship_dir/.git
-  touch $spaceship_version_file
+  rm -rf "$spaceship_dir"
+  git clone --depth 1 --branch v4.9.1 https://github.com/spaceship-prompt/spaceship-prompt.git "$spaceship_dir"
+  rm -rf "$spaceship_dir/.git"
+  touch "$spaceship_version_file"
 fi
 
 dotmsg "configuring vim..."
 rm -f ~/.vimrc
-ln -s $DOTFILES/vim/.vimrc $HOME/.vimrc
+ln -s "$DOTFILES/vim/.vimrc" "$HOME/.vimrc"
 
 
 # git
-gitcfg=$HOME/.gitconfig
-if [ ! -s $gitcfg ]; then
+gitcfg="$HOME/.gitconfig"
+if [[ ! -s "$gitcfg" ]]; then
   dotmsg "setting up git config"
   echo "[include]
-  path = $DOTFILES/git/config" > $gitcfg
+  path = $DOTFILES/git/config" > "$gitcfg"
   log_todo "remember to configure an email for git:
     git config --global user.email 'your.email@example.com'"
 fi
 
 
 # mise (tool version manager)
-mise_bin="${HOME}/.local/bin/mise"
-if [ ! -f $mise_bin ]; then
+mise_bin="$HOME/.local/bin/mise"
+if [[ ! -f "$mise_bin" ]]; then
   dotmsg "installing mise..."
   curl https://mise.run | sh
 fi
 
-mise_tools=(
-  "python"
-  "node"
-  "go"
-)
+mise_tools=(python node go)
 
-for tool in $mise_tools; do
-  if mise which $tool >/dev/null 2>&1; then
+for tool in "${mise_tools[@]}"; do
+  if mise which "$tool" >/dev/null 2>&1; then
     continue
   fi
   dotmsg "mise: $tool plugin available..."
@@ -89,22 +88,22 @@ for tool in $mise_tools; do
 done
 
 # atuin
-atuin_bin="${HOME}/.atuin/bin/atuin"
-if [ ! -f $atuin_bin ]; then
+atuin_bin="$HOME/.atuin/bin/atuin"
+if [[ ! -f "$atuin_bin" ]]; then
   dotmsg "installing atuin..."
   curl --proto '=https' --tlsv1.2 -LsSf https://setup.atuin.sh | sh
   dotmsg "importing shell history to atuin..."
-  $atuin_bin import auto
+  "$atuin_bin" import auto
 else
   dotmsg "atuin already installed"
 fi
 
 dotmsg "configuring atuin..."
-atuin_config_dir="${HOME}/.config/atuin"
-atuin_config="${atuin_config_dir}/config.toml"
-mkdir -p $atuin_config_dir
-rm -f $atuin_config
-ln -s $DOTFILES/atuin/config.toml $atuin_config
+atuin_config_dir="$HOME/.config/atuin"
+atuin_config="$atuin_config_dir/config.toml"
+mkdir -p "$atuin_config_dir"
+rm -f "$atuin_config"
+ln -s "$DOTFILES/atuin/config.toml" "$atuin_config"
 
 log_todo "Restart shell for all changes to take effect"
 print_result

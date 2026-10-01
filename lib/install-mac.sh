@@ -1,4 +1,4 @@
-#!/usr/bin/env zsh
+#!/usr/bin/env bash
 
 # macOS setup
 
@@ -11,7 +11,7 @@ defaults write com.apple.Finder AppleShowAllFiles true
 log_todo "you may need to \`killall Finder\` to show hidden files"
 
 # homebrew
-if ! hash brew > /dev/null; then
+if ! command -v brew >/dev/null; then
   dotmsg "installing homebrew..."
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
   export PATH="/opt/homebrew/bin:$PATH"
@@ -19,7 +19,7 @@ fi
 dotmsg "updating homebrew..."
 brew update
 dotmsg "installing homebrew packages..."
-brew bundle --file $DOTFILES/lib/Brewfile
+brew bundle --file "$DOTFILES/lib/Brewfile"
 
 # install fzf
 if brew list fzf >/dev/null; then

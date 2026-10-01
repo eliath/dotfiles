@@ -4,7 +4,7 @@ Not going to list instructions for mapping caps to esc, setting up desktop env, 
 
 Setup an SSH key for the new computer, add the SSH key to github, and clone the repo into your home directory.
 
-Install requires zsh. Install it first with `apt install zsh` or `brew install zsh` if not already available.
+The install script runs in bash, which macOS and Ubuntu both ship. It installs zsh on Linux; macOS already has it.
 
 Once ready, use `./install`
 

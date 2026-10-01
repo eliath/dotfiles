@@ -1,4 +1,4 @@
-#!/usr/bin/env zsh
+#!/usr/bin/env bash
 
 # Linux setup
 # last verified on Ubuntu 20.04
@@ -10,4 +10,4 @@ sudo ubuntu-drivers autoinstall
 # apt packages
 dotmsg "installing apt packages..."
 sudo apt update
-xargs -a ${DOTFILES}/lib/apt-packages sudo apt install -y
+xargs -a "$DOTFILES/lib/apt-packages" sudo apt install -y
