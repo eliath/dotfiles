@@ -1,3 +1,6 @@
+# Tinycast launcher, third-party tap. Needs macOS 26 or newer.
+tap "abue-ammar/tinycast"
+
 brew "bat"
 brew "fd"
 brew "fzf"
@@ -8,3 +11,6 @@ brew "ripgrep"
 brew "tmux"
 brew "vim"
 brew "zoxide"
+
+# Apple silicon build; Intel Macs use "tinycast-universal"
+cask "tinycast"

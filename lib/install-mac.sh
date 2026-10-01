@@ -35,5 +35,7 @@ if ! command -v brew >/dev/null; then
 fi
 dotmsg "updating homebrew..."
 brew update
+# Homebrew requires third-party taps to be trusted before they can be tapped
+brew trust --tap abue-ammar/tinycast
 dotmsg "installing homebrew packages..."
 brew bundle --file "$DOTFILES/lib/Brewfile"
