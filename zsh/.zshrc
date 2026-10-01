@@ -100,7 +100,9 @@ elif [[ -f /usr/share/doc/fzf/examples/key-bindings.zsh ]]; then
   source /usr/share/doc/fzf/examples/key-bindings.zsh
   source /usr/share/doc/fzf/examples/completion.zsh
 fi
-. "${ZDOTDIR}/fzf_config.zsh"
+export FZF_DEFAULT_COMMAND='fd --type f --hidden --exclude .git'
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+export FZF_ALT_C_COMMAND='fd --type d --hidden --exclude .git'
 
 # zoxide, with j as the command to keep autojump muscle memory
 command -v zoxide >/dev/null && eval "$(zoxide init zsh --cmd j)"
