@@ -21,6 +21,9 @@ window-height = 35
 # Linux only, no effect on macOS
 gtk-titlebar-hide-when-maximized = true
 gtk-toolbar-style = flat
+# Linux only. Kernel 6.5+ counts threads waiting on io_uring as iowait, so
+# an idle Ghostty pins vmstat wa and PSI io near 100%. epoll avoids that.
+async-backend = epoll
 
 # Convenience
 copy-on-select = clipboard
