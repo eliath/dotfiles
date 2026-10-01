@@ -29,6 +29,9 @@ keybind = super+key_d=new_split:right
 keybind = super+shift+key_d=new_split:down
 # macOS only, no effect on Linux
 window-save-state = always
+# Install Ghostty's terminfo on SSH hosts that lack it. Without it, zsh
+# can't redraw the prompt in place and prints duplicate prompts.
+shell-integration-features = ssh-terminfo
 
 # Loaded last, so it overrides anything above. Optional.
 config-file = ?local
