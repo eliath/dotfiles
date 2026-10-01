@@ -2,9 +2,11 @@
 
 # macOS setup
 
-# screenshot location
-defaults write com.apple.screencapture location /tmp/
-dotmsg "screenshots will write to /tmp"
+# screenshots go to the clipboard, like Cmd+Shift+5 > Options > Save to > Clipboard.
+# Hold Ctrl with any screenshot shortcut to force the clipboard regardless.
+defaults write com.apple.screencapture target clipboard
+killall SystemUIServer || true
+dotmsg "screenshots will copy to the clipboard"
 
 # show hidden files
 defaults write com.apple.Finder AppleShowAllFiles true

@@ -11,7 +11,8 @@ read -r -p "This action could destroy your user configs. Are you sure? [y/n] " r
 
 # macOS settings
 if is_macos; then
-  defaults write com.apple.screencapture location "$HOME/Desktop/"
+  defaults delete com.apple.screencapture target || true
+  killall SystemUIServer || true
   defaults write com.apple.Finder AppleShowAllFiles false
   log_todo "Run \`killall Finder\` to apply Finder settings"
   defaults write com.apple.dock autohide -bool false
