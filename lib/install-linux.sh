@@ -18,3 +18,8 @@ mkdir -p "$HOME/.local/bin"
 if command -v fdfind >/dev/null && ! command -v fd >/dev/null; then
   ln -sf "$(command -v fdfind)" "$HOME/.local/bin/fd"
 fi
+
+# Same for bat, which Debian installs as batcat. LESSOPEN needs the real name.
+if command -v batcat >/dev/null && ! command -v bat >/dev/null; then
+  ln -sf "$(command -v batcat)" "$HOME/.local/bin/bat"
+fi

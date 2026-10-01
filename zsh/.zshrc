@@ -11,16 +11,12 @@ export VISUAL='code --wait'
 export PAGER=less
 
 if [[ "$(uname)" == "Darwin" ]]; then
-  # less syntax highlight (source: https://gist.github.com/textarcana/4611277#gistcomment-1701305)
-  export LESSOPEN="| $(which highlight) %s --out-format xterm256 --quiet --force --style solarized-light"
   alias less='less -m -n -g -i --underline-special'
   # ls colors
   unset LS_COLORS
   CLICOLOR=1
   CLICOLOR_FORCE=1
 else # Linux
-  # less syntax highlight
-  export LESSOPEN="| /usr/share/source-highlight/src-hilite-lesspipe.sh %s"
   # ls colors
   alias ls='ls --group-directories-first -F --color=auto'
 fi
@@ -31,6 +27,10 @@ export LESS=" -R "
 ###########
 
 add_to_path "${HOME}/.local/bin"
+
+# less syntax highlight. After PATH setup: on Ubuntu, bat is a symlink in
+# ~/.local/bin.
+command -v bat >/dev/null && export LESSOPEN="| bat --color=always --style=plain %s"
 
 #####################
 # ACTIVATE SOFTWARE #
