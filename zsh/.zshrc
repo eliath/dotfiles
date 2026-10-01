@@ -35,12 +35,9 @@ command -v bat >/dev/null && export LESSOPEN="| bat --color=always --style=plain
 #####################
 # ACTIVATE SOFTWARE #
 #####################
-if [[ "$(uname)" == "Darwin" ]]; then
-  if [ -d "/opt/homebrew/bin" ]; then
-    # Homebrew activation
-    export PATH="/opt/homebrew/bin:$PATH"
-    . "${ZDOTDIR}/brew-activate.zsh"
-  fi
+# Homebrew: sets PATH, MANPATH, INFOPATH and HOMEBREW_PREFIX
+if [[ -x /opt/homebrew/bin/brew ]]; then
+  eval "$(/opt/homebrew/bin/brew shellenv)"
 fi
 
 # PREZTO #############################################

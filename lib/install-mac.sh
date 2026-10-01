@@ -14,7 +14,7 @@ log_todo "you may need to \`killall Finder\` to show hidden files"
 if ! command -v brew >/dev/null; then
   dotmsg "installing homebrew..."
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-  export PATH="/opt/homebrew/bin:$PATH"
+  eval "$(/opt/homebrew/bin/brew shellenv)"
 fi
 dotmsg "updating homebrew..."
 brew update
