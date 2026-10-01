@@ -10,6 +10,23 @@ dotmsg "screenshots will write to /tmp"
 defaults write com.apple.Finder AppleShowAllFiles true
 log_todo "you may need to \`killall Finder\` to show hidden files"
 
+# Dock: auto-hide, and keep recent apps out of an otherwise empty Dock
+defaults write com.apple.dock autohide -bool true
+defaults write com.apple.dock show-recents -bool false
+
+# Dock: remove all pinned apps. Finder and Trash aren't in this list, so they
+# stay. Runs on the first install only, so re-running install won't remove
+# apps pinned since.
+dock_marker="$HOME/.local/state/dotfiles/dock-cleared"
+if [[ ! -f "$dock_marker" ]]; then
+  defaults write com.apple.dock persistent-apps -array
+  mkdir -p "$(dirname "$dock_marker")"
+  touch "$dock_marker"
+fi
+
+# killall fails when no Dock is running, e.g. over SSH without a GUI login
+killall Dock || true
+
 # homebrew
 if ! command -v brew >/dev/null; then
   dotmsg "installing homebrew..."

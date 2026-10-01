@@ -14,6 +14,11 @@ if is_macos; then
   defaults write com.apple.screencapture location "$HOME/Desktop/"
   defaults write com.apple.Finder AppleShowAllFiles false
   log_todo "Run \`killall Finder\` to apply Finder settings"
+  defaults write com.apple.dock autohide -bool false
+  defaults write com.apple.dock show-recents -bool true
+  killall Dock || true
+  rm -f "$HOME/.local/state/dotfiles/dock-cleared"
+  log_todo "Pinned Dock apps were not restored; re-add them manually"
 fi
 
 # remove zsh config
