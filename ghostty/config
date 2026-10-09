@@ -18,7 +18,8 @@ cursor-style = block
 background-opacity = 1
 window-width = 100
 window-height = 35
-# Linux only, no effect on macOS
+# Linux only, no effect on macOS. No GNOME header bar; keeps border and resize edges.
+gtk-titlebar = false
 gtk-titlebar-hide-when-maximized = true
 gtk-toolbar-style = flat
 # Linux only. Kernel 6.5+ counts threads waiting on io_uring as iowait, so
